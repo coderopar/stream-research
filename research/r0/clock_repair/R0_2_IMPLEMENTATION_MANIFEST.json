@@ -1,0 +1,28 @@
+{
+  "phase": "R0.2",
+  "name": "Causal Clock Repair",
+  "baseline_commit": "42c7c89",
+  "baseline_tag": "r0-governance-provenance-v1",
+  "protected_cohort": "P1_PROTECTED",
+  "p1_start_utc": "2026-07-19T00:00:00Z",
+  "implementation_scope": [
+    "canonical int64-nanosecond clock contract",
+    "hard causal-order invariants",
+    "D0-only boundary and horizon guard",
+    "legacy candidate-second overlap diagnostic",
+    "adversarial regression tests for the historical overlap failure"
+  ],
+  "explicit_non_goals": [
+    "rerun historical hypotheses",
+    "inspect P1 outcomes",
+    "derive repaired timestamps from integer candidate_second",
+    "rebuild the corrected D0 research substrate (R0.3)"
+  ],
+  "test_command": "python -m pytest tests/research_governance/test_r0_clock_contract.py -v",
+  "clock_contract_revision": "1.1",
+  "r0_3_acceptance_correction": {
+    "removed_invariant": "candidate_detection_ts_ns <= anchor_ts_ns",
+    "added_invariant": "candidate_detection_ts_ns <= information_available_ts_ns",
+    "reason": "actual 7M source shows candidate-policy availability and recovered book-state anchor are distinct clocks and may occur in either order"
+  }
+}

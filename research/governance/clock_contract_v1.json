@@ -1,0 +1,39 @@
+{
+  "contract_id": "R0_CLOCK_CONTRACT_V1_1",
+  "phase": "R0.2",
+  "timestamp_representation": "signed int64 Unix nanoseconds",
+  "float_timestamps_permitted": false,
+  "fields": [
+    "candidate_detection_ts_ns",
+    "anchor_ts_ns",
+    "feature_window_start_ts_ns",
+    "feature_window_end_ts_ns",
+    "information_available_ts_ns",
+    "decision_ts_ns",
+    "order_send_ts_ns",
+    "estimated_exchange_arrival_ts_ns",
+    "executable_entry_ts_ns",
+    "outcome_start_ts_ns"
+  ],
+  "hard_invariants": [
+    "candidate_detection_ts_ns <= information_available_ts_ns",
+    "feature_window_start_ts_ns <= feature_window_end_ts_ns",
+    "feature_window_end_ts_ns <= information_available_ts_ns",
+    "anchor_ts_ns <= information_available_ts_ns",
+    "information_available_ts_ns <= decision_ts_ns",
+    "decision_ts_ns <= order_send_ts_ns",
+    "order_send_ts_ns <= estimated_exchange_arrival_ts_ns",
+    "estimated_exchange_arrival_ts_ns <= executable_entry_ts_ns",
+    "executable_entry_ts_ns <= outcome_start_ts_ns",
+    "feature_window_end_ts_ns <= outcome_start_ts_ns"
+  ],
+  "d0": {
+    "start_utc": "2026-05-18T00:00:00Z",
+    "end_exclusive_utc": "2026-07-19T00:00:00Z",
+    "p1_protected_start_utc": "2026-07-19T00:00:00Z",
+    "rule": "R0.2 may not validate or derive any row whose required clock or requested outcome horizon reaches P1_PROTECTED."
+  },
+  "legacy_rule": "candidate_second must never be substituted for an exact source-event timestamp or exact book anchor. For the frozen one-second candidate policy only, the deterministic interval-close boundary (candidate_second + 1 second) may be used as the conservative candidate-availability timestamp.",
+  "contract_revision": "1.1",
+  "revision_reason": "Historical source review showed the recovered exact book-state anchor can precede frozen one-second candidate availability; candidate and anchor clocks are distinct and need not be ordered relative to each other."
+}

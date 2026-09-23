@@ -1,6 +1,6 @@
 # R0 — Scientific reset and substrate repair
 
-This patch implements the first two R0 work packages under Protocol v1.2.
+This directory tracks the governed R0 scientific-reset work packages under Protocol v1.2.
 
 ## R0.0 — Governance freeze
 
@@ -28,5 +28,33 @@ Run the scanner in the actual repository. The repository's canonical entry-point
 be a symlink to the external canonical store; R0.1 explicitly supports that topology
 while refusing derived/outcome/report roots.
 
-R0.2 clock repair must not begin until the R0.1 generated manifests have been reviewed and
-the R0.1 gate is explicitly marked complete.
+R0.1 is frozen at tag `r0-governance-provenance-v1`.
+
+## R0.2 — Causal clock repair
+
+Implemented by:
+
+- `src/research_core/clocks/contract.py`
+- `research/r0/clock_repair/`
+- `research/governance/clock_contract_v1.json`
+- `tests/research_governance/test_r0_clock_contract.py`
+
+R0.2 replaces integer-second timing assumptions with an explicit int64-nanosecond
+clock contract and regression tests for the historical feature/outcome overlap.
+
+## R0.3 — Corrected D0 research substrate
+
+Implemented by:
+
+- `src/research_core/substrate/d0.py`
+- `research/r0/substrate/build_corrected_d0_substrate.py`
+- `research/r0/substrate/README.md`
+- `research/r0/substrate/R0_3_IMPLEMENTATION_MANIFEST.json`
+- `tests/research_governance/test_r0_d0_substrate.py`
+
+R0.3 retains the historical 25-bp population as an explicitly labeled D0
+lineage family. It reconstructs exact candidate observability only when the
+legacy origin/release preconditions are already known from prior seconds,
+recovers exact int64 anchors where available, rebuilds the +3s scientific label
+clock under R0.2, and reconstructs future labels from canonical D0 trades without
+using the old Phase-7M outcome tables or opening P1.

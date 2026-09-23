@@ -54,3 +54,6 @@ reports (2).zip
 reports (3).zip
 scripts.zip
 scripts (2).zip
+
+# Local/generated archive bundles
+*.zip

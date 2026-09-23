@@ -1,0 +1,46 @@
+{
+  "phase": "R0.3",
+  "name": "Corrected D0 Research Substrate",
+  "protocol_version": "1.2",
+  "depends_on": [
+    "R0.0 Governance Freeze",
+    "R0.1 Dataset Inventory + Provenance",
+    "R0.2 Causal Clock Repair"
+  ],
+  "candidate_adapter": "LEGACY_7M2_EARLY_25BP_RESET5_RELEASE10_REARM60",
+  "evidentiary_role": "D0_DEVELOPMENT_ONLY",
+  "implementation_scope": [
+    "retain historical D0 candidate identities without future-label filtering",
+    "represent frozen one-second candidate availability at the interval-close boundary without pretending it is an exact raw-trade event timestamp",
+    "keep candidate-policy availability and exact book-anchor clocks semantically distinct",
+    "preserve historical origin_second <= release_second <= candidate_second semantics including same-second release/candidate jumps",
+    "recover exact int64 anchors without float epoch coercion",
+    "construct revised R0.2-compliant scientific label clocks from exact anchors",
+    "rebuild future outcome labels from canonical D0 perps trades",
+    "reuse prior rebuilt R0.3 AVAILABLE outcomes only when exact outcome_start and lineage hashes are unchanged",
+    "physically separate causal and future tables",
+    "fail closed at the P1_PROTECTED boundary",
+    "preserve unavailable candidates/outcomes explicitly rather than deleting them"
+  ],
+  "explicit_non_goals": [
+    "declare 25bp to be a uniquely correct candidate definition",
+    "reinterpret the frozen one-second policy as an intrasecond raw-trade policy",
+    "rerun or rank historical hypotheses",
+    "reuse Phase-7M future outcome tables",
+    "inspect P1_PROTECTED",
+    "simulate executable fills or PnL before R0.6",
+    "build the R0.5 causal market-state store"
+  ],
+  "clock_semantics_revision": {
+    "reason": "actual 7M.3/7M.6 source shows recovered book-state anchor and frozen one-second candidate availability are distinct clocks and may occur in either order",
+    "candidate_detection_semantics": "FROZEN_ONE_SECOND_POLICY_AVAILABLE_AT_INTERVAL_CLOSE",
+    "exact_anchor_semantics": "RECOVERED_EXACT_BOOK_STATE_INT64_NS",
+    "forbidden_invariant_removed": "candidate_detection_ts_ns <= anchor_ts_ns",
+    "required_invariant_added": "candidate_detection_ts_ns <= information_available_ts_ns"
+  },
+  "fixed_observation_horizon_sec": 3,
+  "fixed_outcome_horizons_sec": [300, 600, 900, 1800],
+  "fixed_lineage_targets_bps": [35, 50, 75, 100],
+  "test_command": "python -m pytest tests/research_governance/test_r0_clock_contract.py tests/research_governance/test_r0_d0_substrate.py -v",
+  "builder_version": "1.0.3"
+}
