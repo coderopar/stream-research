@@ -1,0 +1,2 @@
+event_id,event_ts_utc,pool_id,access_type,outcome_scope,actor,status,notes
+OA-0001,2026-09-22T00:00:00Z,P1_PROTECTED,DECLARATION,NONE,USER,CLEAN,"User states the new two-month extension was only downloaded and canonicalized; no protected outcomes or performance were inspected. Timestamp records declaration date, not an inferred exact conversation time."

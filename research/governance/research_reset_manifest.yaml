@@ -1,0 +1,64 @@
+schema_version: 1
+manifest_id: R0_RESET_2026-09-22
+protocol:
+  version: "1.2"
+  status: FROZEN
+  path: research/protocol/v1.2/BTCUSDT_Scientific_Trading_Research_Protocol_v1.2.docx
+  sha256: 040486b35301b872b1342a40a932ec6552ba7cf90d520206cfda2c10b7c5c6ea
+
+research_reset:
+  effective_date: "2026-09-22"
+  purpose: >-
+    Reset the evidentiary status of the BTCUSDT research program after the
+    adversarial review. Historical work remains available for development,
+    lineage, falsification and engineering reuse, but is not treated as
+    untouched confirmatory evidence.
+
+cohorts:
+  D0:
+    role: DEVELOPMENT
+    status: OUTCOME_SPENT
+    start_date_utc: "2026-05-18"
+    end_date_utc: "2026-07-18"
+    notes:
+      - The period was repeatedly inspected across the pre-reset research lineage.
+      - All future work may use D0 for unrestricted exploratory development.
+      - Results discovered or refined on D0 remain exploratory regardless of nominal significance.
+
+  P1_PROTECTED:
+    role: PROTECTED_HISTORICAL_POOL
+    status: OUTCOME_UNSEEN
+    declared_start_date_utc: "2026-07-19"
+    end_date_utc: DISCOVER_FROM_CANONICAL_SCAN
+    contamination_status: CLEAN_BY_USER_DECLARATION
+    notes:
+      - User reports downloading and canonicalizing the extension only.
+      - No future returns, continuation labels, strategy P&L, backtests, signal performance, or candidate future paths were inspected.
+      - P1_PROTECTED is not yet designated as D1 and must not be partitioned after seeing protected outcomes.
+
+canonical_data:
+  expected_root: data/canonical/market_events_v1
+  inventory_builder: research/r0/provenance/build_dataset_inventory.py
+  required_hash_algorithm: sha256
+
+r0_0_gate:
+  required:
+    - protocol_v1_2_frozen
+    - D0_declared_development
+    - P1_declared_protected
+    - P1_outcomes_declared_unseen
+    - outcome_access_register_initialized
+  status: IMPLEMENTED_PENDING_LOCAL_REPOSITORY_INSTALL
+
+r0_1_gate:
+  required:
+    - canonical_root_exists
+    - canonical_file_index_generated
+    - canonical_files_hashed
+    - D0_manifest_generated
+    - P1_manifest_generated
+    - feed_coverage_inventory_generated
+    - schema_inventory_generated_or_explicitly_unavailable
+    - P1_end_date_discovered_from_canonical_partitions
+    - no_noncanonical_paths_scanned
+  status: PENDING_LOCAL_SCAN

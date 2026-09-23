@@ -1,0 +1,1597 @@
+{
+  "files_with_schema": 22343,
+  "generated_at_utc": "2026-09-23T06:05:21+00:00",
+  "inspection_mode": "PARQUET_FOOTER_ONLY",
+  "parquet_metadata_errors": [
+    {
+      "relative_path": "_staging/20260918T070820Z-2f149835/617f2c48b46c8f9c7c95b72b/perps/book_snapshots/date=2026-08-19/part-617f2c48b46c8f9c7c95b72b.parquet",
+      "status": "ERROR:ArrowInvalid"
+    },
+    {
+      "relative_path": "_staging/20260918T070820Z-2f149835/617f2c48b46c8f9c7c95b72b/perps/depth_updates/date=2026-08-19/part-617f2c48b46c8f9c7c95b72b.parquet",
+      "status": "ERROR:ArrowInvalid"
+    },
+    {
+      "relative_path": "_staging/20260918T070820Z-2f149835/617f2c48b46c8f9c7c95b72b/perps/trades/date=2026-08-19/part-617f2c48b46c8f9c7c95b72b.parquet",
+      "status": "ERROR:ArrowInvalid"
+    }
+  ],
+  "schema_version": 1,
+  "schemas": {
+    "08b6f8c5503f1e03e05ce7b2970af0fbce3f980e74e855f5639372ba6af0c0b4": {
+      "columns": [
+        {
+          "name": "canonical_schema_version",
+          "nullable": false,
+          "type": "int16"
+        },
+        {
+          "name": "source_schema",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "market",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "event_type",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "symbol",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "ts_recv_ns",
+          "nullable": false,
+          "type": "int64"
+        },
+        {
+          "name": "receive_second",
+          "nullable": false,
+          "type": "int64"
+        },
+        {
+          "name": "mono_ns",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "event_id",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "sequence",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "source_file_id",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "source_relative_path",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "source_record_number",
+          "nullable": false,
+          "type": "int64"
+        },
+        {
+          "name": "record_extra_json",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "payload_extra_json",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "event_name",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "exchange_event_ms",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "trade_time_ms",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "aggregate_trade_id",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "first_trade_id",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "last_trade_id",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "price",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "quantity",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "normalized_quantity",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "buyer_is_maker",
+          "nullable": true,
+          "type": "bool"
+        }
+      ],
+      "schema_hash": "08b6f8c5503f1e03e05ce7b2970af0fbce3f980e74e855f5639372ba6af0c0b4"
+    },
+    "09c8c2b0cad7061d5443f1667ca09c7339b2ca4182a539abba5697436283db99": {
+      "columns": [
+        {
+          "name": "canonical_schema_version",
+          "nullable": false,
+          "type": "int16"
+        },
+        {
+          "name": "source_schema",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "market",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "event_type",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "symbol",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "ts_recv_ns",
+          "nullable": false,
+          "type": "int64"
+        },
+        {
+          "name": "receive_second",
+          "nullable": false,
+          "type": "int64"
+        },
+        {
+          "name": "mono_ns",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "event_id",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "sequence",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "source_file_id",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "source_relative_path",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "source_record_number",
+          "nullable": false,
+          "type": "int64"
+        },
+        {
+          "name": "record_extra_json",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "payload_extra_json",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "exchange_time_ms",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "open_interest",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "schema_hash": "09c8c2b0cad7061d5443f1667ca09c7339b2ca4182a539abba5697436283db99"
+    },
+    "155dc16c75a19e3c6a85df674e1f1a25dddc6530409450666b8b5939e21d1d85": {
+      "columns": [
+        {
+          "name": "canonical_schema_version",
+          "nullable": false,
+          "type": "int16"
+        },
+        {
+          "name": "source_schema",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "market",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "event_type",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "symbol",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "ts_recv_ns",
+          "nullable": false,
+          "type": "int64"
+        },
+        {
+          "name": "receive_second",
+          "nullable": false,
+          "type": "int64"
+        },
+        {
+          "name": "mono_ns",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "event_id",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "sequence",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "source_file_id",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "source_relative_path",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "source_record_number",
+          "nullable": false,
+          "type": "int64"
+        },
+        {
+          "name": "record_extra_json",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "payload_extra_json",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "event_name",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "exchange_event_ms",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "trade_time_ms",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "aggregate_trade_id",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "first_trade_id",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "last_trade_id",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "price",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "quantity",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "buyer_is_maker",
+          "nullable": true,
+          "type": "bool"
+        },
+        {
+          "name": "best_price_match",
+          "nullable": true,
+          "type": "bool"
+        }
+      ],
+      "schema_hash": "155dc16c75a19e3c6a85df674e1f1a25dddc6530409450666b8b5939e21d1d85"
+    },
+    "395c732523b1290ca8af6b2ea304e8f6e705676f7c4846ca9798ea243f54389f": {
+      "columns": [
+        {
+          "name": "canonical_schema_version",
+          "nullable": false,
+          "type": "int16"
+        },
+        {
+          "name": "source_schema",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "market",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "event_type",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "symbol",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "ts_recv_ns",
+          "nullable": false,
+          "type": "int64"
+        },
+        {
+          "name": "receive_second",
+          "nullable": false,
+          "type": "int64"
+        },
+        {
+          "name": "mono_ns",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "event_id",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "sequence",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "source_file_id",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "source_relative_path",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "source_record_number",
+          "nullable": false,
+          "type": "int64"
+        },
+        {
+          "name": "record_extra_json",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "payload_extra_json",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "event_name",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "exchange_event_ms",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "transaction_time_ms",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "first_update_id",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "final_update_id",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "previous_final_update_id",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "bid_updates",
+          "nullable": true,
+          "type": "list<element: struct<price: string, quantity: string, extra_json: string>>"
+        },
+        {
+          "name": "ask_updates",
+          "nullable": true,
+          "type": "list<element: struct<price: string, quantity: string, extra_json: string>>"
+        },
+        {
+          "name": "bid_update_count",
+          "nullable": true,
+          "type": "int32"
+        },
+        {
+          "name": "ask_update_count",
+          "nullable": true,
+          "type": "int32"
+        }
+      ],
+      "schema_hash": "395c732523b1290ca8af6b2ea304e8f6e705676f7c4846ca9798ea243f54389f"
+    },
+    "49909fd21a44eaae4c9fa53cf1919494ea26136041991c13d9017a767a41d491": {
+      "columns": [
+        {
+          "name": "canonical_schema_version",
+          "nullable": false,
+          "type": "int16"
+        },
+        {
+          "name": "source_schema",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "market",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "event_type",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "symbol",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "ts_recv_ns",
+          "nullable": false,
+          "type": "int64"
+        },
+        {
+          "name": "receive_second",
+          "nullable": false,
+          "type": "int64"
+        },
+        {
+          "name": "mono_ns",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "event_id",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "sequence",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "source_file_id",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "source_relative_path",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "source_record_number",
+          "nullable": false,
+          "type": "int64"
+        },
+        {
+          "name": "record_extra_json",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "payload_extra_json",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "event_name",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "exchange_event_ms",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "mark_price",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "index_price",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "estimated_settle_price",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "best_bid_price",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "best_ask_price",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "best_bid_quantity",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "best_ask_quantity",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "bid_iv",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "ask_iv",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "high_price_limit",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "low_price_limit",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "mark_iv",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "risk_free_rate",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "delta",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "theta",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "gamma",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "vega",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "schema_hash": "49909fd21a44eaae4c9fa53cf1919494ea26136041991c13d9017a767a41d491"
+    },
+    "55153e23e597c9383218b27b8b61960dcb9eb0fdc51df748b71c916987400897": {
+      "columns": [
+        {
+          "name": "canonical_schema_version",
+          "nullable": false,
+          "type": "int16"
+        },
+        {
+          "name": "source_schema",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "market",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "event_type",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "symbol",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "ts_recv_ns",
+          "nullable": false,
+          "type": "int64"
+        },
+        {
+          "name": "receive_second",
+          "nullable": false,
+          "type": "int64"
+        },
+        {
+          "name": "mono_ns",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "event_id",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "sequence",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "source_file_id",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "source_relative_path",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "source_record_number",
+          "nullable": false,
+          "type": "int64"
+        },
+        {
+          "name": "record_extra_json",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "payload_extra_json",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "event_name",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "exchange_event_ms",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "index_price",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "schema_hash": "55153e23e597c9383218b27b8b61960dcb9eb0fdc51df748b71c916987400897"
+    },
+    "5c3e655a5c8983f09e185c0529406d7f5a25096d82dee9527cb6aaf13d51f7a3": {
+      "columns": [
+        {
+          "name": "canonical_schema_version",
+          "nullable": false,
+          "type": "int16"
+        },
+        {
+          "name": "source_schema",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "market",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "event_type",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "symbol",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "ts_recv_ns",
+          "nullable": false,
+          "type": "int64"
+        },
+        {
+          "name": "receive_second",
+          "nullable": false,
+          "type": "int64"
+        },
+        {
+          "name": "mono_ns",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "event_id",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "sequence",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "source_file_id",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "source_relative_path",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "source_record_number",
+          "nullable": false,
+          "type": "int64"
+        },
+        {
+          "name": "record_extra_json",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "payload_extra_json",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "event_name",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "exchange_event_ms",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "trade_time_ms",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "trade_id",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "price",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "quantity",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "order_type",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "side",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "maker",
+          "nullable": true,
+          "type": "bool"
+        }
+      ],
+      "schema_hash": "5c3e655a5c8983f09e185c0529406d7f5a25096d82dee9527cb6aaf13d51f7a3"
+    },
+    "5e58d3b2fe45fa1a585fda37ceb165cd21dcb63ed42dba30b1ea83c6cefd26e7": {
+      "columns": [
+        {
+          "name": "canonical_schema_version",
+          "nullable": false,
+          "type": "int16"
+        },
+        {
+          "name": "source_schema",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "market",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "event_type",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "symbol",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "ts_recv_ns",
+          "nullable": false,
+          "type": "int64"
+        },
+        {
+          "name": "receive_second",
+          "nullable": false,
+          "type": "int64"
+        },
+        {
+          "name": "mono_ns",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "event_id",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "sequence",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "source_file_id",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "source_relative_path",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "source_record_number",
+          "nullable": false,
+          "type": "int64"
+        },
+        {
+          "name": "record_extra_json",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "payload_extra_json",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "event_name",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "exchange_event_ms",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "mark_price",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "alternate_mark_price",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "estimated_settle_price",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "index_price",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "funding_rate",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "next_funding_time_ms",
+          "nullable": true,
+          "type": "int64"
+        }
+      ],
+      "schema_hash": "5e58d3b2fe45fa1a585fda37ceb165cd21dcb63ed42dba30b1ea83c6cefd26e7"
+    },
+    "60fa5b2a211caef3aaf03eb6f28ab56ea618668e9987ca75815b5c3e28f91c0f": {
+      "columns": [
+        {
+          "name": "canonical_schema_version",
+          "nullable": false,
+          "type": "int16"
+        },
+        {
+          "name": "source_schema",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "market",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "event_type",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "symbol",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "ts_recv_ns",
+          "nullable": false,
+          "type": "int64"
+        },
+        {
+          "name": "receive_second",
+          "nullable": false,
+          "type": "int64"
+        },
+        {
+          "name": "mono_ns",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "event_id",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "sequence",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "source_file_id",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "source_relative_path",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "source_record_number",
+          "nullable": false,
+          "type": "int64"
+        },
+        {
+          "name": "record_extra_json",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "payload_extra_json",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "payload_json",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "schema_hash": "60fa5b2a211caef3aaf03eb6f28ab56ea618668e9987ca75815b5c3e28f91c0f"
+    },
+    "d0b383ec346cbe13f6a8ae3521be4a308c797b6429962773ba7df4c2c4f5de12": {
+      "columns": [
+        {
+          "name": "canonical_schema_version",
+          "nullable": false,
+          "type": "int16"
+        },
+        {
+          "name": "source_schema",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "market",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "event_type",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "symbol",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "ts_recv_ns",
+          "nullable": false,
+          "type": "int64"
+        },
+        {
+          "name": "receive_second",
+          "nullable": false,
+          "type": "int64"
+        },
+        {
+          "name": "mono_ns",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "event_id",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "sequence",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "source_file_id",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "source_relative_path",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "source_record_number",
+          "nullable": false,
+          "type": "int64"
+        },
+        {
+          "name": "record_extra_json",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "payload_extra_json",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "instrument_id",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "channel",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "exchange_ts_ms",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "bid_price",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "bid_size",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "ask_price",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "ask_size",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "bids0_price",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "bids0_size",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "asks0_price",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "asks0_size",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "schema_hash": "d0b383ec346cbe13f6a8ae3521be4a308c797b6429962773ba7df4c2c4f5de12"
+    },
+    "e2e7c1fedb35105e52b7949f4a6ae463ac3dc6f0dc77d0f32ade5a4491aad784": {
+      "columns": [
+        {
+          "name": "canonical_schema_version",
+          "nullable": false,
+          "type": "int16"
+        },
+        {
+          "name": "source_schema",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "market",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "event_type",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "symbol",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "ts_recv_ns",
+          "nullable": false,
+          "type": "int64"
+        },
+        {
+          "name": "receive_second",
+          "nullable": false,
+          "type": "int64"
+        },
+        {
+          "name": "mono_ns",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "event_id",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "sequence",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "source_file_id",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "source_relative_path",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "source_record_number",
+          "nullable": false,
+          "type": "int64"
+        },
+        {
+          "name": "record_extra_json",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "payload_extra_json",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "snapshot_symbol",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "last_update_id",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "bids",
+          "nullable": true,
+          "type": "list<element: struct<price: string, quantity: string, extra_json: string>>"
+        },
+        {
+          "name": "asks",
+          "nullable": true,
+          "type": "list<element: struct<price: string, quantity: string, extra_json: string>>"
+        },
+        {
+          "name": "bid_level_count",
+          "nullable": true,
+          "type": "int32"
+        },
+        {
+          "name": "ask_level_count",
+          "nullable": true,
+          "type": "int32"
+        }
+      ],
+      "schema_hash": "e2e7c1fedb35105e52b7949f4a6ae463ac3dc6f0dc77d0f32ade5a4491aad784"
+    },
+    "ed9c54e9f96581219e7033c57282ff6ee892de25fcb0092337958639482a04f1": {
+      "columns": [
+        {
+          "name": "canonical_schema_version",
+          "nullable": false,
+          "type": "int16"
+        },
+        {
+          "name": "source_schema",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "market",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "event_type",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "symbol",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "ts_recv_ns",
+          "nullable": false,
+          "type": "int64"
+        },
+        {
+          "name": "receive_second",
+          "nullable": false,
+          "type": "int64"
+        },
+        {
+          "name": "mono_ns",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "event_id",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "sequence",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "source_file_id",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "source_relative_path",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "source_record_number",
+          "nullable": false,
+          "type": "int64"
+        },
+        {
+          "name": "record_extra_json",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "payload_extra_json",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "event_name",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "exchange_event_ms",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "order_symbol",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "side",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "order_type",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "time_in_force",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "original_quantity",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "price",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "average_price",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "order_status",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "last_filled_quantity",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "cumulative_filled_quantity",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "trade_time_ms",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "order_extra_json",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "schema_hash": "ed9c54e9f96581219e7033c57282ff6ee892de25fcb0092337958639482a04f1"
+    },
+    "f534a84933d2f4845b4c5210fa9a5b2fa422d8b334dc46c230b077fadfb07f0d": {
+      "columns": [
+        {
+          "name": "canonical_schema_version",
+          "nullable": false,
+          "type": "int16"
+        },
+        {
+          "name": "source_schema",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "market",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "event_type",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "symbol",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "ts_recv_ns",
+          "nullable": false,
+          "type": "int64"
+        },
+        {
+          "name": "receive_second",
+          "nullable": false,
+          "type": "int64"
+        },
+        {
+          "name": "mono_ns",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "event_id",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "sequence",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "source_file_id",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "source_relative_path",
+          "nullable": false,
+          "type": "string"
+        },
+        {
+          "name": "source_record_number",
+          "nullable": false,
+          "type": "int64"
+        },
+        {
+          "name": "record_extra_json",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "payload_extra_json",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "event_name",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "exchange_event_ms",
+          "nullable": true,
+          "type": "int64"
+        },
+        {
+          "name": "open_interest",
+          "nullable": true,
+          "type": "string"
+        },
+        {
+          "name": "open_interest_value",
+          "nullable": true,
+          "type": "string"
+        }
+      ],
+      "schema_hash": "f534a84933d2f4845b4c5210fa9a5b2fa422d8b334dc46c230b077fadfb07f0d"
+    }
+  }
+}

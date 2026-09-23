@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "freeze_id": "PROTOCOL_FREEZE_V1_2_2026-09-22",
+  "protocol_version": "1.2",
+  "status": "FROZEN",
+  "effective_date": "2026-09-22",
+  "protocol_path": "research/protocol/v1.2/BTCUSDT_Scientific_Trading_Research_Protocol_v1.2.docx",
+  "sha256": "040486b35301b872b1342a40a932ec6552ba7cf90d520206cfda2c10b7c5c6ea",
+  "governance_rule": "Protocol changes after protected-outcome access do not apply retroactively to the affected confirmation cohort. A materially changed protocol creates a new version and future cohort only.",
+  "r0_status": "R0.0 implemented; R0.1 scanner installed but local canonical inventory has not yet been executed in this bundle because canonical market-event files were intentionally omitted from the review package."
+}

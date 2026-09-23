@@ -1,0 +1,42 @@
+schema_version: 1
+protected_pools:
+  - pool_id: P1_PROTECTED
+    status: SEALED
+    role: PROTECTED_HISTORICAL_POOL
+    declared_start_date_utc: "2026-07-19"
+    end_date_utc: DISCOVER_FROM_CANONICAL_SCAN
+    canonical_root: data/canonical/market_events_v1
+    outcome_exposure_status: UNSEEN
+    declared_by: USER
+    declaration_date: "2026-09-22"
+    declaration: >-
+      The newly added two months were downloaded and canonicalized only. No
+      future price outcomes, P35/P50/P75/P100 labels, returns, candidate future
+      paths, strategy P&L, backtests, or signal-performance relationships were
+      inspected.
+
+    permitted_before_confirmation_batch_freeze:
+      - file existence and path inventory
+      - cryptographic hashing
+      - schema inspection
+      - row-count metadata inspection
+      - date/feed coverage inspection
+      - canonicalization provenance
+      - pre-registered integrity checks permitted by Protocol v1.2
+
+    prohibited_before_confirmation_batch_freeze:
+      - future return inspection
+      - P35/P50/P75/P100 inspection
+      - MFE or MAE inspection
+      - strategy P&L inspection
+      - signal-versus-outcome analysis
+      - threshold selection using protected outcomes
+      - horizon selection using protected outcomes
+      - interaction discovery using protected outcomes
+      - post-result carving of P1 into confirmation subperiods
+
+    contamination_rule: >-
+      Any protected-outcome exposure must be appended to
+      research/governance/outcome_access_register.csv immediately. Once a
+      protected confirmation cohort is unblinded, it is retired for all newly
+      created hypotheses under Protocol v1.2.

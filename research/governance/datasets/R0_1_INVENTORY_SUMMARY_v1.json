@@ -1,0 +1,50 @@
+{
+  "canonical_metadata_file_count": 23,
+  "canonical_root": "data/canonical/market_events_v1",
+  "canonical_topology": {
+    "external_storage": true,
+    "link_detection": "resolved_path_difference",
+    "logical_and_physical_roots_differ": true,
+    "logical_root": "data/canonical/market_events_v1",
+    "note": "On Windows/MSYS, pathlib may report is_symlink=false for a repository redirect. The authoritative topology indicator is logical_and_physical_roots_differ.",
+    "os_reported_is_symlink": false,
+    "os_reported_symlink_target": null,
+    "resolved_physical_root": "D:\\stream-data\\canonical\\market_events_v1"
+  },
+  "cohort_file_counts": {
+    "D0": 11702,
+    "P1_PROTECTED": 10644
+  },
+  "file_count": 22369,
+  "file_index_sha256": "fe27b0619f6e464ce2bd7fd3618e44edc7663254fea813e863db912c3bd1e639",
+  "generated_at_utc": "2026-09-23T06:05:21+00:00",
+  "hash_mode": "full",
+  "notes": [
+    "The inventory reads file bytes only for SHA-256 hashing.",
+    "Parquet inspection, when enabled, reads footer metadata only; no market-event values or outcome data are selected.",
+    "Canonical extraction-state files are classified as CANONICAL_METADATA and are not assigned to D0/P1 cohorts.",
+    "Any other undated canonical file is classified UNKNOWN_UNDATED and blocks R0.1 closure until reviewed."
+  ],
+  "p1_declared_start_date_utc": "2026-07-19",
+  "p1_observed_first_date_utc": "2026-07-19",
+  "p1_observed_last_date_utc": "2026-09-19",
+  "r0_1_gate_checks": {
+    "D0_manifest_generated": true,
+    "P1_end_date_discovered_from_canonical_partitions": true,
+    "P1_manifest_generated": true,
+    "canonical_file_index_generated": true,
+    "canonical_files_hashed": true,
+    "canonical_metadata_classified_separately": true,
+    "canonical_root_exists": true,
+    "feed_coverage_inventory_generated": true,
+    "no_noncanonical_paths_scanned": true,
+    "no_unreviewed_undated_market_event_files": true,
+    "schema_inventory_generated_or_explicitly_unavailable": true
+  },
+  "repo_root": "C:\\Projects\\stream-research",
+  "schema_version": 1,
+  "status": "PASS",
+  "total_bytes": 119257011359,
+  "undated_file_count": 0,
+  "unknown_undated_market_event_file_count": 0
+}

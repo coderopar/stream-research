@@ -1,0 +1,56 @@
+# Python environments
+.venv/
+venv/
+env/
+
+# Python caches and test/tool caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Secrets / local environment
+.env
+.env.*
+!.env.example
+
+# Logs / temporary files
+logs/
+tmp/
+temp/
+*.tmp
+*.temp
+*.log
+
+# Build/package artifacts
+build/
+dist/
+*.egg-info/
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# Physical market/research datasets are local/external stores.
+# Scientific identity is tracked by governed R0 manifests and hashes.
+data/
+
+# Historical/generated research outputs remain available locally but are not
+# used as the Git artifact store. Governed summaries/manifests belong under research/.
+reports/
+
+# Generated runtime outputs
+outputs/
+
+# Historical transfer/archive copies
+reports.zip
+reports (2).zip
+reports (3).zip
+scripts.zip
+scripts (2).zip
