@@ -1,0 +1,40 @@
+{
+  "phase": "R0.4",
+  "name": "Dependence / Episode Framework",
+  "protocol_version": "1.2",
+  "depends_on_checkpoint": {
+    "commit": "e9b3ac699213503348a0549b24e3a9bff02cfa88",
+    "tag": "r0-causal-clock-substrate-v1"
+  },
+  "evidentiary_role": "D0_DEPENDENCE_INFRASTRUCTURE_ONLY",
+  "implementation_scope": [
+    "preserve all 7067 frozen D0 candidate identities",
+    "read only R0.3 causal candidate and governed-clock tables plus their manifest",
+    "build half-open transitive overlap components at 5m, 10m, 15m, and 30m",
+    "build a 60-second policy-gap temporal episode inherited from the frozen candidate cooldown rather than tuned from outcomes",
+    "partition policy temporal episodes by exact candidate direction without arbitrary same-timestamp ordering",
+    "preserve exact direction plus origin-second lineage groups",
+    "construct a conservative inference cluster as the union of UTC availability-day clustering and 30m overlap dependence",
+    "emit gap, component-size, and day-concentration diagnostics without opening outcome values",
+    "retain the 36 R0.3 clock-unavailable candidates in non-overlap episode structures and mark overlap fields unavailable"
+  ],
+  "explicit_non_goals": [
+    "test any continuation hypothesis",
+    "inspect R0.3 return, MFE, MAE, threshold-hit, or other future outcome values",
+    "tune an episode gap based on effect size, confidence interval, or significance",
+    "open P1_PROTECTED",
+    "choose a hypothesis-specific D1 estimator or resampling scheme",
+    "perform matching, counterfactual estimation, ML, execution simulation, or PnL"
+  ],
+  "frozen_structures": {
+    "overlap_horizons_sec": [300, 600, 900, 1800],
+    "overlap_interval_semantics": "half-open [start, end)",
+    "policy_temporal_gap_sec": 60,
+    "directional_partition": "exact direction within policy temporal episode",
+    "origin_lineage": "exact (direction, legacy_origin_second)",
+    "conservative_inference_cluster": "UTC availability-day union 30m-overlap components"
+  },
+  "test_command": "python -m pytest tests/research_governance/test_r0_clock_contract.py tests/research_governance/test_r0_d0_substrate.py tests/research_governance/test_r0_dependence.py -v",
+  "self_test_command": "python research/r0/dependence/build_d0_dependence_framework.py --self-test",
+  "builder_version": "1.0.0"
+}

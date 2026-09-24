@@ -1,0 +1,38 @@
+{
+  "contract_id": "R0_DEPENDENCE_CONTRACT_V1",
+  "protocol_version": "1.2",
+  "evidentiary_role": "D0_DEPENDENCE_INFRASTRUCTURE_ONLY",
+  "parent_checkpoint": {
+    "commit": "e9b3ac699213503348a0549b24e3a9bff02cfa88",
+    "tag": "r0-causal-clock-substrate-v1",
+    "r0_3_schema": "r0_corrected_d0_substrate_v1"
+  },
+  "outcome_firewall": {
+    "future_outcome_values_read": false,
+    "returns_mfe_mae_or_threshold_labels_used": false,
+    "episode_thresholds_selected_from_outcomes": false
+  },
+  "protected_data": {
+    "p1_read": false,
+    "p1_start_date_utc": "2026-07-19"
+  },
+  "overlap": {
+    "source": "R0.3 governed outcome_start_ts_ns only; no outcome values",
+    "horizons_sec": [300, 600, 900, 1800],
+    "interval_semantics": "half-open [start, end)",
+    "touching_boundaries_overlap": false,
+    "transitive_connected_components": true
+  },
+  "episodes": {
+    "policy_temporal_gap_sec": 60,
+    "policy_temporal_gap_source": "frozen EARLY_25BP_RESET5_RELEASE10_REARM60 cooldown/rearm interval",
+    "directional_episode": "exact direction partition within each policy temporal episode",
+    "origin_lineage_episode": "exact tuple (direction, legacy_origin_second)",
+    "threshold_tuning": "none"
+  },
+  "conservative_inference_cluster": {
+    "construction": "union of UTC candidate-availability day clusters and 30-minute overlap components",
+    "reason": "same-day latent regime dependence is plausible, while cross-midnight overlapping forward paths must not be split by the calendar boundary",
+    "hypothesis_specific_rule": "future D1 plans must pre-register this conservative cluster or an explicit conservative hierarchy/sensitivity rule before confirmation"
+  }
+}

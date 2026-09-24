@@ -53,8 +53,27 @@ Implemented by:
 - `tests/research_governance/test_r0_d0_substrate.py`
 
 R0.3 retains the historical 25-bp population as an explicitly labeled D0
-lineage family. It reconstructs exact candidate observability only when the
-legacy origin/release preconditions are already known from prior seconds,
-recovers exact int64 anchors where available, rebuilds the +3s scientific label
-clock under R0.2, and reconstructs future labels from canonical D0 trades without
-using the old Phase-7M outcome tables or opening P1.
+lineage family. It represents the frozen one-second candidate policy as available
+at interval close, keeps that policy clock distinct from the recovered exact
+book-state anchor, preserves same-second release/candidate transitions permitted
+by the historical state machine, rebuilds the +3s scientific label clock under
+R0.2, and reconstructs future labels from canonical D0 trades without using the
+old Phase-7M outcome tables or opening P1. The accepted build preserves all
+7,067 candidates, governs 7,031 exact clocks, and retains the 36 upstream
+level-audit omissions explicitly as clock-unavailable.
+
+## R0.4 — Dependence / episode framework
+
+Implemented by:
+
+- `src/research_core/dependence/`
+- `research/governance/dependence_contract_v1.json`
+- `research/r0/dependence/`
+- `tests/research_governance/test_r0_dependence.py`
+
+R0.4 freezes outcome-blind dependence structures before new research: exact
+5m/10m/15m/30m forward-window overlap components, a 60-second temporal episode
+inherited from the frozen candidate-policy cooldown, direction and origin-lineage
+partitions, and a conservative inference cluster that unions UTC availability-day
+clustering with cross-midnight 30-minute overlap. It reads R0.3 causal candidates
+and clocks only; future outcome values and P1 remain unopened.
