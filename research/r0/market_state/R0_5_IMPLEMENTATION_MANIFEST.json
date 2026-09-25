@@ -1,0 +1,23 @@
+{
+  "r0_stage": "R0.5",
+  "name": "Causal Market-State Store",
+  "implementation_version": "1.0.1",
+  "parent_checkpoint_commit": "9bc5fd1",
+  "parent_checkpoint_tag": "r0-dependence-framework-v1",
+  "schema_name": "r0_causal_market_state_v1",
+  "scope": "D0 causal infrastructure only",
+  "implemented_family": "PERPS_TRADES",
+  "deferred_families": [
+    "ORDER_BOOK",
+    "PERPS_DERIVATIVES",
+    "SPOT_CROSS_VENUE",
+    "OPTIONS"
+  ],
+  "protected_data_read": false,
+  "future_outcomes_read": false,
+  "candidate_count_expected": 7067,
+  "governed_clock_count_expected": 7031,
+  "clock_unavailable_expected": 36,
+  "acceptance_state": "IMPLEMENTED_NOT_YET_RUNTIME_ACCEPTED",
+  "performance_patch": "Parquet row-group pruning to candidate-required 30m causal intervals; exact full-day fallback when no prior trade exists inside pruned history."
+}

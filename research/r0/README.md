@@ -77,3 +77,20 @@ inherited from the frozen candidate-policy cooldown, direction and origin-lineag
 partitions, and a conservative inference cluster that unions UTC availability-day
 clustering with cross-midnight 30-minute overlap. It reads R0.3 causal candidates
 and clocks only; future outcome values and P1 remain unopened.
+
+
+## R0.5 — Causal market-state store
+
+Implemented by:
+
+- `src/research_core/market_state/`
+- `research/governance/market_state_contract_v1.json`
+- `research/r0/market_state/`
+- `tests/research_governance/test_r0_market_state.py`
+
+R0.5 freezes reusable outcome-blind causal state interfaces at the R0.3
+`information_available_ts_ns` cutoff. Version 1 implements canonical BTCUSDT
+perps-trade primitives plus explicit freshness/coverage/provenance, while R0.4
+dependence identifiers remain physically separated as governance-only metadata.
+Order-book, derivatives, cross-venue and options families are deferred until
+their source-specific causal availability semantics are independently governed.

@@ -1,0 +1,67 @@
+{
+  "contract_id": "R0_CAUSAL_MARKET_STATE_CONTRACT_V1",
+  "protocol_version": "1.2",
+  "evidentiary_role": "D0_CAUSAL_MARKET_STATE_INFRASTRUCTURE_ONLY",
+  "parent_checkpoint": {
+    "commit": "9bc5fd1",
+    "tag": "r0-dependence-framework-v1",
+    "r0_3_schema": "r0_corrected_d0_substrate_v1",
+    "r0_4_schema": "r0_dependence_framework_v1"
+  },
+  "outcome_firewall": {
+    "future_outcome_values_read": false,
+    "returns_mfe_mae_or_threshold_labels_used": false,
+    "feature_selection_from_outcomes": false
+  },
+  "protected_data": {
+    "p1_read": false,
+    "p1_start_date_utc": "2026-07-19"
+  },
+  "causal_clock": {
+    "cutoff": "R0.3 information_available_ts_ns",
+    "asof": "latest source receive timestamp <= cutoff",
+    "window": "half-open [start, cutoff)",
+    "future_interpolation": false,
+    "nanosecond_storage": "int64 only"
+  },
+  "trade_storage_grid": {
+    "fine": {"lookback_sec": 60, "bucket_sec": 1},
+    "coarse": {"lookback_sec": 1800, "bucket_sec": 60},
+    "scientific_feature_definition": false,
+    "rule": "storage resolution only; R1+ must register the exact scientific window and transform"
+  },
+  "physical_separation": {
+    "causal_market_state": "data/derived/perps/research/r0_causal_market_state_v1/causal",
+    "governance_only": "data/derived/perps/research/r0_causal_market_state_v1/governance",
+    "quality": "data/derived/perps/research/r0_causal_market_state_v1/quality",
+    "future_outcomes": "not read by R0.5"
+  },
+  "families": {
+    "PERPS_TRADES": {
+      "status": "IMPLEMENTED",
+      "source": "canonical perps/trades",
+      "clock": "ts_recv_ns"
+    },
+    "ORDER_BOOK": {
+      "status": "DEFERRED",
+      "reason": "requires authoritative snapshot+diff replay and explicit book validity/freshness contract"
+    },
+    "PERPS_DERIVATIVES": {
+      "status": "DEFERRED",
+      "reason": "OI/funding/mark/index require source-specific publication/receive clocks"
+    },
+    "SPOT_CROSS_VENUE": {
+      "status": "DEFERRED",
+      "reason": "requires venue-specific causal clocks"
+    },
+    "OPTIONS": {
+      "status": "DEFERRED",
+      "reason": "requires option-surface/OI/Greek freshness and information-availability contracts"
+    }
+  },
+  "governance_fields": {
+    "source": "R0.4",
+    "predictive_feature_eligible": false,
+    "rule": "episode/overlap/cluster identifiers are for inference, splitting, resampling and diagnostics only"
+  }
+}
