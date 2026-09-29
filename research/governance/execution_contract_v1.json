@@ -1,0 +1,77 @@
+{
+  "contract_id": "R0_EXECUTION_COST_CONTRACT_V1",
+  "protocol_version": "1.2",
+  "evidentiary_role": "D0_EXECUTION_INFRASTRUCTURE_ONLY",
+  "parent_checkpoint": {
+    "commit": "62c99c0",
+    "tag": "r0-causal-market-state-v1",
+    "r0_5_schema": "r0_causal_market_state_v1"
+  },
+  "outcome_firewall": {
+    "future_outcome_values_read": false,
+    "returns_mfe_mae_or_threshold_labels_used": false,
+    "latency_or_cost_tuning_from_outcomes": false
+  },
+  "protected_data": {
+    "p1_read": false,
+    "p1_start_date_utc": "2026-07-19"
+  },
+  "order_book_source": {
+    "families": [
+      "perps/book_snapshots",
+      "perps/depth_updates"
+    ],
+    "clock": "canonical ts_recv_ns int64",
+    "snapshot_role": "collector-local checkpoint for bootstrap/recovery only",
+    "bootstrap_rule": "complete two-sided checkpoint plus first following diff with pu == snapshot_last_update_id",
+    "healthy_replay_rule": "later snapshots are audit-only; authoritative state advances through continuous pu -> u diffs",
+    "gap_rule": "pu sequence gap or crossed reconstructed book invalidates state until a later valid checkpoint handshake",
+    "quantity_rule": "diff quantities are absolute; zero removes the price level"
+  },
+  "marketable_execution": {
+    "price_lookup_clock": "estimated_exchange_arrival_ts_ns",
+    "rule": "walk visible opposite-side depth at arrival timestamp",
+    "insufficient_depth": "INCOMPLETE_FILL; never extrapolate",
+    "reference_price": "arrival-time reconstructed mid",
+    "passive_fill_assumptions": false,
+    "own_market_impact_model": false
+  },
+  "latency": {
+    "components": [
+      "computation_ns",
+      "decision_ns",
+      "order_submission_ns",
+      "network_ns",
+      "exchange_processing_ns",
+      "fill_completion_ns"
+    ],
+    "rule": "every component must be explicit nonnegative integer nanoseconds",
+    "production_profile_frozen": false,
+    "audit_profile": "ZERO_LATENCY_AUDIT_ONLY"
+  },
+  "costs": {
+    "taker_fee_bps": "explicit assumption required for total cost",
+    "funding_bps": "explicit signed assumption; source timing deferred until a position specification requires it",
+    "other_bps": "explicit signed assumption",
+    "builder_outputs_fee_adjusted_cost": false
+  },
+  "audit_only": {
+    "arrival_profile": "ZERO_LATENCY_AUDIT_ONLY",
+    "quote_notional_usdt": 1000.0,
+    "simulate_sides": [
+      "BUY",
+      "SELL"
+    ],
+    "scientific_strategy_definition": false,
+    "note": "The zero-latency profile and 1000-USDT notional exercise replay/fill coverage only. They are not a registered strategy latency or position size."
+  },
+  "freshness": {
+    "universal_max_book_age_frozen": false,
+    "rule": "record exact state age; a future registered strategy must pre-specify any maximum acceptable age"
+  },
+  "future_strategy_outcomes": {
+    "rule": "economic return/outcome measurement must begin no earlier than executable_entry_ts_ns for the registered latency/fill model",
+    "r0_3_label_clock_is_entry_substitute": false,
+    "note": "R0.3 anchor+3s labels remain corrected legacy scientific labels; they are not an executable entry price under nonzero latency."
+  }
+}

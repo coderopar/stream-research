@@ -94,3 +94,19 @@ perps-trade primitives plus explicit freshness/coverage/provenance, while R0.4
 dependence identifiers remain physically separated as governance-only metadata.
 Order-book, derivatives, cross-venue and options families are deferred until
 their source-specific causal availability semantics are independently governed.
+
+## R0.6 — Execution + cost simulator
+
+Implemented by:
+
+- `src/research_core/execution/`
+- `research/governance/execution_contract_v1.json`
+- `research/r0/execution/`
+- `tests/research_governance/test_r0_execution.py`
+
+R0.6 reconstructs canonical BTCUSDT perps order-book state from collector-local
+checkpoints plus continuous diff-depth updates and provides explicit marketable
+fill, latency and friction primitives. The full D0 build uses a zero-latency,
+1,000-USDT **audit-only** profile to measure replay/fill coverage; those audit
+values are not a registered trading strategy assumption. Passive fills and own-
+market impact remain unsupported until separately justified.
