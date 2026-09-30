@@ -2,6 +2,8 @@
 
 This directory tracks the governed R0 scientific-reset work packages under Protocol v1.2.
 
+For the cross-phase scientific narrative, plain-language interpretation, acceptance evidence, known limitations, and the rule that every research-step commit must update the research record, see `research/README.md`. This R0 README remains the phase-local implementation index.
+
 ## R0.0 — Governance freeze
 
 Implemented by:
@@ -110,3 +112,22 @@ fill, latency and friction primitives. The full D0 build uses a zero-latency,
 1,000-USDT **audit-only** profile to measure replay/fill coverage; those audit
 values are not a registered trading strategy assumption. Passive fills and own-
 market impact remain unsupported until separately justified.
+
+## R0.7 — Research registries + guardrails
+
+Implemented by:
+
+- `src/research_core/registry/`
+- `research/governance/research_registry_contract_v1.json`
+- `research/governance/registries/`
+- `research/r0/registries/`
+- `tests/research_governance/test_r0_registry_guardrails.py`
+
+R0.7 installs append-only hypothesis/genealogy, lifecycle, evidence-budget,
+confirmation-batch, access-contamination and decision registries plus executable
+Protocol-v1.2 guardrails. It creates no hypotheses, does not partition P1, and
+opens neither protected causal data nor future outcomes. Registration is blocked
+until the position, execution, benchmark/MEE, dependence, risk, evidence-control,
+D1-feasibility and fresh-context adversarial-review requirements are complete.
+
+Acceptance evidence on the Windows development environment: R0.7-specific tests 37/37 passed; the full `tests/research_governance` suite passed 146 tests with 3 R0.1 symlink-capability skips and zero failures. R0.7 remains to be frozen in Git after documentation review.

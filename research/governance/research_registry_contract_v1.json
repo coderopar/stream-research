@@ -1,0 +1,127 @@
+{
+  "contract_id": "R0_RESEARCH_REGISTRY_GUARDRAIL_CONTRACT_V1",
+  "protocol_version": "1.2",
+  "evidentiary_role": "RESEARCH_GOVERNANCE_INFRASTRUCTURE_ONLY",
+  "parent_checkpoint": {
+    "commit": "6e742f8",
+    "tag": "r0-execution-simulator-v1"
+  },
+  "outcome_firewall": {
+    "future_outcome_values_read": false,
+    "protected_performance_read": false,
+    "p1_read": false,
+    "registry_validation_requires_market_or_outcome_data": false
+  },
+  "registry_storage": {
+    "format": "canonical JSON Lines",
+    "append_only": true,
+    "in_place_mutation": false,
+    "negative_results_must_remain_visible": true,
+    "material_hypothesis_change_requires_new_version": true,
+    "registry_files": {
+      "hypothesis_versions": "research/governance/registries/hypothesis_versions.jsonl",
+      "hypothesis_events": "research/governance/registries/hypothesis_events.jsonl",
+      "evidence_budgets": "research/governance/registries/evidence_budgets.jsonl",
+      "confirmation_batches": "research/governance/registries/confirmation_batches.jsonl",
+      "access_events": "research/governance/registries/access_events.jsonl",
+      "decision_log": "research/governance/registries/decision_log.jsonl",
+      "protected_cohorts": "research/governance/registries/protected_cohorts.jsonl"
+    }
+  },
+  "hypothesis_genealogy": {
+    "required_fields": [
+      "parent_hypothesis_ids",
+      "conceptual_family",
+      "derived_from_results",
+      "datasets_that_influenced_design"
+    ],
+    "failed_or_invalidated_ancestry_must_persist": true,
+    "renaming_does_not_reset_ancestry": true,
+    "cycles_forbidden": true
+  },
+  "promotion_stages": [
+    "IDEA",
+    "FEASIBLE",
+    "EXPLORATORY_CANDIDATE",
+    "REGISTERED_CANDIDATE",
+    "REGISTERED_HOLDOUT_SURVIVOR",
+    "PROSPECTIVE_SHADOW_CANDIDATE",
+    "LIVE_CAPITAL_CANDIDATE",
+    "SCALABLE_STRATEGY"
+  ],
+  "registration_gate": {
+    "complete_hypothesis_and_position_spec_required": true,
+    "strongest_relevant_benchmark_required": true,
+    "minimum_economically_meaningful_effect_required": true,
+    "mandatory_risk_gate_required": true,
+    "deterministic_dependence_definition_required": true,
+    "evidence_budget_required": true,
+    "independent_support_precision_plan_required": true,
+    "fresh_context_adversarial_review_required": true,
+    "d1_feasibility_plan_required": true,
+    "post_unblinding_defect_rule_required": true,
+    "code_and_artifact_hashes_required": true
+  },
+  "evidence_control": {
+    "mere_test_count_is_sufficient": false,
+    "explicit_operating_guarantee_required": true,
+    "anti_family_splitting_rationale_required": true,
+    "single_unadjusted_primary_allowed_only_for_one_decision_without_alternative_success_paths": true,
+    "unallocated_secondary_claims_are_confirmatory": false,
+    "do_not_spend_threshold_required": true
+  },
+  "protected_access": {
+    "p1_outcomes_sealed_until_immutable_d1_freeze": true,
+    "discovery_agent_has_d1_access": false,
+    "d1_causal_feasibility_requires_registered_gate": true,
+    "detailed_d1_feasibility_creates_design_contamination": true,
+    "d1_outcome_access_requires_frozen_batch": true,
+    "d1_outcome_access_requires_clean_confirmation_context": true,
+    "contamination_is_monotone": true,
+    "first_unblinding_role_must_be_clean": true
+  },
+  "design_guardrails": {
+    "governance_metadata_as_predictor": false,
+    "future_or_outcome_derived_predictor": false,
+    "future_or_outcome_derived_eligibility": false,
+    "ordinary_random_cross_validation_for_dependent_market_data": false,
+    "approved_validation_examples": [
+      "PURGED_WALK_FORWARD",
+      "BLOCKED_TIME_SERIES",
+      "PREQUENTIAL"
+    ]
+  },
+  "reproducibility": {
+    "canonical_json_hashing": "sha256",
+    "freeze_hash_required_for_immutable_records": true,
+    "append_only_prefix_guard": true,
+    "substantive_idempotence_guard": true,
+    "volatile_metadata_may_be_excluded_only_by_explicit_field_name": true
+  },
+  "r0_7_scope": {
+    "creates_new_hypotheses": false,
+    "tests_hypotheses": false,
+    "selects_p1_partition": false,
+    "unblinds_p1": false,
+    "purpose": "Install executable governance before R0.8 dry-run and before R1 hypothesis generation."
+  },
+  "protected_period_architecture": {
+    "cohort_registry_required": true,
+    "immutable_named_d1_or_reserve_cohorts_before_unblinding": true,
+    "post_result_boundary_carving": false,
+    "required_identity": [
+      "cohort_id",
+      "role",
+      "start_date_utc",
+      "end_date_utc",
+      "data_version",
+      "canonical_builder_commit",
+      "schema_version",
+      "source_manifest_hashes",
+      "timezone_contract",
+      "unit_contract",
+      "known_coverage_gaps",
+      "freeze_ts_utc"
+    ]
+  }
+}

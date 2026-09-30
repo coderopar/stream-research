@@ -1,0 +1,30 @@
+{
+  "r0_stage": "R0.7",
+  "name": "Research Registries + Guardrails",
+  "implementation_version": "1.0.0",
+  "parent_checkpoint_commit": "6e742f8",
+  "parent_checkpoint_tag": "r0-execution-simulator-v1",
+  "contract": "research/governance/research_registry_contract_v1.json",
+  "protocol_version": "1.2",
+  "scope": "Governance infrastructure only; no hypothesis generation or protected-data access",
+  "registry_format": "append-only canonical JSONL",
+  "p1_read": false,
+  "future_outcomes_read": false,
+  "hypotheses_created": 0,
+  "confirmation_batches_created": 0,
+  "acceptance_state": "LOCAL_ACCEPTANCE_TESTS_PASS_GIT_FREEZE_PENDING",
+  "protected_cohorts_created": 0,
+  "registry_files_installed": 7,
+  "acceptance_evidence": {
+    "r0_7_specific_tests": {
+      "passed": 37,
+      "failed": 0
+    },
+    "full_research_governance_suite": {
+      "passed": 146,
+      "skipped": 3,
+      "failed": 0
+    },
+    "skips": "R0.1 Windows symlink-capability tests only"
+  }
+}
