@@ -1,0 +1,84 @@
+{
+  "contract_id": "R0_DRY_RUN_CONTRACT_V1",
+  "protocol_version": "1.2",
+  "purpose": "Exercise the complete governed research workflow end to end on D0 before the adversarial R0 acceptance audit.",
+  "non_promotable": true,
+  "hypothesis_identity": "HYP-R08DRY001@1",
+  "production_registries_must_remain_unchanged": true,
+  "protected_data": {
+    "p1_market_data_read": false,
+    "p1_outcome_read": false,
+    "p1_status_required": "SEALED_OUTCOME_UNSEEN",
+    "real_d1_cohort_created": false,
+    "real_confirmation_unblinding": false
+  },
+  "feature": {
+    "source": "R0.5 trade_buckets_1s",
+    "window": "fixed trailing 10 seconds [-10s,0s)",
+    "definition": "normalized raw buyer_is_maker false-minus-true quantity balance",
+    "threshold": 0.0,
+    "scientific_interpretation": "none; plumbing state only",
+    "searched_or_tuned_from_outcomes": false
+  },
+  "eligibility": {
+    "required": [
+      "R0.3/R0.5 governed clock available",
+      "R0.5 fine trade history AVAILABLE",
+      "R0.6 sequence-valid executable book AVAILABLE",
+      "R0.6 direction-specific audit fill complete",
+      "fixed test feature available"
+    ],
+    "future_fields_allowed": false,
+    "outcome_observability_separate": true
+  },
+  "outcome": {
+    "source": "R0.3 corrected D0 outcomes",
+    "fixed_horizon_sec": 300,
+    "attached_after_eligibility_freeze": true,
+    "boundary_censoring_changes_eligibility": false
+  },
+  "dependence": {
+    "primary_unit": "R0.4 conservative_inference_cluster_id",
+    "contrast": "equal-weight within-cluster state-true minus state-false mean",
+    "bootstrap": "deterministic cluster bootstrap",
+    "confirmatory_claim": false
+  },
+  "execution": {
+    "source": "R0.6 audit_zero_latency_state",
+    "profile": "ZERO_LATENCY_AUDIT_ONLY",
+    "notional": "1000 USDT AUDIT ONLY",
+    "economic_realism_claim": false,
+    "mechanical_net_proxy": "R0.3 directional return minus R0.6 entry crossing cost only; no exit-depth claim"
+  },
+  "position_state_machine": {
+    "states": ["FLAT", "OPEN"],
+    "entry": "state true while causally eligible and FLAT",
+    "holding_period_sec": 300,
+    "repeated_or_opposite_signal_while_open": "IGNORE",
+    "max_concurrent_positions": 1
+  },
+  "registry_rehearsal": {
+    "namespace": "isolated R0.8 output registries",
+    "production_registry_write": false,
+    "lifecycle": ["IDEA", "FEASIBLE", "EXPLORATORY_CANDIDATE", "REGISTERED_CANDIDATE", "SCIENTIFIC_ONLY"],
+    "synthetic_confirmation_objects": true,
+    "synthetic_objects_never_authorize_real_d1_access": true
+  },
+  "forbidden_negative_controls": [
+    "P1 outcome access",
+    "Discovery Agent protected D1 metadata access",
+    "future-derived predictor",
+    "future-derived eligibility",
+    "random cross-validation",
+    "same-version material mutation",
+    "terminal-version rescue"
+  ],
+  "acceptance": {
+    "same-input_substantive_idempotence": true,
+    "parent_artifact_hashes_verified": true,
+    "production_registry_hashes_unchanged": true,
+    "forbidden_controls_fail_closed": true,
+    "classification_forced": "SCIENTIFIC_ONLY",
+    "research_readme_update_required": true
+  }
+}

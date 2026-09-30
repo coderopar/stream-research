@@ -186,6 +186,27 @@ R0 is not intended to prove a trading strategy. Its purpose is to make the resea
 
 **Next step:** Freeze R0.7 in Git, then run R0.8 as an end-to-end dry run of the research machine on D0.
 
+## R0.8 — Full dry run on D0
+
+**Question:** Do the individually accepted R0 components actually work together as one governed research workflow before we start generating fresh hypotheses?
+
+**What changed:** An end-to-end D0 integration runner was added. It verifies accepted parent hashes, creates one fixed non-promotable causal test state from R0.5 trade buckets, freezes eligibility before attaching future observability, uses the R0.4 conservative dependence unit, requires R0.6 executable-book coverage, applies a one-position-at-a-time 5-minute state machine, rehearses R0.7 registration in an isolated namespace, and red-teams the main forbidden paths.
+
+**Why it matters:** Passing unit tests for clocks, state, execution, dependence, and governance separately is not enough. Research can still fail at the seams—for example if outcome availability silently changes eligibility, if overlapping signals become independent trades, if a dry-run hypothesis mutates production registries, or if protected-data guards are bypassed by the integrated workflow.
+
+**Status:** PASS — local acceptance complete; Git freeze pending. The corrected full-D0 implementation ran twice with identical substantive hash `d7024f938942fd35241ce8c37148622032db24ba929a513f754167cf343066fd`; the R0.8-specific suite passed 22/22 tests, and the full research-governance suite passed 168 tests with 3 known Windows symlink-capability skips and zero failures.
+
+**Scientific interpretation:** The R0.8 state is intentionally synthetic plumbing, not a newly proposed market mechanism or trading signal. Its D0 result is permanently non-promotable and the lifecycle terminates `SCIENTIFIC_ONLY` regardless of effect direction or magnitude.
+
+**Acceptance correction:** The first real D0 run exposed a summary-only risk bug: R0.3 stores MAE as a non-negative adverse-excursion magnitude, but R0.8 initially took the minimum when reporting `position_worst_mae_bps`. The underlying 2,836 entered positions had valid MAE variation (median about 9.60 bps; maximum about 209.76 bps). The analysis population, position path, P1 firewall, registry isolation, negative controls, and deterministic substantive hash were unaffected. The builder now uses the maximum non-negative MAE and rejects negative values. The corrected full-D0 rerun completed twice with `position_worst_mae_bps = 209.7608088530789` and identical substantive hashes, so the defect is closed before freeze.
+
+**Known limitation:** R0.8 deliberately reuses the R0.6 zero-latency/1,000-USDT audit execution profile and a mechanical entry-cost proxy. This exercises execution integration but does not create a realistic strategy P&L model. R0.8 also does not decide the real P1/D1 cohort architecture.
+
+**Implication:** The integrated D0 research machine passed its R0.8 gate: causal eligibility remained outcome-blind, P1 was untouched, production registries were unchanged, overlapping exposure was controlled, 7/7 negative controls failed closed, and corrected same-implementation reruns were deterministic. This does not validate any trading hypothesis; it permits the infrastructure to proceed to R0.9 adversarial acceptance review.
+
+**Next step:** Freeze the accepted R0.8 step in Git, then perform R0.9 — Adversarial R0 Acceptance Audit.
+
+
 ---
 
 ## R0 remaining gates
@@ -200,3 +221,6 @@ R0 is complete only after these integration/adversarial gates pass. Passing isol
 ## After R0
 
 R1 begins fresh hypothesis-universe generation. The repaired 7M direction remains one historical D0 lineage branch, not the mandatory path for new research. Fresh hypothesis generation may introduce new candidate definitions, causal market states, interaction structures, data families, predictive models, and economic mechanisms, provided they remain inside the governed D0 research process until frozen for protected confirmation.
+
+
+R0.8 acceptance also hardened idempotence after the MAE summary correction: substantive equality is now required only for the same accepted parents and the same implementation fingerprint; a legitimate code/contract correction creates a new baseline while true same-implementation nondeterminism still fails closed.

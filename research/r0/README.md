@@ -131,3 +131,28 @@ until the position, execution, benchmark/MEE, dependence, risk, evidence-control
 D1-feasibility and fresh-context adversarial-review requirements are complete.
 
 Acceptance evidence on the Windows development environment: R0.7-specific tests 37/37 passed; the full `tests/research_governance` suite passed 146 tests with 3 R0.1 symlink-capability skips and zero failures. R0.7 remains to be frozen in Git after documentation review.
+
+## R0.8 — Full dry run on D0
+
+Implemented by:
+
+- `src/research_core/dry_run/`
+- `research/governance/r0_dry_run_contract_v1.json`
+- `research/r0/dry_run/`
+- `tests/research_governance/test_r0_full_dry_run.py`
+
+R0.8 integrates the accepted R0.3-R0.7 machinery using one deliberately
+non-promotable D0 plumbing hypothesis. It verifies parent hashes, builds a fixed
+causal test state from R0.5, freezes eligibility before opening D0 outcomes,
+uses the R0.4 conservative dependence unit, requires R0.6 executable-book
+coverage, applies a one-position-at-a-time state machine, rehearses R0.7
+registration in an isolated namespace, and proves forbidden research paths fail
+closed. The synthetic hypothesis is forced to terminate `SCIENTIFIC_ONLY`
+regardless of its D0 descriptive result. Production registries and P1 remain
+untouched.
+
+R0.8 local acceptance is PASS; Git freeze is pending. The corrected full-D0 build preserved all 7,067 candidates, had 7,031 governed/causally eligible rows, entered 2,836 non-overlapping positions from 3,453 state-true rows, blocked all 7/7 forbidden-action controls, made zero production-registry mutations, and read neither P1 market data nor P1 outcomes. The MAE summary-only defect was corrected before freeze; the final position-level worst MAE is 209.7608088530789 bps.
+
+The corrected implementation ran twice with identical substantive hash `d7024f938942fd35241ce8c37148622032db24ba929a513f754167cf343066fd`. R0.8 acceptance also hardened idempotence: substantive equality is required only for the same accepted parents and the same implementation fingerprint; a legitimate code/contract correction creates a new baseline while true same-implementation nondeterminism still fails closed.
+
+Acceptance evidence on the Windows development environment: R0.8-specific tests 22/22 passed; the full `tests/research_governance` suite passed 168 tests with 3 known R0.1 symlink-capability skips and zero failures.

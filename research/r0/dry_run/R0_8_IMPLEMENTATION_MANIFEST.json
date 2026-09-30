@@ -1,0 +1,66 @@
+{
+  "phase": "R0.8",
+  "name": "Full dry run on D0",
+  "protocol_version": "1.2",
+  "implementation_status": "LOCAL_ACCEPTANCE_PASS_GIT_FREEZE_PENDING",
+  "evidentiary_role": "R0_INTEGRATION_DRY_RUN_D0_ONLY_NON_PROMOTABLE",
+  "reads_real_p1_market_data": false,
+  "reads_real_p1_outcomes": false,
+  "mutates_production_registries": false,
+  "creates_real_hypotheses": false,
+  "creates_real_confirmation_cohorts": false,
+  "fixed_test_hypothesis": "HYP-R08DRY001@1",
+  "fixed_classification": "SCIENTIFIC_ONLY",
+  "implementation_files": [
+    "src/research_core/dry_run/__init__.py",
+    "src/research_core/dry_run/analysis.py",
+    "research/governance/r0_dry_run_contract_v1.json",
+    "research/r0/dry_run/run_full_d0_dry_run.py",
+    "research/r0/dry_run/README.md",
+    "tests/research_governance/test_r0_full_dry_run.py"
+  ],
+  "required_parent_phases": [
+    "R0.3",
+    "R0.4",
+    "R0.5",
+    "R0.6",
+    "R0.7"
+  ],
+  "next_phase_after_acceptance": "R0.9 — Adversarial R0 acceptance audit",
+  "acceptance_correction": {
+    "defect_id": "R0.8-MAE-SUMMARY-001",
+    "scope": "SUMMARY_ONLY",
+    "description": "position_worst_mae_bps used min() although R0.3 MAE is a non-negative adverse-excursion magnitude; corrected to max() and negative values now fail closed",
+    "affected_scientific_artifacts": false,
+    "requires_full_d0_rerun_before_freeze": false,
+    "closure": "Corrected full-D0 implementation reran twice with stable substantive hash and corrected maximum non-negative position MAE."
+  },
+  "builder_version": "1.0.1",
+  "pre_freeze_corrections": [
+    "MAE worst-risk summary uses maximum non-negative magnitude among entered positions.",
+    "Idempotence is keyed to accepted parent hashes plus an explicit implementation fingerprint; pre-fix manifests do not block corrected baselines."
+  ],
+  "local_acceptance_evidence": {
+    "r08_specific_tests_passed": 22,
+    "r08_specific_tests_failed": 0,
+    "full_research_governance_tests_passed": 168,
+    "full_research_governance_tests_skipped": 3,
+    "full_research_governance_tests_failed": 0,
+    "known_skips": "R0.1 Windows symlink-capability tests only",
+    "full_d0_runs_with_matching_corrected_hash": 2,
+    "substantive_run_hash": "d7024f938942fd35241ce8c37148622032db24ba929a513f754167cf343066fd",
+    "candidate_rows": 7067,
+    "governed_clock_rows": 7031,
+    "causally_eligible_rows": 7031,
+    "state_true_rows": 3453,
+    "positions_entered": 2836,
+    "ignored_while_position_open": 617,
+    "forbidden_controls_passed": 7,
+    "forbidden_controls_total": 7,
+    "production_registry_mutations": 0,
+    "p1_read": false,
+    "p1_outcome_read": false,
+    "position_worst_mae_bps": 209.7608088530789,
+    "classification": "SCIENTIFIC_ONLY"
+  }
+}
