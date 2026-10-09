@@ -1,0 +1,63 @@
+{
+  "contract_id": "R0_ACCEPTANCE_AUDIT_CONTRACT_V1",
+  "protocol_version": "1.2",
+  "purpose": "Falsification-first acceptance audit of the complete R0 scientific infrastructure before fresh R1 hypothesis generation.",
+  "accepted_parent": {
+    "step": "R0.8",
+    "commit": "53eac195e83b5fe08397ca50ffc1aadbd201c9a1",
+    "tag": "r0-full-d0-dry-run-v1",
+    "substantive_run_hash": "d7024f938942fd35241ce8c37148622032db24ba929a513f754167cf343066fd"
+  },
+  "audit_principle": "Treat every R0 PASS/frozen label as a researcher claim until checked against code, manifests, registries, runtime evidence, and Git lineage.",
+  "no_new_hypothesis_testing": true,
+  "p1_market_data_read": false,
+  "p1_outcome_read": false,
+  "required_domains": [
+    "GIT_FREEZE_LINEAGE",
+    "PROTOCOL_AND_PROVENANCE",
+    "P1_FIREWALL",
+    "CAUSAL_CLOCKS_AND_BOUNDARIES",
+    "FEATURE_OUTCOME_SEPARATION",
+    "DEPENDENCE_AND_PSEUDOREPLICATION",
+    "MARKET_STATE_ASOF",
+    "EXECUTION_BOUNDARIES",
+    "REGISTRY_AND_LIFECYCLE",
+    "END_TO_END_REPRODUCIBILITY",
+    "DOCUMENTATION_AND_MANIFEST_CONSISTENCY",
+    "RESIDUAL_LIMITATIONS"
+  ],
+  "finding_statuses": ["PASS", "FINDING", "ACCEPTED_LIMITATION", "NOT_TESTABLE"],
+  "severities": ["INFO", "MINOR", "MAJOR", "BLOCKER"],
+  "r1_gate": {
+    "blocker_finding": "NO_GO_BLOCKER",
+    "other_blocking_finding": "REVIEW_REQUIRED",
+    "accepted_limitations_only": "PASS_WITH_ACCEPTED_LIMITATIONS",
+    "no_open_findings": "PASS"
+  },
+  "required_frozen_tags": [
+    "r0-governance-provenance-v1",
+    "r0-causal-clock-substrate-v1",
+    "r0-dependence-framework-v1",
+    "r0-causal-market-state-v1",
+    "r0-execution-simulator-v1",
+    "r0-full-d0-dry-run-v1"
+  ],
+  "known_nonblocking_limitations_to_reassess": [
+    "36 of 7067 historical D0 candidates have unrecoverable governed clocks and remain explicit CLOCK_UNAVAILABLE",
+    "candidate dependence is severe at longer horizons and must govern later inference",
+    "R0.5 v1 implements PERPS_TRADES only; other state families remain deferred",
+    "R0.6 audit coverage uses zero added latency and 1000 USDT audit notional, not a realistic strategy execution profile",
+    "R0.6 sequence-gap audit does not persist exact recovery-duration intervals",
+    "negative proof of every historical P1 filesystem read is procedural rather than forensic"
+  ],
+  "final_acceptance_requires": [
+    "zero open R1-blocking findings",
+    "P1 remains SEALED and outcome-unseen",
+    "R0.8 accepted parent tag and substantive hash verified",
+    "critical frozen tags form an ancestor chain",
+    "production research registries show no real hypotheses or confirmation cohorts before R1",
+    "documentation and implementation manifests accurately describe frozen acceptance state",
+    "all accepted limitations are explicit and carried forward",
+    "research/README.md updated in the R0.9 research-step commit"
+  ]
+}

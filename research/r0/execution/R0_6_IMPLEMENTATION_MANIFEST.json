@@ -6,7 +6,10 @@
   "parent_checkpoint_tag": "r0-causal-market-state-v1",
   "schema_name": "r0_execution_simulator_v1",
   "scope": "D0 execution infrastructure only",
-  "canonical_families": ["perps/book_snapshots", "perps/depth_updates"],
+  "canonical_families": [
+    "perps/book_snapshots",
+    "perps/depth_updates"
+  ],
   "audit_profile": "ZERO_LATENCY_AUDIT_ONLY",
   "audit_quote_notional_usdt": 1000.0,
   "passive_fill_model": false,
@@ -17,5 +20,20 @@
   "candidate_count_expected": 7067,
   "governed_clock_count_expected": 7031,
   "clock_unavailable_expected": 36,
-  "acceptance_state": "IMPLEMENTED_NOT_YET_RUNTIME_ACCEPTED"
+  "acceptance_state": "PASS_FROZEN",
+  "accepted_checkpoint": {
+    "commit": "6e742f8",
+    "tag": "r0-execution-simulator-v1"
+  },
+  "accepted_runtime_evidence": {
+    "candidate_rows": 7067,
+    "governed_clock_rows": 7031,
+    "clock_unavailable_rows": 36,
+    "executable_book_available_governed_rows": 7031,
+    "technical_buy_complete_rows": 7031,
+    "technical_sell_complete_rows": 7031,
+    "bootstrap_bridge_failures": 0,
+    "p1_read": false,
+    "future_outcomes_read": false
+  }
 }

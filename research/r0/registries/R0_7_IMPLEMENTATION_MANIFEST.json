@@ -12,7 +12,7 @@
   "future_outcomes_read": false,
   "hypotheses_created": 0,
   "confirmation_batches_created": 0,
-  "acceptance_state": "LOCAL_ACCEPTANCE_TESTS_PASS_GIT_FREEZE_PENDING",
+  "acceptance_state": "PASS_FROZEN",
   "protected_cohorts_created": 0,
   "registry_files_installed": 7,
   "acceptance_evidence": {
@@ -26,5 +26,9 @@
       "failed": 0
     },
     "skips": "R0.1 Windows symlink-capability tests only"
+  },
+  "accepted_checkpoint": {
+    "commit": "c02364e86aee2ec8d6d7eb9821f65e2a5f30d0c8",
+    "tag": "r0-research-guardrails-v1"
   }
 }

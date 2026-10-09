@@ -48,7 +48,7 @@ r0_0_gate:
     - P1_declared_protected
     - P1_outcomes_declared_unseen
     - outcome_access_register_initialized
-  status: IMPLEMENTED_PENDING_LOCAL_REPOSITORY_INSTALL
+  status: PASS_FROZEN
 
 r0_1_gate:
   required:
@@ -61,4 +61,4 @@ r0_1_gate:
     - schema_inventory_generated_or_explicitly_unavailable
     - P1_end_date_discovered_from_canonical_partitions
     - no_noncanonical_paths_scanned
-  status: PENDING_LOCAL_SCAN
+  status: PASS_FROZEN

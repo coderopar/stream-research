@@ -176,7 +176,7 @@ R0 is not intended to prove a trading strategy. Its purpose is to make the resea
 
 **Why it matters:** Scientific discipline must be encoded in the workflow rather than depend only on memory. A failed hypothesis must remain failed in that version; a material redesign must create a descendant version; D1 access and contamination must be auditable.
 
-**Status:** IMPLEMENTED; local acceptance tests PASS; Git freeze pending.
+**Status:** PASS / frozen at commit `c02364e86aee2ec8d6d7eb9821f65e2a5f30d0c8`, tag `r0-research-guardrails-v1`.
 
 **Evidence:** R0.7-specific suite: 37/37 passed. Full `tests/research_governance` suite: 146 passed, 3 skipped, 0 failed. The three skips are R0.1 symlink tests unavailable on the current Windows platform. No hypotheses, confirmation batches, protected cohorts, P1 reads, or protected outcome reads were created by R0.7.
 
@@ -184,7 +184,7 @@ R0 is not intended to prove a trading strategy. Its purpose is to make the resea
 
 **Implication:** R1 can generate ideas broadly in D0 while preserving permanent ancestry and preventing those exploratory choices from masquerading as independent D1 confirmation.
 
-**Next step:** Freeze R0.7 in Git, then run R0.8 as an end-to-end dry run of the research machine on D0.
+**Next step:** R0.7 was frozen successfully; proceed through R0.8 integration and R0.9 adversarial acceptance.
 
 ## R0.8 — Full dry run on D0
 
@@ -194,7 +194,7 @@ R0 is not intended to prove a trading strategy. Its purpose is to make the resea
 
 **Why it matters:** Passing unit tests for clocks, state, execution, dependence, and governance separately is not enough. Research can still fail at the seams—for example if outcome availability silently changes eligibility, if overlapping signals become independent trades, if a dry-run hypothesis mutates production registries, or if protected-data guards are bypassed by the integrated workflow.
 
-**Status:** PASS — local acceptance complete; Git freeze pending. The corrected full-D0 implementation ran twice with identical substantive hash `d7024f938942fd35241ce8c37148622032db24ba929a513f754167cf343066fd`; the R0.8-specific suite passed 22/22 tests, and the full research-governance suite passed 168 tests with 3 known Windows symlink-capability skips and zero failures.
+**Status:** PASS / frozen at commit `53eac195e83b5fe08397ca50ffc1aadbd201c9a1`, tag `r0-full-d0-dry-run-v1`. The corrected full-D0 implementation ran twice with identical substantive hash `d7024f938942fd35241ce8c37148622032db24ba929a513f754167cf343066fd`; the R0.8-specific suite passed 22/22 tests, and the full research-governance suite passed 168 tests with 3 known Windows symlink-capability skips and zero failures.
 
 **Scientific interpretation:** The R0.8 state is intentionally synthetic plumbing, not a newly proposed market mechanism or trading signal. Its D0 result is permanently non-promotable and the lifecycle terminates `SCIENTIFIC_ONLY` regardless of effect direction or magnitude.
 
@@ -204,23 +204,38 @@ R0 is not intended to prove a trading strategy. Its purpose is to make the resea
 
 **Implication:** The integrated D0 research machine passed its R0.8 gate: causal eligibility remained outcome-blind, P1 was untouched, production registries were unchanged, overlapping exposure was controlled, 7/7 negative controls failed closed, and corrected same-implementation reruns were deterministic. This does not validate any trading hypothesis; it permits the infrastructure to proceed to R0.9 adversarial acceptance review.
 
-**Next step:** Freeze the accepted R0.8 step in Git, then perform R0.9 — Adversarial R0 Acceptance Audit.
+**Next step:** R0.8 was frozen successfully; perform R0.9 — Adversarial R0 Acceptance Audit.
 
+
+## R0.9 — Adversarial R0 acceptance audit
+
+**Question:** After all R0 components have been built and the end-to-end dry run has passed, does the complete scientific infrastructure actually survive a falsification-first review strongly enough to open fresh D0 hypothesis generation in R1?
+
+**What changed:** R0.9 installs a finding-ledger audit that independently rechecks Git freeze lineage, the frozen Protocol-v1.2 hash, canonical provenance identity, the P1 firewall and access ledger, production-registry cleanliness, the accepted R0.8 runtime hash and implementation fingerprint, R0.3–R0.6 parent hashes, critical cross-component governance contracts, and consistency between the living research record and implementation manifests. Known scientific limitations are carried forward explicitly rather than disappearing behind a final PASS label.
+
+**Why it matters:** R0.8 proved the components can work together. R0.9 asks a different question: whether the entire reconstructed research process can withstand an attempt to falsify its readiness. A technically green test suite is not sufficient if freeze provenance is ambiguous, documentation contradicts Git, protected-data status is unclear, parent artifacts drifted, or accepted limitations were silently forgotten.
+
+**Status:** `PASS_WITH_ACCEPTED_LIMITATIONS`. The first audit correctly returned `REVIEW_REQUIRED` because it found three MAJOR documentation/acceptance-metadata inconsistencies (`R09-DOC-001` through `R09-DOC-003`). Those findings were remediated without changing scientific artifacts. Two consecutive post-remediation audits then produced the same substantive hash `3faab2f04bb4902d19d90a0a9c6df49b42e62b648572c6316110ea869b87accd` and a final ledger of 17 PASS, 6 accepted limitations, 0 open findings, 0 majors, 0 blockers, 0 `NOT_TESTABLE`, and 0 R1-blocking rows.
+
+**Protection:** R0.9 performed no new hypothesis testing and read neither P1 market partitions nor P1 outcomes. It audited governance metadata and accepted D0 artifacts only.
+
+**Acceptance evidence:** R0.9-specific tests passed 26/26. The full `tests/research_governance` suite passed 194 tests with 3 known Windows symlink-capability skips and zero failures. The six carried limitations were reviewed explicitly and accepted as non-blocking for D0-only R1 hypothesis generation; they remain binding constraints for later stages where relevant.
+
+**Implication:** The R0 research foundation has survived its final falsification-first gate. This does not validate a trading hypothesis; it establishes that the governed research machine is fit to begin fresh D0 hypothesis generation.
+
+**Next step:** Freeze this accepted R0.9 state in Git, then open R1 — Fresh Hypothesis Universe Generation.
 
 ---
 
-## R0 remaining gates
+## R0 status
 
-```text
-R0.8  Full dry run on D0
-R0.9  Adversarial R0 acceptance audit
-```
-
-R0 is complete only after these integration/adversarial gates pass. Passing isolated component tests is necessary but not sufficient.
+R0 is complete with accepted limitations once the final R0.9 acceptance state above is committed and tagged. No scientific R1 blocker remains.
 
 ## After R0
 
-R1 begins fresh hypothesis-universe generation. The repaired 7M direction remains one historical D0 lineage branch, not the mandatory path for new research. Fresh hypothesis generation may introduce new candidate definitions, causal market states, interaction structures, data families, predictive models, and economic mechanisms, provided they remain inside the governed D0 research process until frozen for protected confirmation.
+R1 begins fresh hypothesis-universe generation. The repaired 7M direction remains one historical D0 lineage branch, not the mandatory path for new research. Fresh hypothesis generation may introduce new candidate definitions, causal market states, interaction structures, data families, predictive models, and economic mechanisms, provided they remain inside the governed D0 research process until frozen for protected confirmation. A hypothesis that depends on a market-state family not yet implemented by the governed state store may be generated in R1, but it cannot be tested ad hoc in R2; the corresponding causal state capability must first be added under governance.
 
 
 R0.8 acceptance also hardened idempotence after the MAE summary correction: substantive equality is now required only for the same accepted parents and the same implementation fingerprint; a legitimate code/contract correction creates a new baseline while true same-implementation nondeterminism still fails closed.
+
+**R0.9 rerun hardening:** The first post-remediation rerun exposed an audit-identity defect rather than scientific nondeterminism. The pre-remediation audit hash was being compared with a repository whose audited governance/documentation state had intentionally changed. R0.9 now fingerprints the audited governance inputs, production-registry state, accepted R0.8 runtime manifest, Git HEAD, and frozen tag resolutions. Idempotence is enforced only when accepted parent, audit implementation, and audited repository state are all unchanged. This change does not read P1 market data or outcomes and does not alter any R0 scientific artifact.

@@ -2,7 +2,7 @@
   "phase": "R0.8",
   "name": "Full dry run on D0",
   "protocol_version": "1.2",
-  "implementation_status": "LOCAL_ACCEPTANCE_PASS_GIT_FREEZE_PENDING",
+  "implementation_status": "PASS_FROZEN",
   "evidentiary_role": "R0_INTEGRATION_DRY_RUN_D0_ONLY_NON_PROMOTABLE",
   "reads_real_p1_market_data": false,
   "reads_real_p1_outcomes": false,
@@ -26,7 +26,7 @@
     "R0.6",
     "R0.7"
   ],
-  "next_phase_after_acceptance": "R0.9 — Adversarial R0 acceptance audit",
+  "next_phase_after_acceptance": "R0.9 \u2014 Adversarial R0 acceptance audit",
   "acceptance_correction": {
     "defect_id": "R0.8-MAE-SUMMARY-001",
     "scope": "SUMMARY_ONLY",
@@ -62,5 +62,9 @@
     "p1_outcome_read": false,
     "position_worst_mae_bps": 209.7608088530789,
     "classification": "SCIENTIFIC_ONLY"
+  },
+  "accepted_checkpoint": {
+    "commit": "53eac195e83b5fe08397ca50ffc1aadbd201c9a1",
+    "tag": "r0-full-d0-dry-run-v1"
   }
 }

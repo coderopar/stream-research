@@ -1,0 +1,101 @@
+{
+  "phase": "R0.9",
+  "name": "Adversarial R0 Acceptance Audit",
+  "protocol_version": "1.2",
+  "implementation_status": "LOCAL_ACCEPTANCE_PASS_WITH_ACCEPTED_LIMITATIONS_GIT_FREEZE_PENDING",
+  "evidentiary_role": "R0_FALSIFICATION_FIRST_INFRASTRUCTURE_ACCEPTANCE_GATE",
+  "accepted_parent": {
+    "commit": "53eac195e83b5fe08397ca50ffc1aadbd201c9a1",
+    "tag": "r0-full-d0-dry-run-v1",
+    "substantive_run_hash": "d7024f938942fd35241ce8c37148622032db24ba929a513f754167cf343066fd"
+  },
+  "new_hypothesis_testing": false,
+  "p1_market_data_read": false,
+  "p1_outcome_read": false,
+  "mutates_production_registries": false,
+  "automatic_pass_allowed_with_blocking_findings": false,
+  "finding_ledger_required": true,
+  "manual_review_after_machine_audit_required": true,
+  "implementation_files": [
+    "src/research_core/audit/__init__.py",
+    "src/research_core/audit/checks.py",
+    "research/governance/r0_acceptance_audit_contract_v1.json",
+    "research/r0/audit/run_r0_acceptance_audit.py",
+    "research/r0/audit/README.md",
+    "tests/research_governance/test_r0_acceptance_audit.py"
+  ],
+  "report_outputs": [
+    "reports/r0_acceptance_audit_v1/findings.csv",
+    "reports/r0_acceptance_audit_v1/audit_summary.json"
+  ],
+  "expected_first_run_behavior": "May legitimately return REVIEW_REQUIRED if cross-component metadata or freeze-documentation inconsistencies are discovered.",
+  "final_acceptance_condition": "Zero R1-blocking findings after remediation, explicit accepted limitations, clean full governance regression, and final research/README.md update.",
+  "builder_version": "1.0.1",
+  "first_real_audit": {
+    "overall_status": "REVIEW_REQUIRED",
+    "substantive_audit_hash": "a85ea4c119c9e669191edd8e2f5fdacfe8f73e4e0c6045f0c4dca6fcf63bffdf",
+    "counts": {
+      "total": 23,
+      "passes": 14,
+      "accepted_limitations": 6,
+      "open_findings": 3,
+      "majors": 3,
+      "blockers": 0,
+      "not_testable": 0,
+      "blocking_r1": 3
+    },
+    "finding_ids": [
+      "R09-DOC-001",
+      "R09-DOC-002",
+      "R09-DOC-003"
+    ],
+    "finding_class": "DOCUMENTATION_AND_ACCEPTANCE_METADATA_ONLY",
+    "p1_market_data_read": false,
+    "p1_outcome_read": false
+  },
+  "remediation": {
+    "scope": "METADATA_ONLY",
+    "scientific_artifacts_changed": false,
+    "protocol_document_sha256_changed": false,
+    "p1_declarations_changed": false,
+    "rerun_required": false,
+    "rerun_result": "All three metadata findings closed; final audit PASS_WITH_ACCEPTED_LIMITATIONS."
+  },
+  "idempotence_hardening": {
+    "reason": "The first post-remediation rerun correctly changed findings but was falsely compared with the pre-remediation audit because repository audit inputs were not part of the idempotence identity.",
+    "rule": "Substantive equality is enforced only when accepted parent, R0.9 implementation fingerprint, and audit-input fingerprint are all unchanged.",
+    "p1_market_data_read": false,
+    "p1_outcome_read": false
+  },
+  "final_acceptance": {
+    "overall_status": "PASS_WITH_ACCEPTED_LIMITATIONS",
+    "substantive_audit_hash": "3faab2f04bb4902d19d90a0a9c6df49b42e62b648572c6316110ea869b87accd",
+    "repeat_runs_with_matching_hash": 2,
+    "counts": {
+      "total": 23,
+      "passes": 17,
+      "accepted_limitations": 6,
+      "open_findings": 0,
+      "majors": 0,
+      "minors": 0,
+      "blockers": 0,
+      "not_testable": 0,
+      "blocking_r1": 0
+    },
+    "r09_specific_tests": {
+      "passed": 26,
+      "failed": 0,
+      "skipped": 0
+    },
+    "full_governance_tests": {
+      "passed": 194,
+      "failed": 0,
+      "skipped": 3,
+      "skip_reason": "Known Windows symlink-capability checks from R0.1."
+    },
+    "p1_market_data_read": false,
+    "p1_outcome_read": false,
+    "manual_limitation_review": "Six carried limitations explicitly reviewed; none blocks D0-only R1 hypothesis generation. Each remains binding where relevant in later stages.",
+    "r1_gate": "OPEN_AFTER_GIT_FREEZE"
+  }
+}

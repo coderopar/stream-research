@@ -130,7 +130,7 @@ opens neither protected causal data nor future outcomes. Registration is blocked
 until the position, execution, benchmark/MEE, dependence, risk, evidence-control,
 D1-feasibility and fresh-context adversarial-review requirements are complete.
 
-Acceptance evidence on the Windows development environment: R0.7-specific tests 37/37 passed; the full `tests/research_governance` suite passed 146 tests with 3 R0.1 symlink-capability skips and zero failures. R0.7 remains to be frozen in Git after documentation review.
+Acceptance evidence on the Windows development environment: R0.7-specific tests 37/37 passed; the full `tests/research_governance` suite passed 146 tests with 3 R0.1 symlink-capability skips and zero failures. R0.7 is frozen at commit `c02364e86aee2ec8d6d7eb9821f65e2a5f30d0c8`, tag `r0-research-guardrails-v1`.
 
 ## R0.8 — Full dry run on D0
 
@@ -151,8 +151,29 @@ closed. The synthetic hypothesis is forced to terminate `SCIENTIFIC_ONLY`
 regardless of its D0 descriptive result. Production registries and P1 remain
 untouched.
 
-R0.8 local acceptance is PASS; Git freeze is pending. The corrected full-D0 build preserved all 7,067 candidates, had 7,031 governed/causally eligible rows, entered 2,836 non-overlapping positions from 3,453 state-true rows, blocked all 7/7 forbidden-action controls, made zero production-registry mutations, and read neither P1 market data nor P1 outcomes. The MAE summary-only defect was corrected before freeze; the final position-level worst MAE is 209.7608088530789 bps.
+R0.8 acceptance is PASS and frozen at commit `53eac195e83b5fe08397ca50ffc1aadbd201c9a1`, tag `r0-full-d0-dry-run-v1`. The corrected full-D0 build preserved all 7,067 candidates, had 7,031 governed/causally eligible rows, entered 2,836 non-overlapping positions from 3,453 state-true rows, blocked all 7/7 forbidden-action controls, made zero production-registry mutations, and read neither P1 market data nor P1 outcomes. The MAE summary-only defect was corrected before freeze; the final position-level worst MAE is 209.7608088530789 bps.
 
 The corrected implementation ran twice with identical substantive hash `d7024f938942fd35241ce8c37148622032db24ba929a513f754167cf343066fd`. R0.8 acceptance also hardened idempotence: substantive equality is required only for the same accepted parents and the same implementation fingerprint; a legitimate code/contract correction creates a new baseline while true same-implementation nondeterminism still fails closed.
 
 Acceptance evidence on the Windows development environment: R0.8-specific tests 22/22 passed; the full `tests/research_governance` suite passed 168 tests with 3 known R0.1 symlink-capability skips and zero failures.
+
+## R0.9 — Adversarial R0 acceptance audit
+
+Implemented by:
+
+- `src/research_core/audit/`
+- `research/governance/r0_acceptance_audit_contract_v1.json`
+- `research/r0/audit/`
+- `tests/research_governance/test_r0_acceptance_audit.py`
+
+R0.9 is the final falsification-first infrastructure gate before R1. It does not search for market hypotheses or inspect P1. It re-verifies the R0 freeze lineage, Protocol-v1.2 identity, canonical provenance, P1 seal/access ledger, production-registry cleanliness, accepted R0.8 runtime and implementation fingerprint, R0.3-R0.6 parent hashes, critical contracts, documentation/manifest consistency, and all carried-forward scientific limitations.
+
+The first real audit is intentionally permitted to return `REVIEW_REQUIRED`. Findings are recorded with stable IDs, severity, evidence, remediation and an explicit `blocking_r1` flag. R0 is not complete until the audit is rerun with zero R1-blocking findings and the full research-governance regression remains clean.
+
+The first real R0.9 audit returned `REVIEW_REQUIRED`: 14 PASS rows, 6 accepted limitations, 3 MAJOR R1-blocking findings, 0 blockers and 0 `NOT_TESTABLE`. The three findings were exclusively stale documentation/acceptance metadata (`R09-DOC-001`, `R09-DOC-002`, `R09-DOC-003`). The remediation changed metadata only and left scientific artifacts, Protocol-v1.2 SHA-256, D0 parent artifacts, P1 status, registries and runtime results unchanged.
+
+R0.9 idempotence was hardened after the metadata-remediation rerun: a changed audited governance/documentation state establishes a new audit baseline, while a repeated audit of the same accepted parent + R0.9 implementation + audit-input fingerprint must reproduce the same substantive audit hash or fail closed.
+
+Final acceptance is `PASS_WITH_ACCEPTED_LIMITATIONS`. Two consecutive post-remediation audits produced identical substantive hash `3faab2f04bb4902d19d90a0a9c6df49b42e62b648572c6316110ea869b87accd`. The final ledger contains 17 PASS rows, 6 accepted limitations, 0 open findings, 0 majors, 0 blockers, 0 `NOT_TESTABLE`, and 0 R1-blocking rows. R0.9-specific tests passed 26/26; the full research-governance suite passed 194 tests with the same 3 known Windows symlink-capability skips and zero failures. P1 market data and P1 outcomes remained unread.
+
+The six carried limitations were reviewed explicitly and accepted as non-blocking for D0-only R1 hypothesis generation. They remain binding constraints where relevant in later stages rather than being treated as resolved. R0 is scientifically complete pending only the Git freeze of this R0.9 acceptance state.

@@ -18,6 +18,20 @@
   "candidate_count_expected": 7067,
   "governed_clock_count_expected": 7031,
   "clock_unavailable_expected": 36,
-  "acceptance_state": "IMPLEMENTED_NOT_YET_RUNTIME_ACCEPTED",
-  "performance_patch": "Parquet row-group pruning to candidate-required 30m causal intervals; exact full-day fallback when no prior trade exists inside pruned history."
+  "acceptance_state": "PASS_FROZEN",
+  "performance_patch": "Parquet row-group pruning to candidate-required 30m causal intervals; exact full-day fallback when no prior trade exists inside pruned history.",
+  "accepted_checkpoint": {
+    "commit": "62c99c09f5caef61cdfa1d9f1a70fc0236b28579",
+    "tag": "r0-causal-market-state-v1"
+  },
+  "accepted_runtime_evidence": {
+    "tests_passed": 79,
+    "tests_failed": 0,
+    "candidate_rows": 7067,
+    "governed_clock_rows": 7031,
+    "clock_unavailable_rows": 36,
+    "trade_state_available_governed_rows": 7031,
+    "p1_read": false,
+    "future_outcomes_read": false
+  }
 }
