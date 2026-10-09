@@ -1,0 +1,118 @@
+{
+  "contract_id": "R1_HYPOTHESIS_UNIVERSE_GOVERNANCE_CONTRACT_V1",
+  "protocol_version": "1.2",
+  "accepted_r0_parent": {
+    "commit": "71192f37e8aa44da4c30326048debf65b1ca5792",
+    "tag": "r0-foundation-accepted-v1",
+    "r0_9_status": "PASS_WITH_ACCEPTED_LIMITATIONS",
+    "r0_9_substantive_audit_hash": "3faab2f04bb4902d19d90a0a9c6df49b42e62b648572c6316110ea869b87accd"
+  },
+  "evidentiary_role": "PRE_OUTCOME_HYPOTHESIS_UNIVERSE_GOVERNANCE",
+  "r1_goal": "Generate a broad, auditable D0 hypothesis universe before exploratory testing begins in R2.",
+  "protected_data_firewall": {
+    "p1_market_data_read": false,
+    "p1_outcome_read": false,
+    "d1_read": false,
+    "protected_performance_read": false,
+    "allowed_source_zones": [
+      "NONE",
+      "PUBLIC",
+      "D0",
+      "LEGACY_D0"
+    ],
+    "protected_source_zones_forbidden": [
+      "P1_PROTECTED",
+      "D1",
+      "RESERVE"
+    ]
+  },
+  "generation_modes": {
+    "OUTCOME_BLIND": "Theory, literature, structural data knowledge, mechanism reasoning, user proposals, or model design that did not use observed result values.",
+    "D0_RESULT_INFORMED": "An idea explicitly influenced by observed D0 results; result lineage and influencing datasets must be recorded.",
+    "LEGACY_RESULT_INFORMED": "An idea inherited or reformulated from pre-reset/legacy D0 results; ancestry must remain explicit."
+  },
+  "generation_registry": {
+    "format": "canonical JSON Lines",
+    "append_only": true,
+    "families": "research/governance/universe/families.jsonl",
+    "ideas": "research/governance/universe/ideas.jsonl",
+    "generation_sessions": "research/governance/universe/generation_sessions.jsonl",
+    "material_mutation_in_place": false,
+    "negative_duplicate_and_legacy_lineage_erasure": false
+  },
+  "family_policy": {
+    "family_defined_by_mechanism_not_result": true,
+    "variant_dimensions_must_be_declared": true,
+    "new_family_boundary_rule_required": true,
+    "anti_family_splitting_rationale_required": true,
+    "threshold_horizon_window_variants_do_not_automatically_create_independent_families": true
+  },
+  "idea_policy": {
+    "fresh_outcome_testing_in_r1": false,
+    "numeric_outcome_statistics_embedded_in_idea_packet": false,
+    "result_informed_ideas_allowed_only_with_explicit_lineage": true,
+    "testability_must_be_separate_from_scientific_merit": true,
+    "unsupported_market_state_families_may_be_proposed": true,
+    "unsupported_market_state_families_may_be_tested_ad_hoc_in_r2": false,
+    "promotion_to_permanent_hypothesis_registry_is_explicit": true
+  },
+  "required_idea_fields": [
+    "idea_id",
+    "version",
+    "family_id",
+    "created_at_utc",
+    "title",
+    "scientific_proposition",
+    "economic_mechanism",
+    "relationship_type",
+    "expected_market_response",
+    "causal_state_requirements",
+    "trigger_concept",
+    "candidate_definition_status",
+    "position_concept",
+    "primary_economic_target",
+    "risk_concepts",
+    "execution_dependencies",
+    "generation_mode",
+    "source_refs",
+    "parent_idea_refs",
+    "parent_hypothesis_ids",
+    "legacy_lineage_refs",
+    "derived_from_results",
+    "datasets_that_influenced_design",
+    "infrastructure_assessment",
+    "freeze_hash"
+  ],
+  "promotion_boundary": {
+    "universe_idea_is_not_yet_a_registered_hypothesis": true,
+    "promotion_target": "research/governance/registries/hypothesis_versions.jsonl",
+    "first_governed_lifecycle_stage": "IDEA",
+    "promotion_preserves_family_result_and_dataset_lineage": true,
+    "feasibility_and_registration_gates_remain_owned_by_r0_7": true
+  },
+  "predeclared_generation_lenses": [
+    "THEORY_LITERATURE",
+    "MARKET_MECHANISM",
+    "LEGACY_7M_LINEAGE",
+    "ORDER_BOOK_LIQUIDITY",
+    "PERPS_TRADE_FLOW",
+    "DERIVATIVES_POSITIONING",
+    "CROSS_VENUE",
+    "VOLATILITY_REGIME",
+    "PREDICTIVE_MODEL"
+  ],
+  "universe_freeze_rule": {
+    "r1_9_must_address_every_predeclared_lens": true,
+    "missing_lens_requires_explicit_waiver": true,
+    "outcome_based_pruning_during_generation": false,
+    "family_and_idea_lineage_must_remain_visible": true
+  },
+  "r1_0_scope": {
+    "creates_market_hypotheses": false,
+    "tests_market_hypotheses": false,
+    "reads_d0_outcomes": false,
+    "reads_p1": false,
+    "mutates_r0_7_hypothesis_registry": false,
+    "purpose": "Freeze the R1 generation schema, source provenance, anti-family-splitting rules, coverage lenses, and promotion boundary before R1.1 begins."
+  }
+}

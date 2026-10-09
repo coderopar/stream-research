@@ -1,0 +1,103 @@
+{
+  "phase": "R1.0",
+  "name": "Hypothesis-Generation Governance + Universe Schema",
+  "protocol_version": "1.2",
+  "implementation_status": "LOCAL_ACCEPTANCE_PASS_GIT_FREEZE_PENDING",
+  "accepted_parent": {
+    "commit": "71192f37e8aa44da4c30326048debf65b1ca5792",
+    "tag": "r0-foundation-accepted-v1",
+    "r0_9_status": "PASS_WITH_ACCEPTED_LIMITATIONS",
+    "r0_9_substantive_audit_hash": "3faab2f04bb4902d19d90a0a9c6df49b42e62b648572c6316110ea869b87accd"
+  },
+  "evidentiary_role": "PRE_OUTCOME_HYPOTHESIS_UNIVERSE_GOVERNANCE",
+  "creates_market_hypotheses": false,
+  "tests_market_hypotheses": false,
+  "reads_d0_outcomes": false,
+  "p1_market_data_read": false,
+  "p1_outcome_read": false,
+  "mutates_r0_7_hypothesis_registry": false,
+  "generation_plan": {
+    "session_id": "GEN-R1-UNIVERSE-V1",
+    "version": 1,
+    "freeze_hash": "a6e08574742dc0c029cbe080cc99d751f730f5422f80826ed2e38f2a3b88f148",
+    "status": "FROZEN_PLANNED",
+    "predeclared_lens_count": 9
+  },
+  "new_registry_files": [
+    "research/governance/universe/generation_sessions.jsonl",
+    "research/governance/universe/families.jsonl",
+    "research/governance/universe/ideas.jsonl"
+  ],
+  "implementation_files": [
+    "research/governance/hypothesis_universe_contract_v1.json",
+    "research/governance/universe/README.md",
+    "research/r1/README.md",
+    "research/r1/universe/README.md",
+    "research/r1/universe/validate_hypothesis_universe_governance.py",
+    "src/research_core/hypothesis_universe/__init__.py",
+    "src/research_core/hypothesis_universe/models.py",
+    "src/research_core/hypothesis_universe/guards.py",
+    "tests/research_governance/test_r1_hypothesis_universe_governance.py"
+  ],
+  "acceptance_conditions": [
+    "R0 parent and final R0.9 acceptance hash remain anchored",
+    "P1 remains SEALED / outcome UNSEEN",
+    "R1.0 opens no market or outcome artifacts",
+    "generation session plan is frozen before R1.1",
+    "protected source zones are rejected",
+    "outcome-blind and result-informed provenance cannot be conflated",
+    "family anti-splitting fields are mandatory",
+    "infrastructure/testability is separated from scientific merit",
+    "idea promotion preserves R0.7 genealogy fields without bypassing R0.7 lifecycle gates",
+    "full research-governance regression remains green"
+  ],
+  "next_step": "R1.1 \u2014 Theory / market-mechanism family generation under the frozen R1.0 plan.",
+  "local_validation": {
+    "r1_0_specific_tests": {
+      "passed": 29,
+      "failed": 0,
+      "skipped": 0
+    },
+    "validator": "PASS",
+    "self_test": "PASS",
+    "full_research_governance": {
+      "passed": 217,
+      "failed": 0,
+      "skipped": 9,
+      "skip_reason": "local packaging environment lacks pyarrow; user project environment previously has pyarrow"
+    },
+    "protected_reads": {
+      "d0_outcomes": false,
+      "p1_market_data": false,
+      "p1_outcomes": false
+    }
+  },
+  "user_acceptance": {
+    "status": "PASS",
+    "accepted_at_date": "2026-10-09",
+    "r1_0_specific_tests": {
+      "passed": 29,
+      "failed": 0,
+      "skipped": 0
+    },
+    "validator": "PASS",
+    "full_research_governance": {
+      "passed": 223,
+      "failed": 0,
+      "skipped": 3,
+      "skip_reason": "known Windows symlink-capability tests from R0.1"
+    },
+    "registry_state": {
+      "family_rows": 0,
+      "idea_rows": 0,
+      "generation_session_rows": 1
+    },
+    "protected_reads": {
+      "d0_outcomes": false,
+      "p1_market_data": false,
+      "p1_outcomes": false
+    },
+    "p1_status": "SEALED_OUTCOME_UNSEEN",
+    "git_freeze": "PENDING"
+  }
+}

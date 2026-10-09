@@ -229,7 +229,29 @@ R0 is not intended to prove a trading strategy. Its purpose is to make the resea
 
 ## R0 status
 
-R0 is complete with accepted limitations once the final R0.9 acceptance state above is committed and tagged. No scientific R1 blocker remains.
+R0 is complete with accepted limitations and frozen at commit `71192f37e8aa44da4c30326048debf65b1ca5792`, tag `r0-foundation-accepted-v1`. No scientific R1 blocker remains.
+
+# R1 — Fresh hypothesis-universe generation
+
+R1 uses the accepted R0 machinery to generate a broad, auditable universe of BTCUSDT research ideas before exploratory outcome testing begins in R2. The repaired 7M path is one lineage branch, not the default or mandatory research direction.
+
+## R1.0 — Hypothesis-generation governance + universe schema
+
+**Question:** Before generating fresh hypotheses, what record structure and stopping rules prevent brainstorming, legacy-result influence, family splitting, implementation convenience, or hidden outcome use from becoming undocumented researcher degrees of freedom?
+
+**What changed:** R1.0 adds append-only pre-hypothesis registries for generation sessions, conceptual families, and idea packets; explicit `OUTCOME_BLIND`, `D0_RESULT_INFORMED`, and `LEGACY_RESULT_INFORMED` provenance; anti-family-splitting rules; causal-state / trigger / position / risk / execution concepts; infrastructure-testability status separate from scientific merit; and an explicit adapter into the permanent R0.7 `HYP-*` registry. A frozen generation plan predeclares nine lenses that must be addressed before R1.9 can freeze the universe.
+
+**Why it matters:** R1 should be broad enough to generate unsupported or unconventional ideas without allowing favorable D0 results, existing code, or threshold/horizon variants to masquerade as independent mechanisms. A raw idea must not receive the status of a registered hypothesis merely because it was written down.
+
+**Protection:** R1.0 reads no D0 outcomes, P1 market data, P1 outcomes, or protected performance. It creates no BTCUSDT hypothesis families or market ideas and does not mutate the permanent R0.7 hypothesis registry. P1 remains sealed.
+
+**Known limitation:** R1.0 governs how ideas are recorded; it does not guarantee that later R1 ideas are insightful. Conceptual family boundaries still require scientific judgment and are therefore reviewed again at R1.9.
+
+**Implication:** R1.1-R1.8 can generate ideas broadly while preserving whether an idea was genuinely outcome-blind or inherited from D0/legacy results. Missing state or execution capability may block later R2 testing but may not be used as a scientific-merit score.
+
+**Status:** LOCAL ACCEPTANCE PASS / Git freeze pending. R1.0-specific validation passed 29/29 tests. The accepted project-environment research-governance suite passed 223 tests with the same 3 known Windows symlink-capability skips and zero failures. The validator returned `PASS` with 0 family rows, 0 idea rows, 1 frozen generation session, no D0 outcome read, no P1 market-data read, no P1 outcome read, and `P1_PROTECTED` still `SEALED_OUTCOME_UNSEEN`.
+
+**Next step:** Freeze the accepted R1.0 governance checkpoint in Git, then begin R1.1 theory / market-mechanism family generation. No R1.1 idea generation begins before that freeze.
 
 ## After R0
 
