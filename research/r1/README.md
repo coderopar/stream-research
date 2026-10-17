@@ -99,6 +99,19 @@ outcomes are forbidden generation inputs.
 
 ## R1.0 acceptance checkpoint
 
-R1.0 passed local project-environment acceptance on 2026-10-09 and is awaiting only its Git freeze. R1.0-specific tests passed 29/29; the full research-governance suite passed 223 tests with 3 known Windows symlink-capability skips and zero failures. The validator returned `PASS` with zero family rows, zero idea rows, one frozen generation session, no D0 outcome read, no P1 market-data read, and no P1 outcome read. `P1_PROTECTED` remains `SEALED_OUTCOME_UNSEEN`.
+R1.0 passed local project-environment acceptance on 2026-10-09 and is frozen at commit `93f954f303f2585dd7de171292dc12075b97cdde`, tag `r1-hypothesis-universe-governance-v1`. R1.0-specific tests passed 29/29; the full research-governance suite passed 223 tests with 3 known Windows symlink-capability skips and zero failures. The validator returned `PASS` with zero family rows, zero idea rows, one frozen generation session, no D0 outcome read, no P1 market-data read, and no P1 outcome read. `P1_PROTECTED` remains `SEALED_OUTCOME_UNSEEN`.
 
-This acceptance means the *rules for generating the universe* are ready. It does not endorse any BTCUSDT hypothesis because R1.0 deliberately created none. R1.1 must begin only after this checkpoint is frozen in Git.
+This acceptance means the *rules for generating the universe* are ready. It does not endorse any BTCUSDT hypothesis because R1.0 deliberately created none.
+
+
+## R1.1 checkpoint — Theory / market-mechanism generation
+
+R1.1 is the first outcome-blind idea-generation pass. It completes the `THEORY_LITERATURE` and `MARKET_MECHANISM` lenses and appends eight mechanism families plus fifteen idea records to the governed universe. The source basis is public market-microstructure literature plus explicitly labelled first-principles mechanism synthesis; R1.1 reads no D0 outcomes, no legacy 7M results, no P1 market data, and no P1 outcomes.
+
+The eight families are information-bearing flow/price discovery, metaorder flow persistence, liquidity resilience, impact efficiency versus absorption, queue pressure, transient impact decay, cross-venue information diffusion, and volatility-liquidity feedback. These are broad mechanism seeds rather than threshold/horizon variants. Detailed order-book, trade-flow, cross-venue, and regime generation remains reserved for R1.3, R1.4, R1.6, and R1.7.
+
+Infrastructure status is deliberately separated from scientific admissibility. Only two R1.1 ideas currently require no new governed state beyond `PERPS_TRADES`; the others remain in the universe but are explicitly blocked until the relevant causal state family is implemented. R0.6 execution book replay is not treated as a substitute for a governed `ORDER_BOOK` hypothesis feature store.
+
+Generation session `GEN-R1-UNIVERSE-V1` advances to version 2 / `IN_PROGRESS`, with exactly `THEORY_LITERATURE` and `MARKET_MECHANISM` completed. Seven predeclared lenses remain before R1.9 can freeze the universe. R1.1 is committed only if its local validator/tests and the full research-governance regression pass; this README ships in the same commit candidate rather than through a separate acceptance-metadata patch.
+
+**Next:** R1.2 — explicit legacy 7M lineage generation under `LEGACY_RESULT_INFORMED` provenance.

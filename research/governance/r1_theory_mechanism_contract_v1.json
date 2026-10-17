@@ -1,0 +1,88 @@
+{
+  "contract_id": "R1_1_THEORY_MARKET_MECHANISM_GENERATION_CONTRACT_V1",
+  "protocol_version": "1.2",
+  "accepted_r1_0_parent": {
+    "commit": "93f954f303f2585dd7de171292dc12075b97cdde",
+    "tag": "r1-hypothesis-universe-governance-v1"
+  },
+  "evidentiary_role": "OUTCOME_BLIND_HYPOTHESIS_GENERATION_NOT_TESTING",
+  "completed_generation_lenses": [
+    "THEORY_LITERATURE",
+    "MARKET_MECHANISM"
+  ],
+  "source_policy": {
+    "allowed_source_zones": ["PUBLIC", "NONE"],
+    "allowed_source_types": ["THEORY_LITERATURE", "MARKET_MECHANISM"],
+    "d0_results_allowed": false,
+    "legacy_results_allowed": false,
+    "d0_outcomes_read": false,
+    "p1_market_data_read": false,
+    "p1_outcome_read": false,
+    "public_literature_empirical_findings_are_project_outcomes": false,
+    "numeric_project_outcome_statistics_in_idea_packets": false
+  },
+  "universe_addition": {
+    "family_count": 8,
+    "idea_count": 15,
+    "generation_mode": "OUTCOME_BLIND",
+    "permanent_hypothesis_registry_mutation": false,
+    "scientific_merit_ranking": false,
+    "outcome_based_pruning": false
+  },
+  "family_ids": [
+    "FAM-INFORMED-FLOW-PRICE-DISCOVERY",
+    "FAM-METAORDER-FLOW-PERSISTENCE",
+    "FAM-LIQUIDITY-RESILIENCE",
+    "FAM-IMPACT-EFFICIENCY-ABSORPTION",
+    "FAM-QUEUE-PRESSURE",
+    "FAM-TRANSIENT-IMPACT-DECAY",
+    "FAM-CROSS-VENUE-INFORMATION-DIFFUSION",
+    "FAM-VOLATILITY-LIQUIDITY-FEEDBACK"
+  ],
+  "idea_ids": [
+    "IDEA-R1-INFORMED-FLOW-CONTINUATION",
+    "IDEA-R1-FLOW-DEPTH-SENSITIVITY",
+    "IDEA-R1-SIGNED-FLOW-PERSISTENCE",
+    "IDEA-R1-PERSISTENCE-LIQUIDITY-ADAPTATION",
+    "IDEA-R1-FAST-RESILIENCE-REVERSION",
+    "IDEA-R1-SLOW-RESILIENCE-CONTINUATION",
+    "IDEA-R1-IMPACT-EFFICIENCY-CONTINUATION",
+    "IDEA-R1-ABSORPTION-EXHAUSTION-REVERSAL",
+    "IDEA-R1-QUEUE-IMBALANCE-DIRECTION",
+    "IDEA-R1-QUEUE-PRESSURE-FAILURE",
+    "IDEA-R1-ISOLATED-SHOCK-REVERSION",
+    "IDEA-R1-CROSS-VENUE-LEAD-LAG",
+    "IDEA-R1-CROSS-VENUE-COMMON-FLOW-CONFIRMATION",
+    "IDEA-R1-THIN-LIQUIDITY-AMPLIFICATION",
+    "IDEA-R1-LIQUIDITY-RECOVERY-DAMPING"
+  ],
+  "later_lens_boundary": {
+    "r1_1_is_mechanism_seed_generation": true,
+    "r1_3_deepens_order_book_liquidity": true,
+    "r1_4_deepens_perps_trade_flow": true,
+    "r1_6_deepens_cross_venue": true,
+    "r1_7_deepens_volatility_regime": true,
+    "threshold_horizon_or_window_variants_added_in_r1_1": false,
+    "unsupported_state_may_be_reconstructed_ad_hoc_for_testing": false
+  },
+  "infrastructure_boundary": {
+    "current_governed_reusable_state": ["PERPS_TRADES"],
+    "deferred_state_families_named_by_r1_1": [
+      "ORDER_BOOK",
+      "SPOT_CROSS_VENUE",
+      "VOLATILITY_STATE",
+      "GOVERNED_PERPS_PRICE_PATH_STATE"
+    ],
+    "blocked_testability_is_not_negative_scientific_merit": true
+  },
+  "r1_1_scope": {
+    "creates_market_hypothesis_ideas": true,
+    "tests_market_hypotheses": false,
+    "selects_thresholds_from_results": false,
+    "selects_horizons_from_results": false,
+    "reads_d0_outcomes": false,
+    "reads_p1": false,
+    "uses_legacy_7m_results": false,
+    "mutates_r0_7_hypothesis_registry": false
+  }
+}

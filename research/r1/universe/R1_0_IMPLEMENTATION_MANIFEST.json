@@ -2,7 +2,7 @@
   "phase": "R1.0",
   "name": "Hypothesis-Generation Governance + Universe Schema",
   "protocol_version": "1.2",
-  "implementation_status": "LOCAL_ACCEPTANCE_PASS_GIT_FREEZE_PENDING",
+  "implementation_status": "ACCEPTED_AND_FROZEN",
   "accepted_parent": {
     "commit": "71192f37e8aa44da4c30326048debf65b1ca5792",
     "tag": "r0-foundation-accepted-v1",
@@ -98,6 +98,14 @@
       "p1_outcomes": false
     },
     "p1_status": "SEALED_OUTCOME_UNSEEN",
-    "git_freeze": "PENDING"
+    "git_freeze": {
+      "status": "FROZEN",
+      "commit": "93f954f303f2585dd7de171292dc12075b97cdde",
+      "tag": "r1-hypothesis-universe-governance-v1"
+    }
+  },
+  "accepted_git_freeze": {
+    "commit": "93f954f303f2585dd7de171292dc12075b97cdde",
+    "tag": "r1-hypothesis-universe-governance-v1"
   }
 }

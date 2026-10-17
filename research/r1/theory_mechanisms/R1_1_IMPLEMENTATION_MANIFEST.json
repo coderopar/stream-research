@@ -1,0 +1,82 @@
+{
+  "phase": "R1.1",
+  "name": "Theory / Market-Mechanism Family Generation",
+  "protocol_version": "1.2",
+  "implementation_status": "IMPLEMENTATION_COMPLETE",
+  "accepted_parent": {
+    "commit": "93f954f303f2585dd7de171292dc12075b97cdde",
+    "tag": "r1-hypothesis-universe-governance-v1"
+  },
+  "evidentiary_role": "OUTCOME_BLIND_HYPOTHESIS_GENERATION_NOT_TESTING",
+  "completed_lenses": [
+    "THEORY_LITERATURE",
+    "MARKET_MECHANISM"
+  ],
+  "family_rows_added": 8,
+  "idea_rows_added": 15,
+  "literature_source_rows": 10,
+  "generation_mode": "OUTCOME_BLIND",
+  "tests_market_hypotheses": false,
+  "reads_d0_outcomes": false,
+  "reads_legacy_7m_results": false,
+  "p1_market_data_read": false,
+  "p1_outcome_read": false,
+  "mutates_r0_7_hypothesis_registry": false,
+  "scientific_merit_ranking": false,
+  "outcome_based_pruning": false,
+  "generation_session": {
+    "session_id": "GEN-R1-UNIVERSE-V1",
+    "version": 2,
+    "status": "IN_PROGRESS",
+    "completed_lenses": [
+      "THEORY_LITERATURE",
+      "MARKET_MECHANISM"
+    ],
+    "freeze_hash": "b63493c8ee567a799f8989dbcdbab20ac34dfb213effbee2020b64178618bf59"
+  },
+  "implementation_files": [
+    "research/governance/r1_theory_mechanism_contract_v1.json",
+    "research/governance/universe/families.jsonl",
+    "research/governance/universe/ideas.jsonl",
+    "research/governance/universe/generation_sessions.jsonl",
+    "research/r1/theory_mechanisms/literature_sources.json",
+    "research/r1/theory_mechanisms/README.md",
+    "research/r1/theory_mechanisms/validate_theory_mechanism_generation.py",
+    "tests/research_governance/test_r1_theory_mechanism_generation.py"
+  ],
+  "acceptance_conditions": [
+    "accepted R1.0 parent commit/tag remain anchored",
+    "R1.1 uses PUBLIC/NONE sources only",
+    "all 15 ideas remain OUTCOME_BLIND",
+    "no D0 or legacy result lineage enters R1.1 ideas",
+    "P1 remains sealed and unread",
+    "no permanent R0.7 hypothesis registry mutation occurs",
+    "theory/literature and market-mechanism are the only newly completed lenses",
+    "family anti-splitting rules validate",
+    "unsupported state families remain blocked rather than reconstructed ad hoc",
+    "full research-governance regression remains green"
+  ],
+  "next_step": "R1.2 \u2014 Legacy 7M lineage generation under explicit LEGACY_RESULT_INFORMED provenance.",
+  "acceptance_policy": "This step must not be committed unless the R1.1-specific validator/tests and full research-governance regression pass in the project environment; no post-test metadata patch is required.",
+  "local_packaging_validation": {
+    "r1_1_specific_tests": {
+      "passed": 29,
+      "failed": 0,
+      "skipped": 0
+    },
+    "validator": "PASS",
+    "self_test": "PASS",
+    "full_research_governance": {
+      "passed": 246,
+      "failed": 0,
+      "skipped": 9,
+      "skip_reason": "packaging environment lacks pyarrow; project environment has historically executed these tests"
+    },
+    "protected_reads": {
+      "d0_outcomes": false,
+      "legacy_7m_results": false,
+      "p1_market_data": false,
+      "p1_outcomes": false
+    }
+  }
+}

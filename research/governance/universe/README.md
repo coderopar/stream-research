@@ -10,9 +10,7 @@ Files:
 - `families.jsonl` — conceptual mechanism families used to prevent family splitting;
 - `ideas.jsonl` — immutable/versioned R1 idea packets with source and result lineage.
 
-R1.0 freezes the first generation plan but creates no market hypothesis families
-and no market ideas. R1.1+ may append records under the contract in
-`research/governance/hypothesis_universe_contract_v1.json`.
+R1.0 froze the first generation plan without creating market ideas. R1.1 has now appended the first eight outcome-blind mechanism families, fifteen outcome-blind idea records, and generation-session version 2 under the same append-only contract. Later R1 stages must continue to append rather than rewrite these records.
 
 A universe idea is **not** yet a permanent hypothesis. Promotion is explicit and
 must preserve family, result, dataset, and ancestry fields into the R0.7
@@ -24,3 +22,6 @@ P1/D1 data are not permitted sources for R1 generation. D0-result-informed and
 legacy-result-informed ideas are allowed only when their influence is recorded
 explicitly; outcome-blind ideas may not claim result independence if observed
 results actually influenced their design.
+
+
+R1.1 source catalogue and mechanism rationale live under `research/r1/theory_mechanisms/`. Public literature references are qualitative provenance only; no project D0/P1 outcomes are embedded in the R1.1 idea packets.

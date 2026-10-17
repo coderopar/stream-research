@@ -249,9 +249,30 @@ R1 uses the accepted R0 machinery to generate a broad, auditable universe of BTC
 
 **Implication:** R1.1-R1.8 can generate ideas broadly while preserving whether an idea was genuinely outcome-blind or inherited from D0/legacy results. Missing state or execution capability may block later R2 testing but may not be used as a scientific-merit score.
 
-**Status:** LOCAL ACCEPTANCE PASS / Git freeze pending. R1.0-specific validation passed 29/29 tests. The accepted project-environment research-governance suite passed 223 tests with the same 3 known Windows symlink-capability skips and zero failures. The validator returned `PASS` with 0 family rows, 0 idea rows, 1 frozen generation session, no D0 outcome read, no P1 market-data read, no P1 outcome read, and `P1_PROTECTED` still `SEALED_OUTCOME_UNSEEN`.
+**Status:** PASS / frozen at commit `93f954f303f2585dd7de171292dc12075b97cdde`, tag `r1-hypothesis-universe-governance-v1`. R1.0-specific validation passed 29/29 tests. The accepted project-environment research-governance suite passed 223 tests with the same 3 known Windows symlink-capability skips and zero failures. The validator returned `PASS` with 0 family rows, 0 idea rows, 1 frozen generation session, no D0 outcome read, no P1 market-data read, no P1 outcome read, and `P1_PROTECTED` still `SEALED_OUTCOME_UNSEEN`.
 
-**Next step:** Freeze the accepted R1.0 governance checkpoint in Git, then begin R1.1 theory / market-mechanism family generation. No R1.1 idea generation begins before that freeze.
+**Next step:** R1.0 is frozen. Proceed to R1.1 theory / market-mechanism family generation.
+
+
+## R1.1 — Theory / market-mechanism family generation
+
+**Question:** Before opening D0 exploratory testing, what economically plausible BTCUSDT mechanisms should enter the governed universe purely from public market-microstructure theory/literature and first-principles reasoning?
+
+**What changed:** R1.1 appends eight conceptual families and fifteen immutable idea records to the R1 universe. The families cover information-bearing flow/price discovery, metaorder flow persistence, liquidity resilience, impact efficiency versus absorption, queue pressure, transient impact decay, cross-venue information diffusion, and volatility-liquidity feedback. A frozen ten-source public literature catalogue records the qualitative provenance used to motivate those mechanisms. Generation session `GEN-R1-UNIVERSE-V1` advances to version 2 / `IN_PROGRESS`, with only `THEORY_LITERATURE` and `MARKET_MECHANISM` marked complete.
+
+**Why it matters:** This is the first point where the reset research program actually creates new market ideas. By doing it before fresh D0 outcome testing, the universe is not constructed by looking for whatever happened to work historically. Family boundaries also prevent threshold, horizon, window, queue-level, or venue-pair variants from masquerading as independent mechanisms.
+
+**Source discipline:** R1.1 uses `PUBLIC` literature and `NONE` first-principles mechanism sources only. All fifteen ideas are `OUTCOME_BLIND`: no D0 outcome, legacy 7M result, P1 market data, P1 outcome, fitted project statistic, or observed strategy return influences admission. Public empirical papers are background literature, not project outcomes, and their fitted coefficients/statistics are not copied into idea packets.
+
+**Infrastructure boundary:** Scientific admissibility is separate from current testability. Two ideas can currently be developed using the governed `PERPS_TRADES` state; thirteen require one or more deferred governed state capabilities such as `ORDER_BOOK`, cross-venue state, volatility state, or causal intrawindow price-path state. Those ideas remain in the universe, but R2 may not reconstruct those states ad hoc. R0.6 order-book replay remains an execution foundation, not an approved order-book predictor store.
+
+**Known limitation:** R1.1 is intentionally broad and qualitative. It does not claim these mechanisms transfer to BTCUSDT, does not rank their merit, and does not choose thresholds, horizons, or interactions. Detailed generation for order-book, trade-flow, cross-venue, and volatility lenses remains reserved for later R1 stages.
+
+**Implication:** The research program now has a first outcome-blind mechanism layer. The next stage can add the old 7M lineage transparently as result-informed ancestry rather than allowing it to silently shape the fresh theory universe.
+
+**Acceptance boundary:** This README and all R1.1 artifacts ship in one commit candidate. The step is committed only after the R1.1 validator/tests and full `tests/research_governance` regression pass in the project environment; no separate post-test metadata patch is required.
+
+**Next step:** R1.2 — Legacy 7M lineage generation under explicit `LEGACY_RESULT_INFORMED` provenance.
 
 ## After R0
 

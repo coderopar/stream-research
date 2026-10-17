@@ -1,0 +1,165 @@
+[
+  {
+    "source_id": "LIT-KYLE-1985",
+    "title": "Continuous Auctions and Insider Trading",
+    "authors": [
+      "Albert S. Kyle"
+    ],
+    "year": 1985,
+    "source_kind": "PEER_REVIEWED_THEORY",
+    "stable_reference": "https://www.econometricsociety.org/publications/econometrica/browse/1985/11/01/continuous-auctions-and-insider-trading",
+    "supported_mechanism_claims": [
+      "Trading can transmit private information into prices through a dynamic price-impact process.",
+      "Market depth is a core state variable linking order flow to price response."
+    ],
+    "scope_note": "Used only as public theory background; no BTCUSDT or project outcome result is imported."
+  },
+  {
+    "source_id": "LIT-GLOSTEN-MILGROM-1985",
+    "title": "Bid, Ask and Transaction Prices in a Specialist Market with Heterogeneously Informed Traders",
+    "authors": [
+      "Lawrence R. Glosten",
+      "Paul R. Milgrom"
+    ],
+    "year": 1985,
+    "source_kind": "PEER_REVIEWED_THEORY",
+    "stable_reference": "https://doi.org/10.1016/0304-405X(85)90044-3",
+    "supported_mechanism_claims": [
+      "Trades can convey information when market participants face adverse selection.",
+      "Bid-ask spreads and realizable prices matter when translating observed price changes into executable economics."
+    ],
+    "scope_note": "Used as mechanism background for information-bearing flow and execution-aware interpretation."
+  },
+  {
+    "source_id": "LIT-HASBROUCK-1991",
+    "title": "Measuring the Information Content of Stock Trades",
+    "authors": [
+      "Joel Hasbrouck"
+    ],
+    "year": 1991,
+    "source_kind": "PEER_REVIEWED_EMPIRICAL",
+    "stable_reference": "https://doi.org/10.1111/j.1540-6261.1991.tb03749.x",
+    "supported_mechanism_claims": [
+      "The information effect of trades can arrive with a lag rather than instantaneously.",
+      "Trade impact can depend on trade size and prevailing spread/liquidity conditions."
+    ],
+    "scope_note": "Qualitative public evidence only; no numerical findings are copied into R1 idea packets."
+  },
+  {
+    "source_id": "LIT-BOUCHAUD-FARMER-LILLO-2009",
+    "title": "How Markets Slowly Digest Changes in Supply and Demand",
+    "authors": [
+      "Jean-Philippe Bouchaud",
+      "J. Doyne Farmer",
+      "Fabrizio Lillo"
+    ],
+    "year": 2009,
+    "source_kind": "REVIEW_THEORY_EMPIRICAL",
+    "stable_reference": "https://arxiv.org/abs/0809.0822",
+    "supported_mechanism_claims": [
+      "Order flow can be persistent because large parent orders are executed incrementally.",
+      "Liquidity can adapt dynamically to persistent order flow, so impact is not a fixed mechanical response."
+    ],
+    "scope_note": "Used to motivate persistence-versus-adaptive-liquidity mechanisms without importing project outcomes."
+  },
+  {
+    "source_id": "LIT-CONT-KUKANOV-STOIKOV-2014",
+    "title": "The Price Impact of Order Book Events",
+    "authors": [
+      "Rama Cont",
+      "Arseniy Kukanov",
+      "Sasha Stoikov"
+    ],
+    "year": 2014,
+    "source_kind": "PEER_REVIEWED_EMPIRICAL",
+    "stable_reference": "https://arxiv.org/abs/1011.6402",
+    "supported_mechanism_claims": [
+      "Short-horizon price response can be linked to order-flow imbalance at the best quotes.",
+      "Price response to imbalance can vary inversely with available market depth."
+    ],
+    "scope_note": "Used as public mechanism evidence; R1.1 does not assume the relationship transfers unchanged to BTCUSDT."
+  },
+  {
+    "source_id": "LIT-OBIZHAEVA-WANG-2013",
+    "title": "Optimal Trading Strategy and Supply/Demand Dynamics",
+    "authors": [
+      "Anna A. Obizhaeva",
+      "Jiang Wang"
+    ],
+    "year": 2013,
+    "source_kind": "PEER_REVIEWED_THEORY",
+    "stable_reference": "https://doi.org/10.1016/j.finmar.2012.09.001",
+    "supported_mechanism_claims": [
+      "Liquidity is dynamic; resilience describes how supply and demand recover after a trade.",
+      "The speed of liquidity recovery can matter separately from static spread and depth."
+    ],
+    "scope_note": "Used to motivate fast-versus-slow liquidity recovery as a state, not to choose any threshold or horizon."
+  },
+  {
+    "source_id": "LIT-GOULD-ETAL-2013",
+    "title": "Limit Order Books",
+    "authors": [
+      "Martin D. Gould",
+      "Mason A. Porter",
+      "Stacy Williams",
+      "Mark McDonald",
+      "Daniel J. Fenn",
+      "Sam D. Howison"
+    ],
+    "year": 2013,
+    "source_kind": "PEER_REVIEWED_SURVEY",
+    "stable_reference": "https://doi.org/10.1080/14697688.2013.803148",
+    "supported_mechanism_claims": [
+      "Limit-order-book dynamics expose multiple interacting dimensions of liquidity rather than a single static depth measure.",
+      "Empirical LOB regularities and model assumptions should not be treated as universally transferable without validation."
+    ],
+    "scope_note": "Used as broad background and as a caution against over-interpreting one book statistic."
+  },
+  {
+    "source_id": "LIT-GOULD-BONART-2015",
+    "title": "Queue Imbalance as a One-Tick-Ahead Price Predictor in a Limit Order Book",
+    "authors": [
+      "Martin D. Gould",
+      "Julius Bonart"
+    ],
+    "year": 2015,
+    "source_kind": "PUBLIC_EMPIRICAL_PREPRINT",
+    "stable_reference": "https://arxiv.org/abs/1512.03492",
+    "supported_mechanism_claims": [
+      "Near-touch bid-versus-ask queue imbalance can contain information about the direction of the next mid-price movement.",
+      "Queue pressure is a candidate immediate-state variable rather than a complete trading proposition by itself."
+    ],
+    "scope_note": "Used qualitatively; R1.1 does not import fitted coefficients or significance values."
+  },
+  {
+    "source_id": "LIT-GATHERAL-2010",
+    "title": "No-Dynamic-Arbitrage and Market Impact",
+    "authors": [
+      "Jim Gatheral"
+    ],
+    "year": 2010,
+    "source_kind": "PEER_REVIEWED_THEORY",
+    "stable_reference": "https://doi.org/10.1080/14697680903373692",
+    "supported_mechanism_claims": [
+      "The shape of market impact and the way impact decays through time are jointly constrained.",
+      "Transient-versus-persistent impact should be treated as a dynamic process rather than a fixed one-shot effect."
+    ],
+    "scope_note": "Used to motivate impact-decay families without assuming a particular parametric decay function."
+  },
+  {
+    "source_id": "LIT-MAKAROV-SCHOAR-2020",
+    "title": "Trading and Arbitrage in Cryptocurrency Markets",
+    "authors": [
+      "Igor Makarov",
+      "Antoinette Schoar"
+    ],
+    "year": 2020,
+    "source_kind": "PEER_REVIEWED_CRYPTO_EMPIRICAL",
+    "stable_reference": "https://doi.org/10.1016/j.jfineco.2019.07.001",
+    "supported_mechanism_claims": [
+      "Cryptocurrency markets can exhibit economically meaningful cross-exchange price deviations.",
+      "Common and venue-specific signed-volume components can carry different information about aggregate returns and cross-venue dislocations."
+    ],
+    "scope_note": "Used only to justify cross-venue information-diffusion hypotheses as a legitimate family; no paper statistic is used as a project result."
+  }
+]
