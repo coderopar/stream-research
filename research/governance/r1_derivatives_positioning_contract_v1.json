@@ -1,0 +1,108 @@
+{
+  "contract_id": "R1_5_DERIVATIVES_POSITIONING_GENERATION_V1",
+  "protocol_version": "1.2",
+  "accepted_parent": {
+    "tag": "r1-perps-trade-flow-v1",
+    "contract_id": "R1_4_PERPS_TRADE_FLOW_GENERATION_V1"
+  },
+  "scope": "derivatives and positioning lens; append-only universe ideas; no D0 outcome tests or protected data",
+  "immutable_r1_4_prefix_sha256": {
+    "families.jsonl": "62f15ef41736e100f4b5f59231494a3baeacb0efa6c1d010d651605914d5e54b",
+    "ideas.jsonl": "bf5926dcfbb016c760001e4a71f0a445976018feb76e7c94bd610568ee4d01da",
+    "generation_sessions.jsonl": "538420449eab61df02d980c37a4d5dec2f4e8d49d17bd15b86c35fcd1b006dd9"
+  },
+  "prefix_counts": {
+    "families": 15,
+    "ideas": 67,
+    "sessions": 5
+  },
+  "new_family_ids": [],
+  "new_idea_ids": [
+    "IDEA-R1-OI-FLOW-CHURN-DIVERGENCE",
+    "IDEA-R1-OI-PRICE-RESPONSE-DECOUPLING",
+    "IDEA-R1-OI-EXPANSION-PERSISTENCE",
+    "IDEA-R1-OI-CONTRACTION-AFTER-FLOW-SHOCK",
+    "IDEA-R1-OBSERVED-FORCE-FLOW-CLUSTERING",
+    "IDEA-R1-FORCE-OI-CONTRACTION-JOINT-STATE",
+    "IDEA-R1-FORCED-FLOW-DEPTH-FEEDBACK",
+    "IDEA-R1-LEGACY-OI-EXPOSURE-REINTERPRETATION",
+    "IDEA-R1-LEGACY-FORCE-SNAPSHOT-NULL",
+    "IDEA-R1-FUNDING-FLOW-OPPOSITION",
+    "IDEA-R1-FUNDING-SETTLEMENT-CLOCK-CONTEXT",
+    "IDEA-R1-LEGACY-COUNTER-FUNDING-UNCERTAIN",
+    "IDEA-R1-BASIS-PREMIUM-DRIFT-OI",
+    "IDEA-R1-BASIS-PREMIUM-TRADE-TENSION",
+    "IDEA-R1-LEGACY-BASIS-CHANGE-REPLICATION-FAIL",
+    "IDEA-R1-OPTIONS-VOL-SURFACE-FUNDING-CONTEXT",
+    "IDEA-R1-LEGACY-GAMMA-UNSIGNED-NO-DEALER",
+    "IDEA-R1-FUNDING-BASIS-DIVERGENCE"
+  ],
+  "new_idea_freeze_hashes": {
+    "IDEA-R1-OI-FLOW-CHURN-DIVERGENCE": "9ccbc5c190fb030b6405d69053100460cd98d3961bf624bde4915ff368c96432",
+    "IDEA-R1-OI-PRICE-RESPONSE-DECOUPLING": "a0652f8e72af21c2af6889e9776ea3dba20c89dec064c8de0f8fb480aa4164e3",
+    "IDEA-R1-OI-EXPANSION-PERSISTENCE": "6775ae2142f9aa96d2ec259fb00519c5f3df595c0c473b6e0db16a479c55834a",
+    "IDEA-R1-OI-CONTRACTION-AFTER-FLOW-SHOCK": "3953c056d99024ed03ad74b4f8638a86f511cf6af7ef838a3ad08e8d901ad165",
+    "IDEA-R1-OBSERVED-FORCE-FLOW-CLUSTERING": "49c8f50694c3fc2bce72864effad0ad8d9bfb1c21dbd2130347fd28cb5216aa8",
+    "IDEA-R1-FORCE-OI-CONTRACTION-JOINT-STATE": "1e78059f3a92b8df2c3ea02c19a638c8bbee5dca28b347eff893261e21241138",
+    "IDEA-R1-FORCED-FLOW-DEPTH-FEEDBACK": "7f41bef9264bd8b2375097109fcb8cec57f08a0f62305a8f352f2807e8b57ef7",
+    "IDEA-R1-LEGACY-OI-EXPOSURE-REINTERPRETATION": "4382aafc74c5605e60bf4f2eebbbc6755975251a202a53f76220e2fc962d3939",
+    "IDEA-R1-LEGACY-FORCE-SNAPSHOT-NULL": "9d2f869412d96d71b9d168a28452a6a7877b14124ffcee22e842cb75d0cc72f7",
+    "IDEA-R1-FUNDING-FLOW-OPPOSITION": "f15249778a099d5204421be385d86e92455198ffad96f142f51615d6eb735d4e",
+    "IDEA-R1-FUNDING-SETTLEMENT-CLOCK-CONTEXT": "cc32a2f322649207f28c19c41839f7df9be705ef95cf0d4d9465a4bf81562de7",
+    "IDEA-R1-LEGACY-COUNTER-FUNDING-UNCERTAIN": "2b7f204c2b6878f7d774e306bffa308617cc4d73109df4a6bc69b95032c4e67a",
+    "IDEA-R1-BASIS-PREMIUM-DRIFT-OI": "e5a5b3d3579b104fd57a0840c6f2e612d6c6b68b8f9755233f927818dad57527",
+    "IDEA-R1-BASIS-PREMIUM-TRADE-TENSION": "02aa9b048a160ae0bed3cb3c58b89c14643503326fc0905a85de87b12e3451a2",
+    "IDEA-R1-LEGACY-BASIS-CHANGE-REPLICATION-FAIL": "eeb8d719b1ad54c6d714c48b4914e669d4f74065d05ca438adbce3eb77212f80",
+    "IDEA-R1-OPTIONS-VOL-SURFACE-FUNDING-CONTEXT": "2620d31a67ab058848d35c1e5a26b247af421baeddc3c60815d778d75d52acd4",
+    "IDEA-R1-LEGACY-GAMMA-UNSIGNED-NO-DEALER": "0ea422cbd317533a6e51afee0bb1d59d343373152e59fcea58598807874200bd",
+    "IDEA-R1-FUNDING-BASIS-DIVERGENCE": "25097255c043426d34c7e601c4533d29aa230319a3eb3128f7d09322d38ee664"
+  },
+  "generation_mode_counts": {
+    "OUTCOME_BLIND": 13,
+    "LEGACY_RESULT_INFORMED": 5
+  },
+  "new_public_source_ids": [
+    "LIT-CME-OPEN-INTEREST",
+    "LIT-BINANCE-USDM-MARK-OI",
+    "LIT-BINANCE-FORCE-ORDER-STREAM"
+  ],
+  "new_public_sources_sha256": "dd926eef05c028acbdffef28a8496b83b12a65ea9bf6e1874830f611d892fca8",
+  "session_v6_freeze_hash": "beb58795a9ede7efccab4ea11a71a40321c63b3bdee7dcb3b63e3a4482694128",
+  "completed_lenses_after": [
+    "THEORY_LITERATURE",
+    "MARKET_MECHANISM",
+    "LEGACY_7M_LINEAGE",
+    "ORDER_BOOK_LIQUIDITY",
+    "PERPS_TRADE_FLOW",
+    "DERIVATIVES_POSITIONING"
+  ],
+  "remaining_lenses": [
+    "CROSS_VENUE",
+    "VOLATILITY_REGIME",
+    "PREDICTIVE_MODEL"
+  ],
+  "mandatory_capability_gates": {
+    "PERPS_OPEN_INTEREST": "GOVERNED_PERPS_OPEN_INTEREST_STATE",
+    "PERPS_FORCE_ORDERS": "GOVERNED_PERPS_FORCE_ORDER_STATE",
+    "PERPS_PRICE_PATH": "GOVERNED_PERPS_PRICE_PATH_STATE",
+    "PERPS_FUNDING": "GOVERNED_PERPS_FUNDING_STATE",
+    "PERPS_MARK_INDEX": "GOVERNED_PERPS_MARK_INDEX_STATE",
+    "OPTIONS_MARK_GREEKS": "GOVERNED_OPTIONS_MARK_GREEKS_STATE",
+    "OPTIONS_OPEN_INTEREST": "GOVERNED_OPTIONS_OPEN_INTEREST_STATE",
+    "ORDER_BOOK": "GOVERNED_ORDER_BOOK_STATE"
+  },
+  "scientific_boundaries": {
+    "R0_5_derivatives_predictor_state_exists": false,
+    "all_new_ideas_blocked_pending_governed_state": true,
+    "open_interest_does_not_identify_directional_long_short_inventory": true,
+    "force_order_snapshots_not_complete_liquidation_census": true,
+    "funding_publication_and_settlement_clocks_distinct": true,
+    "mark_index_basis_does_not_imply_risk_free_arbitrage": true,
+    "unsigned_OI_weighted_gamma_not_dealer_sign_or_hedging_flow": true,
+    "new_d0_outcome_tests": false,
+    "p1_market_data_read": false,
+    "p1_outcome_read": false,
+    "permanent_hypothesis_registry_mutated": false,
+    "new_25bp_candidate_or_P75_15m_event_policy_inherited": false
+  }
+}

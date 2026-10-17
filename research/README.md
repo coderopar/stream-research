@@ -322,3 +322,34 @@ No fresh D0 outcomes were opened, no P1 data or outcomes were read, and no R0.7 
 **Implication:** Later R2 may use existing bucket families after D0 feature/candidate design and proper evidence/return/risk gates. It may not use blocked capabilities until governed state exists. No old 25-bp candidate policy is compulsory. See `research/r1/trade_flow/README.md`.
 
 **Next:** R1.5 — derivatives and positioning lens. R1.4 commit/tag are established only after local verification.
+
+## R1.5 — Derivatives and positioning hypothesis generation
+
+**Question:** Which causally observed changes in outstanding perp
+contracts, forced-order snapshots, funding regimes, mark/index premium,
+and option implied-risk geometry might eventually support executable
+BTCUSDT positions?
+
+**What changed:** On the immutable R1.4 15-family/67-idea prefix, R1.5
+appends 18 governed idea records and generation-session v6; five
+`LEGACY_RESULT_INFORMED` ideas retain 7M.7 / 7M.8 / 7M.12A source
+ancestry and failed/null/feasibility qualifiers. Thirteen ideas have
+independent theoretical/mechanism provenance. No new family was justified.
+
+**Why it matters:** Derivatives observations have distinct semantics. OI
+is not directional long/short exposure; force-order snapshots are not the
+full liquidation tape; funding has causal publication and settlement
+clocks; mark/index basis is not risk-free tradable P&L; and unsigned
+OI-weighted gamma cannot identify dealer hedging direction. Confusing
+these would create spurious signals.
+
+**Status:** Complete R1.5 commit candidate, local acceptance pending.
+
+**Evidence and limits:** 15 families / 85 ideas / six generation-session
+records; every new idea is explicitly capability-blocked until causal
+derivatives states exist. R0.5 still provides only historical-D0-candidate
+perp trade buckets; the R0.6 audit execution profile is not a strategy.
+No new D0 or P1 outcomes were opened or tested and the permanent `HYP-*`
+registry remains untouched. See `research/r1/derivatives/README.md`.
+
+**Next:** R1.6 cross-venue hypothesis generation.

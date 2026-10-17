@@ -182,7 +182,7 @@ def test_external_source_refs_are_public_and_have_matching_catalogue_ids():
 
 def test_validator_detects_faked_testable_now_in_fixture():
     m=runner();c=contract(); allideas=read('ideas.jsonl')
-    mutated=json.loads(json.dumps(allideas[51:]))
+    mutated=json.loads(json.dumps(allideas[51:67]))
     x=next(x for x in mutated if x['idea_id']=='IDEA-R1-INTERARRIVAL-SELF-EXCITATION')
     x['infrastructure_assessment']['missing_capabilities']=[]
     x['infrastructure_assessment']['r2_testability']='TESTABLE_NOW'

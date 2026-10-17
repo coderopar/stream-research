@@ -139,3 +139,26 @@ R1.4 adds the fifth predeclared generation lens, sixteen mechanisms/idea records
 Validation, provenance, the capability table, and local acceptance commands are in `trade_flow/README.md`. This step's full research record is shipped with code/tests in the single initial patch and committed only after local acceptance.
 
 **Next:** R1.5 derivatives and positioning generation; remaining lenses are derivatives, cross venue, volatility/regime, and predictive models.
+
+## R1.5 checkpoint — DERIVATIVES_POSITIONING
+
+R1.5 adds **18 ideas** (13 independently sourced `OUTCOME_BLIND`, five
+`LEGACY_RESULT_INFORMED` with explicit 7M parent/source genealogy) and
+advances session `GEN-R1-UNIVERSE-V1` to version 6. The existing 15
+families are sufficient: **no new family** is invented from threshold/horizon
+variants. The universe now holds **15 families and 85 ideas**; three lenses
+remain. All 18 new derivatives ideas are explicitly **blocked for R2**
+until governed receive-time as-of OI, force-order, funding, mark/index or
+options state exists. R0.5 trade buckets alone do not satisfy these needs.
+
+Market structure boundaries: OI cannot reveal a net long/short inventory;
+liquidation snapshot streams may undercount events; current funding is not
+a future realized settlement; mark/index basis is not a guaranteed executable
+arbitrage; unsigned OI-gamma geometry is not evidence of signed dealer flows.
+Legacy 7M null/failed/feasibility branches remain retained, not promoted.
+No D0 outcome testing, P1 reads, permanent HYP-* registrations, outcome-based
+pruning, or inherited 25-bp / P75-15m trading rules. Full catalogue and
+validator in `derivatives/README.md`. The complete implementation and
+README edits ship together; only locally accepted work is committed.
+
+**Next:** R1.6 — Cross-venue mechanism generation.

@@ -1,0 +1,47 @@
+[
+  {
+    "source_id": "LIT-CME-OPEN-INTEREST",
+    "title": "Open Interest",
+    "authors": [
+      "CME Group"
+    ],
+    "year": 2018,
+    "source_kind": "EXCHANGE_EDUCATION",
+    "stable_reference": "https://www.cmegroup.com/education/lessons/open-interest",
+    "supported_mechanism_claims": [
+      "Open interest measures outstanding futures contracts rather than volume traded.",
+      "Every matched futures contract has long and short counterparties; aggregate OI alone does not resolve directional inventory."
+    ],
+    "scope_note": "General market terminology only; no BTC outcome evidence imported."
+  },
+  {
+    "source_id": "LIT-BINANCE-USDM-MARK-OI",
+    "title": "USD-M futures market data: mark/index price, funding and open interest",
+    "authors": [
+      "Binance Developers"
+    ],
+    "year": 2026,
+    "source_kind": "EXCHANGE_API_DOCUMENTATION",
+    "stable_reference": "https://developers.binance.info/en/docs/catalog/core-trading-derivatives-trading-usd-s-m-futures/api/rest-api/market-data",
+    "supported_mechanism_claims": [
+      "Open-interest, mark/index and funding interfaces have distinct publication/update conventions and raw units.",
+      "Historical as-of feature construction must respect the observed receive time, not just an exchange-provided nominal timestamp."
+    ],
+    "scope_note": "Source documents public endpoints; does not prove historical availability, full feed completeness, or predictive outcomes."
+  },
+  {
+    "source_id": "LIT-BINANCE-FORCE-ORDER-STREAM",
+    "title": "USD-M futures liquidation-order snapshot stream",
+    "authors": [
+      "Binance Developers"
+    ],
+    "year": 2026,
+    "source_kind": "EXCHANGE_API_DOCUMENTATION",
+    "stable_reference": "https://developers.binance.info/docs/derivatives/usds-margined-futures/websocket-market-streams/All-Market-Mini-Tickers-Stream",
+    "supported_mechanism_claims": [
+      "Documented force-order stream reports latest liquidation-order snapshot within 1000 ms per symbol.",
+      "Observed force orders must not be equated to a complete liquidation-event census or to identified account distress."
+    ],
+    "scope_note": "Endpoint format and venue scope may change; verify historical collection semantics independently before D0 testing."
+  }
+]

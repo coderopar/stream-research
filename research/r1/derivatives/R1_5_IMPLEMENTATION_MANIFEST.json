@@ -1,0 +1,59 @@
+{
+  "stage": "R1.5",
+  "title": "Derivatives and positioning hypothesis-generation lens",
+  "protocol_version": "1.2",
+  "status": "COMPLETE_COMMIT_CANDIDATE_AWAITING_LOCAL_TESTS",
+  "accepted_parent": {
+    "tag": "r1-perps-trade-flow-v1",
+    "contract": "R1_4_PERPS_TRADE_FLOW_GENERATION_V1"
+  },
+  "scope": "outcome-free append-only hypothesis-universe generation; no new family required",
+  "counts": {
+    "prior_families": 15,
+    "prior_ideas": 67,
+    "prior_sessions": 5,
+    "new_families": 0,
+    "new_ideas": 18,
+    "new_outcome_blind_ideas": 13,
+    "new_legacy_result_informed_ideas": 5,
+    "post_families": 15,
+    "post_ideas": 85,
+    "post_session_version": 6,
+    "blocked_pending_governed_state": 18,
+    "permanent_hypotheses": 0
+  },
+  "data_boundaries": {
+    "new_d0_outcome_tests": false,
+    "legacy_results_reused_as_confirmed": false,
+    "p1_market_data_read": false,
+    "p1_outcome_read": false,
+    "permanent_hypothesis_registry_mutated": false,
+    "scientific_merit_ranking": false,
+    "new_strategy_event_threshold_or_horizon_selected": false
+  },
+  "core_scientific_limits": [
+    "OI unsigned; long/short sign not identifiable",
+    "force-order stream censored snapshot not liquidation census",
+    "funding settlement clock distinct from published funding indicator",
+    "mark/index basis is not directly executable risk-free arb",
+    "unsigned options OI-gamma is not dealer inventory or hedging sign",
+    "R0.5 lacks governed derivatives predictor state"
+  ],
+  "frozen_evidence": {
+    "prior_prefix_sha256": {
+      "families.jsonl": "62f15ef41736e100f4b5f59231494a3baeacb0efa6c1d010d651605914d5e54b",
+      "ideas.jsonl": "bf5926dcfbb016c760001e4a71f0a445976018feb76e7c94bd610568ee4d01da",
+      "generation_sessions.jsonl": "538420449eab61df02d980c37a4d5dec2f4e8d49d17bd15b86c35fcd1b006dd9"
+    }
+  },
+  "acceptance": {
+    "validation_commands": [
+      "python -m pytest tests/research_governance/test_r1_derivatives_positioning_generation.py -v",
+      "python research/r1/derivatives/validate_derivatives_generation.py",
+      "python research/r1/derivatives/validate_derivatives_generation.py --self-test",
+      "python research/r1/trade_flow/validate_trade_flow_generation.py",
+      "python -m pytest tests/research_governance -q -rs"
+    ]
+  },
+  "deliverable": "single package of changed/new repo-root-relative files, including documentation before acceptance; no separate metadata patch"
+}
