@@ -298,3 +298,11 @@ R0.8 acceptance also hardened idempotence after the MAE summary correction: subs
 **Implication:** R1.3–R1.8 can develop mechanism-specific variants with accurate genealogy but must not mine old outcome tables or treat a favorable old effect as a new confirmation. Existing unsupported causal state families still need governed implementations before R2.
 
 **Next:** R1.3 — deeper order-book/liquidity hypothesis generation. R1.9 must still audit the complete universe and family boundaries.
+
+## R1.3 — Order-book and liquidity generation (commit candidate)
+
+R1.3 deepens the first-principles and historical liquidity mechanisms without running a new market/outcome study. It adds one spatial depth-geometry family and sixteen idea packets (nine `OUTCOME_BLIND`, seven `LEGACY_RESULT_INFORMED`) to the existing governed universe, yielding **14 families and 51 ideas**. The first 13 families, 35 ideas and three session versions are preserved byte-for-byte. The new `GEN-R1-UNIVERSE-V1@4` completes the `ORDER_BOOK_LIQUIDITY` lens; five lenses remain.
+
+Why it matters: we now have auditable hypotheses about depth location, queue pressure, replenishment, cancellation/execution ambiguity, transient impact, and flow-conditioned liquidity, without treating the earlier 7M correlations or old 25bp selection policy as proven trading rules. Null/inconclusive legacy refill-penetration evidence remains explicit. All 16 book ideas remain **blocked** for R2 until a proper receive-time-governed causal `ORDER_BOOK` predictor state exists: R0.6 execution replay is not a book feature store. Public market-by-price updates do not reveal passive queue position, individual order identity or hidden liquidity; no claims of spoofing or realized fills can be inferred from them.
+
+No fresh D0 outcomes were opened, no P1 data or outcomes were read, and no R0.7 permanent hypothesis was registered. The package includes its initial research narrative, contract, tests and implementation manifest from the outset; local acceptance decides whether to freeze it, without a post-testing README patch. See `research/r1/order_book/README.md` for the full theory/legacy distinction and future capability gates. **Next: R1.4 — perpetual trade-flow generation.**

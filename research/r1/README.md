@@ -123,3 +123,11 @@ R1.2 is intentionally `LEGACY_RESULT_INFORMED`, unlike the fresh outcome-blind R
 The historical reports have been *read*, so this stage does not claim outcome-blindness. P1 remains sealed and no new market/outcome files were opened. No old exploratory result is promoted to confirmation and the permanent `HYP-*` registry remains untouched. All R1.2 legacy ideas are capability-gated before R2 testing. The proposed package contains the documentation and acceptance tests together; after passing locally, it may be committed as one research step without a separate metadata patch.
 
 **Next:** R1.3 — order-book / liquidity hypothesis deepening, without outcome-based pruning.
+
+## R1.3 checkpoint — Order-book and liquidity hypotheses
+
+R1.3 appends one distinct depth-geometry family, 16 governed ideas (9 outcome-blind, 7 result-informed with full 7M genealogy) and generation-session version 4. Frozen R1.2 registry records remain an unchanged prefix. There are now **14 families and 51 ideas**; five generation lenses remain, starting with `PERPS_TRADE_FLOW`. No new return/hit-rate calculations, fresh D0 outcome testing, P1 access or permanent `HYP-*` registrations were performed.
+
+Scientific content: multi-level depth fragility, persistent/failing queue pressure, event-OFI/depth interaction, resilience/recovery, and the competing consequences of opposing/supporting replenishment and cancellation/transaction-driven depth loss. In particular, older refill-penetration failure is retained, not rescued. The extra ideas are not ranked by apparent performance. Infrastructure remains limited: R0.5 lacks reusable causal book features; R0.6's executable book replay is **not** an order-book predictor layer. Full rationale, qualitative source/legacy provenance and acceptance commands are in `research/r1/order_book/README.md`. No later acceptance-metadata patch is planned.
+
+**Next:** R1.4 — perpetual trade-flow hypotheses (the next frozen lens).

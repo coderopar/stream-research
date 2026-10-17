@@ -1,0 +1,19 @@
+[
+  {
+    "source_id": "LIT-HUANG-LEHALLE-ROSENBAUM-2015",
+    "title": "Simulating and Analyzing Order Book Data: The Queue-Reactive Model",
+    "authors": [
+      "Weibing Huang",
+      "Charles-Albert Lehalle",
+      "Mathieu Rosenbaum"
+    ],
+    "year": 2015,
+    "stable_reference": "https://arxiv.org/abs/1312.0563",
+    "source_kind": "PUBLIC_RESEARCH",
+    "supported_mechanism_claims": [
+      "Conditional intensities of limit-order, cancellation, and trade-related book events can depend on the state of queues in a queue-reactive model.",
+      "Book-event dynamics and transition behavior can be modeled without inferring the identities or intentions of individual liquidity providers."
+    ],
+    "scope_note": "Research model/general setting, not an empirically verified BTCUSDT signal or passive-fill model."
+  }
+]

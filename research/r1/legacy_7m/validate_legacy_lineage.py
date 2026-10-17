@@ -85,8 +85,13 @@ def validate_evidence(catalogue: dict, *, expected_ids: set[str]) -> dict[str, d
 
 
 def assert_append_only_ancestry(families: list, ideas: list, sessions: list, contract: dict) -> None:
-    if len(families) != R11_FAMILIES + R12_FAMILIES or len(ideas) != R11_IDEAS + R12_IDEAS or len(sessions) != 3:
-        raise RegistryValidationError("R1.2 must append exactly 5 families, 20 ideas and 1 session")
+    # R1.2 freezes the initial prefix, not the entire expanding R1 universe.
+    # R1.3+ may only append; they may not rewrite these original rows.
+    if len(families) < R11_FAMILIES + R12_FAMILIES or len(ideas) < R11_IDEAS + R12_IDEAS or len(sessions) < 3:
+        raise RegistryValidationError("R1.2 frozen prefix is truncated")
+    families = families[:R11_FAMILIES + R12_FAMILIES]
+    ideas = ideas[:R11_IDEAS + R12_IDEAS]
+    sessions = sessions[:3]
     if [r["family_id"] for r in families[:R11_FAMILIES]] != contract["prior_family_ids"]:
         raise RegistryValidationError("R1.1 family roster was modified or reordered")
     if [r["idea_id"] for r in ideas[:R11_IDEAS]] != contract["prior_idea_ids"]:
@@ -121,6 +126,11 @@ def validate_installation() -> dict:
     families, ideas, sessions = (read_jsonl(UNIVERSE / fn) for fn in ("families.jsonl", "ideas.jsonl", "generation_sessions.jsonl"))
     validate_universe(families, ideas, sessions)
     assert_append_only_ancestry(families, ideas, sessions, contract)
+    # Restrict R1.2's historical claims to its exact frozen records, while
+    # validate_universe above continues to check the *entire* growing registry.
+    families = families[:R11_FAMILIES + R12_FAMILIES]
+    ideas = ideas[:R11_IDEAS + R12_IDEAS]
+    sessions = sessions[:3]
     catalogue = json.loads(CATALOGUE.read_text(encoding="utf-8"))
     sources = validate_evidence(catalogue, expected_ids=set(contract["evidence_ids"]))
     if hashlib.sha256(CATALOGUE.read_bytes()).hexdigest() != contract["evidence_catalogue_sha256"]:

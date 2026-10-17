@@ -37,7 +37,9 @@ def m():
 
 
 def rows():
-    return (read_jsonl(U / n) for n in ("families.jsonl", "ideas.jsonl", "generation_sessions.jsonl"))
+    # Original R1.2 tests remain about their immutable *prefix* after R1.3+.
+    f, i, s = (read_jsonl(U / n) for n in ("families.jsonl", "ideas.jsonl", "generation_sessions.jsonl"))
+    return f[:13], i[:35], s[:3]
 
 
 def evidence():
@@ -49,7 +51,7 @@ def contract():
 
 
 def test_full_universe_validates_under_accepted_r10_rules():
-    validate_universe(*rows())
+    validate_universe(*(read_jsonl(U / n) for n in ("families.jsonl", "ideas.jsonl", "generation_sessions.jsonl")))
 
 
 def test_r12_append_counts_and_parent_freeze():

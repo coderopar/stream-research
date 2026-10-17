@@ -1,0 +1,105 @@
+{
+  "contract_id": "R1_3_ORDER_BOOK_LIQUIDITY_GENERATION_V1",
+  "protocol_version": "1.2",
+  "accepted_parent": {
+    "r1_2_tag": "r1-legacy-lineage-v1",
+    "r1_2_contract_id": "R1_2_LEGACY_7M_LINEAGE_CONTRACT_V1",
+    "r1_2_legacy_evidence_catalogue_sha256": "5b5eb001419d808523db1174265fcf60d50be7e65a9048da0fce6755c8bbdf31"
+  },
+  "generation_lens": "ORDER_BOOK_LIQUIDITY",
+  "scope": {
+    "new_market_outcome_tests": false,
+    "new_market_features_computed": false,
+    "p1_market_data_read": false,
+    "p1_outcome_read": false,
+    "permanent_hypothesis_registry_mutated": false,
+    "outcome_based_merit_ranking": false,
+    "new_strategy_thresholds_frozen": false,
+    "retains_legacy_failed_inconclusive_ancestry": true,
+    "r0_6_execution_book_not_predictor_state": true,
+    "r0_5_governed_order_book_available": false,
+    "not_an_endorsement_of_25bp_policy": true,
+    "no_future_based_book_eligibility": true
+  },
+  "immutable_r1_2_prefix_sha256": {
+    "families.jsonl": "d9686f811b5da613740f2ba77465e31fac43768420048eaf0e82820b8c1be0a8",
+    "ideas.jsonl": "88ba68d28107798c242e448470a16c5184303dbeebfbb7f8ddd10a8a36f9752f",
+    "generation_sessions.jsonl": "11b0083bbc68dac265655c4822e49bc123472270c0246f3b55cffa6b8ff72dc6"
+  },
+  "prior_counts": {
+    "families": 13,
+    "ideas": 35,
+    "generation_sessions": 3
+  },
+  "added_family_ids": [
+    "FAM-DEPTH-GEOMETRY-FRAGILITY"
+  ],
+  "added_idea_ids": [
+    "IDEA-R1-BOOK-LADDER-GAP-FRAGILITY",
+    "IDEA-R1-BOOK-LADDER-DEPTH-CONCENTRATION",
+    "IDEA-R1-BOOK-CROSS-LEVEL-DEPTH-MIGRATION",
+    "IDEA-R1-BOOK-QUEUE-IMBALANCE-PERSISTENCE",
+    "IDEA-R1-BOOK-QUEUE-PRESSURE-FAILURE",
+    "IDEA-R1-BOOK-OFI-DEPTH-TRANSMISSION",
+    "IDEA-R1-BOOK-QUOTE-CHURN-RESILIENCE",
+    "IDEA-R1-BOOK-SPREAD-BOOK-RECOVERY",
+    "IDEA-R1-BOOK-OPPOSING-ATTRITION",
+    "IDEA-R1-BOOK-DURABLE-QUEUE-LOSS",
+    "IDEA-R1-BOOK-OPPOSING-REFILL-BREADTH",
+    "IDEA-R1-BOOK-NEAR-RESTORATION-FAILURE",
+    "IDEA-R1-BOOK-REFILL-EXECUTION-BOUND",
+    "IDEA-R1-BOOK-SUPPORT-OPPOSITION-REFILL-RACE",
+    "IDEA-R1-BOOK-CANCEL-VERSUS-TRADE-DRAIN",
+    "IDEA-R1-BOOK-DEPTH-RECOVERY-WITH-FLOW-DECAY"
+  ],
+  "added_mode_counts": {
+    "OUTCOME_BLIND": 9,
+    "LEGACY_RESULT_INFORMED": 7
+  },
+  "added_public_source_ids": [
+    "LIT-HUANG-LEHALLE-ROSENBAUM-2015"
+  ],
+  "legacy_evidence_ids_used": [
+    "LEG7M-01",
+    "LEG7M-02",
+    "LEG7M-04",
+    "LEG7M-05",
+    "LEG7M-06"
+  ],
+  "state_blockers": [
+    "GOVERNED_ORDER_BOOK_STATE",
+    "GOVERNED_BOOK_EVENT_OFI",
+    "GOVERNED_BOOK_TRADE_EVENT_ATTRIBUTION",
+    "GOVERNED_DEPTH_LEVEL_EVENT_HISTORY"
+  ],
+  "r0_6_limitations": [
+    "No order identity/queue position from market-by-price feed",
+    "No passive fill inference",
+    "No displayed-depth provenance without sequence continuity",
+    "No realistic latency/cost claims from zero-added-latency audit"
+  ],
+  "expected_post_counts": {
+    "families": 14,
+    "ideas": 51,
+    "generation_sessions": 4,
+    "permanent_hypotheses": 0
+  },
+  "existing_lenses": [
+    "THEORY_LITERATURE",
+    "MARKET_MECHANISM",
+    "LEGACY_7M_LINEAGE"
+  ],
+  "completed_lenses_after": [
+    "THEORY_LITERATURE",
+    "MARKET_MECHANISM",
+    "LEGACY_7M_LINEAGE",
+    "ORDER_BOOK_LIQUIDITY"
+  ],
+  "remaining_lenses": [
+    "PERPS_TRADE_FLOW",
+    "DERIVATIVES_POSITIONING",
+    "CROSS_VENUE",
+    "VOLATILITY_REGIME",
+    "PREDICTIVE_MODEL"
+  ]
+}

@@ -29,3 +29,7 @@ R1.1 source catalogue and mechanism rationale live under `research/r1/theory_mec
 ## R1.2 legacy ancestry addition
 
 Following R1.1, append-only session v3 completes `LEGACY_7M_LINEAGE`. Five new families and twenty `LEGACY_RESULT_INFORMED` ideas are admitted; all cite hashed archived-report evidence IDs in `research/r1/legacy_7m/legacy_evidence_catalogue.json`. Failed and feasibility-only branches are retained. Existing R1.1 family/idea/session JSONL prefixes remain byte-identical. The legacy candidate policy and older event outcomes are not new confirmatory evidence, and P1 stays sealed.
+
+## R1.3 order-book/liquidity addition
+
+R1.3 appends one `FAM-DEPTH-GEOMETRY-FRAGILITY` family, 16 new ideas (9 `OUTCOME_BLIND`, 7 `LEGACY_RESULT_INFORMED`), and session version 4 completing `ORDER_BOOK_LIQUIDITY`. Earlier R1.1/R1.2 JSONL prefixes remain byte-identical. Total: 14 families / 51 ideas / 4 session versions; no permanent hypothesis registration. Every book idea is blocked for R2 until the separately governed causal `ORDER_BOOK` state is implemented. The R0.6 executable replay is not a predictive book store. Details: `research/r1/order_book/README.md` and `research/governance/r1_order_book_liquidity_contract_v1.json`.
