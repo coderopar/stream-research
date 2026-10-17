@@ -115,3 +115,11 @@ Infrastructure status is deliberately separated from scientific admissibility. O
 Generation session `GEN-R1-UNIVERSE-V1` advances to version 2 / `IN_PROGRESS`, with exactly `THEORY_LITERATURE` and `MARKET_MECHANISM` completed. Seven predeclared lenses remain before R1.9 can freeze the universe. R1.1 is committed only if its local validator/tests and the full research-governance regression pass; this README ships in the same commit candidate rather than through a separate acceptance-metadata patch.
 
 **Next:** R1.2 — explicit legacy 7M lineage generation under `LEGACY_RESULT_INFORMED` provenance.
+
+## R1.2 checkpoint — Legacy 7M lineage
+
+R1.2 is intentionally `LEGACY_RESULT_INFORMED`, unlike the fresh outcome-blind R1.1 pass. Using preserved historical Phase 7M reports, it appends five distinct mechanism families, twenty result-informed ideas and one session v3 (`LEGACY_7M_LINEAGE` completed), while leaving the first eight families, fifteen ideas and two session records unchanged. Nineteen archived findings/policy-selection reports are indexed by source SHA256; the pre-R0 result limitations, negative/null/feasibility-only branches, original candidate policy and later causal-clock correction are retained explicitly. R1.2 is neither a new D0 outcome run nor validation of the 25bp candidate policy or P75/15m as a trading strategy. See `research/r1/legacy_7m/lineage_matrix.md` and `README.md` for a phase-by-phase genealogy.
+
+The historical reports have been *read*, so this stage does not claim outcome-blindness. P1 remains sealed and no new market/outcome files were opened. No old exploratory result is promoted to confirmation and the permanent `HYP-*` registry remains untouched. All R1.2 legacy ideas are capability-gated before R2 testing. The proposed package contains the documentation and acceptance tests together; after passing locally, it may be committed as one research step without a separate metadata patch.
+
+**Next:** R1.3 — order-book / liquidity hypothesis deepening, without outcome-based pruning.

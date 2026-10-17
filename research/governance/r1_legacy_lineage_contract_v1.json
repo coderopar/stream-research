@@ -1,0 +1,123 @@
+{
+  "contract_id": "R1_2_LEGACY_7M_LINEAGE_CONTRACT_V1",
+  "protocol_version": "1.2",
+  "accepted_r1_1_parent": {
+    "commit_prefix": "c8d57d9",
+    "tag": "r1-theory-mechanisms-v1"
+  },
+  "evidentiary_role": "LEGACY_RESULT_INFORMED_GENEALOGY_NOT_CONFIRMATION",
+  "scope": {
+    "legacy_archived_reports_reviewed": true,
+    "new_outcome_tests": false,
+    "new_causal_feature_computations": false,
+    "legacy_results_used_as_confirmation": false,
+    "p1_market_data_read": false,
+    "p1_outcome_read": false,
+    "permanent_hypothesis_registry_mutation": false
+  },
+  "prior_family_ids": [
+    "FAM-INFORMED-FLOW-PRICE-DISCOVERY",
+    "FAM-METAORDER-FLOW-PERSISTENCE",
+    "FAM-LIQUIDITY-RESILIENCE",
+    "FAM-IMPACT-EFFICIENCY-ABSORPTION",
+    "FAM-QUEUE-PRESSURE",
+    "FAM-TRANSIENT-IMPACT-DECAY",
+    "FAM-CROSS-VENUE-INFORMATION-DIFFUSION",
+    "FAM-VOLATILITY-LIQUIDITY-FEEDBACK"
+  ],
+  "prior_idea_ids": [
+    "IDEA-R1-INFORMED-FLOW-CONTINUATION",
+    "IDEA-R1-FLOW-DEPTH-SENSITIVITY",
+    "IDEA-R1-SIGNED-FLOW-PERSISTENCE",
+    "IDEA-R1-PERSISTENCE-LIQUIDITY-ADAPTATION",
+    "IDEA-R1-FAST-RESILIENCE-REVERSION",
+    "IDEA-R1-SLOW-RESILIENCE-CONTINUATION",
+    "IDEA-R1-IMPACT-EFFICIENCY-CONTINUATION",
+    "IDEA-R1-ABSORPTION-EXHAUSTION-REVERSAL",
+    "IDEA-R1-QUEUE-IMBALANCE-DIRECTION",
+    "IDEA-R1-QUEUE-PRESSURE-FAILURE",
+    "IDEA-R1-ISOLATED-SHOCK-REVERSION",
+    "IDEA-R1-CROSS-VENUE-LEAD-LAG",
+    "IDEA-R1-CROSS-VENUE-COMMON-FLOW-CONFIRMATION",
+    "IDEA-R1-THIN-LIQUIDITY-AMPLIFICATION",
+    "IDEA-R1-LIQUIDITY-RECOVERY-DAMPING"
+  ],
+  "added_family_ids": [
+    "FAM-PERP-POSITIONING-FORCED-FLOW",
+    "FAM-PERP-BASIS-DISLOCATION",
+    "FAM-FUNDING-CROWDING-REGIME",
+    "FAM-OPTIONS-SURFACE-RISK-REPRICING",
+    "FAM-OPTIONS-UNSIGNED-GAMMA-GEOMETRY"
+  ],
+  "added_idea_ids": [
+    "IDEA-R1-LEGACY-OPPOSING-WITHDRAWAL",
+    "IDEA-R1-LEGACY-DURABLE-OPPOSING-LOSS",
+    "IDEA-R1-LEGACY-OPPOSING-REFILL-BREADTH",
+    "IDEA-R1-LEGACY-OPPOSING-NEAR-RESTORATION",
+    "IDEA-R1-LEGACY-SUPPORTING-REFILL",
+    "IDEA-R1-LEGACY-REFILL-REPLACEMENT-PENETRATION",
+    "IDEA-R1-LEGACY-OI-EXPANSION",
+    "IDEA-R1-LEGACY-FORCE-ORDER-PRESENCE",
+    "IDEA-R1-LEGACY-AGGRESSIVE-TRADE-CONCENTRATION",
+    "IDEA-R1-LEGACY-BASIS-CHANGE",
+    "IDEA-R1-LEGACY-CURRENT-BASIS",
+    "IDEA-R1-LEGACY-COUNTER-FUNDING",
+    "IDEA-R1-LEGACY-BINANCE-SPOT-FLOW",
+    "IDEA-R1-LEGACY-BINANCE-SPOT-PRICE",
+    "IDEA-R1-LEGACY-OKX-BBO-IMBALANCE",
+    "IDEA-R1-LEGACY-OKX-PRICE-CONFIRMATION",
+    "IDEA-R1-LEGACY-OPTIONS-25D-SKEW",
+    "IDEA-R1-LEGACY-OPTIONS-ATM-IV",
+    "IDEA-R1-LEGACY-OPTIONS-TERM-RICHENING",
+    "IDEA-R1-LEGACY-OPTIONS-GAMMA-GEOMETRY"
+  ],
+  "evidence_ids": [
+    "LEG7I-01",
+    "LEG7K-01",
+    "LEG7K-02",
+    "LEG7K-03",
+    "LEG7K-04",
+    "LEG7M-01",
+    "LEG7M-02",
+    "LEG7M-03",
+    "LEG7M-04",
+    "LEG7M-05",
+    "LEG7M-06",
+    "LEG7M-07",
+    "LEG7M-08",
+    "LEG7M-09",
+    "LEG7M-10",
+    "LEG7M-11A",
+    "LEG7M-11B",
+    "LEG7M-11C",
+    "LEG7M-12A"
+  ],
+  "prior_prefix_sha256": {
+    "families.jsonl": "a770c3d2b999531fd4a0f8c0f7cfd184e2060393b4edf0daf4e9a1f03e3c12b8",
+    "ideas.jsonl": "3a8eb6af732b4621d4a898b56b44b691045833d43cf5b68047b0f5c7220f2005",
+    "generation_sessions.jsonl": "a5dac2f6e8d2ff4739614abb071ea4d1323c57a20ad6d8901c76572567504abe"
+  },
+  "restrictions": {
+    "legacy_candidate_policy_status": "HISTORICAL_D0_DEVELOPMENT_ONLY_NOT_ACCEPTED_FINAL_EVENT_POLICY",
+    "original_outcome_clock_status": "SUPERSEDED_R0_2_R0_3",
+    "historical_7m_results_status": "NOT_D1_INDEPENDENT_CONFIRMATION",
+    "no_threshold_horizon_rescue": true,
+    "no_result_based_pruning": true,
+    "failed_and_feasibility_only_branches_retained": true,
+    "unsupported_state_no_ad_hoc_R2_use": true,
+    "r1_3_through_r1_8_not_preempted": true,
+    "source_archives_not_packaged_but_sha256_cited": true
+  },
+  "standalone_substrate_evidence_ids": [
+    "LEG7M-03"
+  ],
+  "evidence_catalogue_sha256": "5b5eb001419d808523db1174265fcf60d50be7e65a9048da0fce6755c8bbdf31",
+  "source_archive_sha256": "de189fc72a169da0a25fd82fb104ad8ace4ff1f004c8c5fb72d8581e8f04d5f2",
+  "standalone_policy_evidence_ids": [
+    "LEG7I-01",
+    "LEG7K-01",
+    "LEG7K-02",
+    "LEG7K-03",
+    "LEG7K-04"
+  ]
+}

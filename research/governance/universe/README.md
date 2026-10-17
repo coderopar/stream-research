@@ -25,3 +25,7 @@ results actually influenced their design.
 
 
 R1.1 source catalogue and mechanism rationale live under `research/r1/theory_mechanisms/`. Public literature references are qualitative provenance only; no project D0/P1 outcomes are embedded in the R1.1 idea packets.
+
+## R1.2 legacy ancestry addition
+
+Following R1.1, append-only session v3 completes `LEGACY_7M_LINEAGE`. Five new families and twenty `LEGACY_RESULT_INFORMED` ideas are admitted; all cite hashed archived-report evidence IDs in `research/r1/legacy_7m/legacy_evidence_catalogue.json`. Failed and feasibility-only branches are retained. Existing R1.1 family/idea/session JSONL prefixes remain byte-identical. The legacy candidate policy and older event outcomes are not new confirmatory evidence, and P1 stays sealed.

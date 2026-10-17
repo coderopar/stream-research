@@ -30,10 +30,12 @@ def _validator():
 
 
 def _rows():
+    # R1.1 tests assert its immutable first records, not the entire expanding
+    # R1 universe. R1.2+ tests validate new append-only rows and full coherence.
     return (
-        read_jsonl(UNIVERSE / "families.jsonl"),
-        read_jsonl(UNIVERSE / "ideas.jsonl"),
-        read_jsonl(UNIVERSE / "generation_sessions.jsonl"),
+        read_jsonl(UNIVERSE / "families.jsonl")[:8],
+        read_jsonl(UNIVERSE / "ideas.jsonl")[:15],
+        read_jsonl(UNIVERSE / "generation_sessions.jsonl")[:2],
     )
 
 

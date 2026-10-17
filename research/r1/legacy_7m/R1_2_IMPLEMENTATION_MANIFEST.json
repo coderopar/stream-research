@@ -1,0 +1,45 @@
+{
+  "stage": "R1.2",
+  "title": "Legacy 7M lineage reconstruction",
+  "implementation_semantics": "APPEND_ONLY_SOURCE_LOCKED_LEGACY_RESULT_INFORMED_UNIVERSE_GENERATION",
+  "protocol_version": "1.2",
+  "accepted_parent": {
+    "commit_prefix": "c8d57d9",
+    "tag": "r1-theory-mechanisms-v1"
+  },
+  "deliverable_scope": "single complete research-step commit candidate; no post-acceptance metadata patch",
+  "expected_counts": {
+    "legacy_evidence_records": 19,
+    "new_families": 5,
+    "new_ideas": 20,
+    "total_families": 13,
+    "total_ideas": 35,
+    "generation_session_version": 3,
+    "permanent_hypotheses": 0,
+    "upstream_policy_design_reports": 5
+  },
+  "research_boundary": {
+    "historical_legacy_results_reviewed": true,
+    "new_d0_outcome_tests": false,
+    "p1_market_data_read": false,
+    "p1_outcome_read": false,
+    "legacy_results_not_independent_confirmation": true,
+    "historical_25bp_candidate_policy_not_final_policy": true,
+    "original_7m3_clock_defect_disclosed": true,
+    "null_failed_and_feasibility_only_ancestors_retained": true,
+    "outcome_based_pruning": false,
+    "scientific_merit_ranking": false,
+    "new_trading_rule_frozen": false,
+    "R0_7_permanent_registry_mutated": false
+  },
+  "source_material": "full_microstructure_adversarial_review_bundle(1).zip (not redistributed); report-path and SHA256 evidence catalogue included",
+  "acceptance": {
+    "status": "REQUIRES_LOCAL_VERIFICATION_BEFORE_COMMIT",
+    "commands": [
+      "python -m pytest tests/research_governance/test_r1_legacy_lineage.py -v",
+      "python research/r1/legacy_7m/validate_legacy_lineage.py",
+      "python research/r1/legacy_7m/validate_legacy_lineage.py --self-test",
+      "python -m pytest tests/research_governance -q -rs"
+    ]
+  }
+}

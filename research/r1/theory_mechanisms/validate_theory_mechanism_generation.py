@@ -91,7 +91,13 @@ def _validate_r11_universe(contract: dict, source_ids: set[str]) -> tuple[list[d
     families = read_jsonl(UNIVERSE / "families.jsonl")
     ideas = read_jsonl(UNIVERSE / "ideas.jsonl")
     sessions = read_jsonl(UNIVERSE / "generation_sessions.jsonl")
+    # R1.1's frozen *prefix* remains authoritative after later append-only R1 lenses.
+    # Validate the entire growing universe, then evaluate R1.1 assertions on its
+    # first eight families, fifteen ideas and two session versions only.
     validate_universe(families, ideas, sessions)
+    if len(families) < 8 or len(ideas) < 15 or len(sessions) < 2:
+        raise RegistryValidationError("R1.1 frozen prefix was truncated")
+    families, ideas, sessions = families[:8], ideas[:15], sessions[:2]
 
     expected_families = set(contract["family_ids"])
     expected_ideas = set(contract["idea_ids"])

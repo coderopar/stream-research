@@ -282,3 +282,19 @@ R1 begins fresh hypothesis-universe generation. The repaired 7M direction remain
 R0.8 acceptance also hardened idempotence after the MAE summary correction: substantive equality is now required only for the same accepted parents and the same implementation fingerprint; a legitimate code/contract correction creates a new baseline while true same-implementation nondeterminism still fails closed.
 
 **R0.9 rerun hardening:** The first post-remediation rerun exposed an audit-identity defect rather than scientific nondeterminism. The pre-remediation audit hash was being compared with a repository whose audited governance/documentation state had intentionally changed. R0.9 now fingerprints the audited governance inputs, production-registry state, accepted R0.8 runtime manifest, Git HEAD, and frozen tag resolutions. Idempotence is enforced only when accepted parent, audit implementation, and audited repository state are all unchanged. This change does not read P1 market data or outcomes and does not alter any R0 scientific artifact.
+
+## R1.2 — Recovering the legacy 7M research ancestry
+
+**Question:** Can we retain what the previous, heavily inspected 7M program taught us, including what failed, without pretending that historical results are independent validation or automatically carrying its candidate policy forward?
+
+**What changed:** A source-hashed, nineteen-record historical evidence catalogue (including five pre-7M policy-selection precursors) and human-readable 7M.1–7M.12A chronology are paired with twenty explicit `LEGACY_RESULT_INFORMED` idea records. Five distinct mechanism families were added; historical liquidity, flow and cross-venue ideas reuse existing R1.1 families instead of splitting families to increase statistical testing opportunities. The frozen generation plan advances to session v3, completing `LEGACY_7M_LINEAGE` only.
+
+**Why it matters:** The old work explored many related outcomes, horizons and features with repeatedly inspected dates, and the pre-R0 candidate-second horizon was later found to overlap information from the exact book anchor. It is scientifically useful development lineage, not an independent confirmation dataset. Null results, failed replication and feasibility-only investigations remain visible, rather than silently removed.
+
+**Evidence/acceptance:** Original archived report paths and SHA256 fingerprints, lineage validation, and full governance regression are shipped in the same proposed commit package. Local test/validator acceptance is required before committing; no separate metadata patch is needed.
+
+**Limitations:** The archive is a historical *report* record, not a fresh audit of underlying raw events or a way to prove all historical analysis choices were preregistered. No economic profitability, causal effect or signed dealer hedge inference is established. The original 25bp/reset/rearm candidate definition remains legacy and optional for future D0 designs. P1 is not accessed.
+
+**Implication:** R1.3–R1.8 can develop mechanism-specific variants with accurate genealogy but must not mine old outcome tables or treat a favorable old effect as a new confirmation. Existing unsupported causal state families still need governed implementations before R2.
+
+**Next:** R1.3 — deeper order-book/liquidity hypothesis generation. R1.9 must still audit the complete universe and family boundaries.
