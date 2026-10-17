@@ -306,3 +306,19 @@ R1.3 deepens the first-principles and historical liquidity mechanisms without ru
 Why it matters: we now have auditable hypotheses about depth location, queue pressure, replenishment, cancellation/execution ambiguity, transient impact, and flow-conditioned liquidity, without treating the earlier 7M correlations or old 25bp selection policy as proven trading rules. Null/inconclusive legacy refill-penetration evidence remains explicit. All 16 book ideas remain **blocked** for R2 until a proper receive-time-governed causal `ORDER_BOOK` predictor state exists: R0.6 execution replay is not a book feature store. Public market-by-price updates do not reveal passive queue position, individual order identity or hidden liquidity; no claims of spoofing or realized fills can be inferred from them.
 
 No fresh D0 outcomes were opened, no P1 data or outcomes were read, and no R0.7 permanent hypothesis was registered. The package includes its initial research narrative, contract, tests and implementation manifest from the outset; local acceptance decides whether to freeze it, without a post-testing README patch. See `research/r1/order_book/README.md` for the full theory/legacy distinction and future capability gates. **Next: R1.4 — perpetual trade-flow generation.**
+
+## R1.4 — Perpetual trade-flow hypotheses
+
+**Question:** What pre-decision, causally observable patterns of trade-side activity, persistence, and arrival tempo might matter for executable BTCUSDT price response—without mistaking activity for information or selecting by returns?
+
+**What changed:** Reused the existing informed-flow, metaorder-persistence and impact-efficiency families; added one independent trade-arrival-tempo family and sixteen ideas (fifteen outcome-blind, one legacy-informed with 7M.7C failed replication). The append-only universe now has **15 families, 67 ideas, and generation-session version 5**. Four required lenses remain. Three public literature sources are explicitly catalogued.
+
+**Why it matters:** R0.5 makes causal trade-count, quantity, notional and raw maker-flag category buckets available now, but not per-print size/interarrival streams or an entire historical price path. Twelve R1.4 ideas are *structurally* testable with existing candidate-indexed D0 buckets, while four are capability-blocked. Any new candidate definition needs a governed rebuild of its causal state, not a free pass from the original frozen-candidate store. This does **not** mean any is profitable, that aggressor sign has been verified, or that latency/fees have been calibrated.
+
+**Evidence/acceptance:** The R1.4 validator hashes frozen R1.3 prefix bytes, validates each idea's immutable genealogy, literature refs, infrastructure gating, sealed P1 boundary, and no permanent HYP registry mutation. Tests, validator, manuscript catalogue and manifest ship in the **same initial commit-candidate ZIP**; local acceptance is required before Git freeze.
+
+**Known limitations:** Trade rows are not unique orders or traders; `buyer_is_maker` is raw until its semantics are verified; storage grids are not scientific feature windows; unobserved print distributions/interarrival/price histories are not fabricated; historical trade concentration failed replication and remains unconfirmed. No new D0 outcomes or P1 reads occurred.
+
+**Implication:** Later R2 may use existing bucket families after D0 feature/candidate design and proper evidence/return/risk gates. It may not use blocked capabilities until governed state exists. No old 25-bp candidate policy is compulsory. See `research/r1/trade_flow/README.md`.
+
+**Next:** R1.5 — derivatives and positioning lens. R1.4 commit/tag are established only after local verification.

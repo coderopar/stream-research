@@ -1,0 +1,50 @@
+{
+  "stage": "R1.4",
+  "title": "Perpetual trade-flow hypothesis universe expansion",
+  "protocol_version": "1.2",
+  "implementation_semantics": "APPEND_ONLY_TRADE_BUCKET_CAPABILITY_AWARE_GENERATION_NO_OUTCOME_TESTING",
+  "accepted_parent": {
+    "tag": "r1-order-book-liquidity-v1",
+    "contract": "R1_3_ORDER_BOOK_LIQUIDITY_GENERATION_V1"
+  },
+  "deliverable_scope": "one root-relative changed-files ZIP with code, tests, contract, manifest and README updates; no post-acceptance metadata patch",
+  "expected_counts": {
+    "prior_families": 14,
+    "prior_ideas": 51,
+    "prior_sessions": 4,
+    "new_families": 1,
+    "new_ideas": 16,
+    "new_outcome_blind_ideas": 15,
+    "new_legacy_result_informed_ideas": 1,
+    "total_families": 15,
+    "total_ideas": 67,
+    "generation_session_version": 5,
+    "permanent_hypotheses": 0,
+    "structurally_testable_now": 12,
+    "blocked_pending_governed_state": 4
+  },
+  "research_boundary": {
+    "new_market_outcome_tests": false,
+    "new_market_features_computed": false,
+    "d0_outcome_files_opened": false,
+    "p1_market_data_read": false,
+    "p1_outcomes_read": false,
+    "outcome_based_pruning": false,
+    "scientific_merit_ranking": false,
+    "new_strategy_threshold_horizon_frozen": false,
+    "permanent_r0_7_hypothesis_registry_mutated": false,
+    "legacy_failed_replication_retained": true,
+    "raw_buyer_maker_flag_not_automatically_reinterpreted": true,
+    "trade_row_count_not_unique_traders": true
+  },
+  "acceptance": {
+    "status": "COMPLETE_COMMIT_CANDIDATE_AWAITING_LOCAL_TESTS",
+    "commands": [
+      "python -m pytest tests/research_governance/test_r1_perps_trade_flow_generation.py -v",
+      "python research/r1/trade_flow/validate_trade_flow_generation.py",
+      "python research/r1/trade_flow/validate_trade_flow_generation.py --self-test",
+      "python research/r1/order_book/validate_order_book_generation.py",
+      "python -m pytest tests/research_governance -q -rs"
+    ]
+  }
+}

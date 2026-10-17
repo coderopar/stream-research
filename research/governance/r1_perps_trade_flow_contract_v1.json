@@ -1,0 +1,117 @@
+{
+  "contract_id": "R1_4_PERPS_TRADE_FLOW_GENERATION_V1",
+  "protocol_version": "1.2",
+  "accepted_parent": {
+    "r1_3_tag": "r1-order-book-liquidity-v1",
+    "r1_3_contract_id": "R1_3_ORDER_BOOK_LIQUIDITY_GENERATION_V1",
+    "r1_3_contract_sha256": "02933657a231d7794a4a67cefa7c7950417926ee62bd9444fc0e7011c5a61488"
+  },
+  "generation_lens": "PERPS_TRADE_FLOW",
+  "immutable_r1_3_prefix_sha256": {
+    "families.jsonl": "47dbae906141b92a456b719ac71ee66c5e198d257eb94849947c3c4e8c67f3a2",
+    "ideas.jsonl": "53408e80d1cf77bccc59be948815708df7864d347c39148b347221f9b61daf41",
+    "generation_sessions.jsonl": "8f41bb48a6e1047072520da056116643499dfe77068b310643247b4340d32efc"
+  },
+  "prior_counts": {
+    "families": 14,
+    "ideas": 51,
+    "generation_sessions": 4
+  },
+  "added_family_ids": [
+    "FAM-PERP-TRADE-ARRIVAL-TEMPO"
+  ],
+  "added_idea_ids": [
+    "IDEA-R1-SIDE-DOMINANCE-PERSISTENCE",
+    "IDEA-R1-SIDE-PRESSURE-ACCELERATION",
+    "IDEA-R1-SIDE-DOMINANCE-REVERSAL",
+    "IDEA-R1-IMBALANCE-ACTIVITY-NORMALIZATION",
+    "IDEA-R1-COUNT-QUANTITY-DIVERGENCE",
+    "IDEA-R1-NOTIONAL-SIDE-ASYMMETRY",
+    "IDEA-R1-FLOW-BURST-CONTINUATION",
+    "IDEA-R1-FLOW-BURST-DISSIPATION",
+    "IDEA-R1-FLOW-SIDE-BURST-COUPLING",
+    "IDEA-R1-FLOW-QUIET-TO-ACTIVE-TRANSITION",
+    "IDEA-R1-FLOW-BIDIRECTIONAL-CHURN",
+    "IDEA-R1-FLOW-SHORT-LONG-REGIME-CONTRAST",
+    "IDEA-R1-INTERARRIVAL-SELF-EXCITATION",
+    "IDEA-R1-INDIVIDUAL-PRINT-TAIL-SKEW",
+    "IDEA-R1-PRICE-RESPONSE-FLOW-DECOUPLING",
+    "IDEA-R1-LEGACY-TRADE-SIZE-HHI-FAILED-REPLICATION"
+  ],
+  "added_mode_counts": {
+    "OUTCOME_BLIND": 15,
+    "LEGACY_RESULT_INFORMED": 1
+  },
+  "added_public_source_ids": [
+    "LIT-LILLO-FARMER-2004",
+    "LIT-BACRY-MASTROMATTEO-MUZY-2015",
+    "LIT-EASLEY-LOPEZDEPRADO-OHARA-2012"
+  ],
+  "legacy_evidence_ids_used": [
+    "LEG7M-07"
+  ],
+  "state_capability_rules": {
+    "available": "PERPS_TRADES receive-time count, quantity, notional, raw buyer_is_maker true/false bucket quantities",
+    "testable_now_requires_only_bucket_fields": true,
+    "blocked_requirements": [
+      "GOVERNED_PERPS_TRADE_EVENTS",
+      "GOVERNED_PERPS_PRICE_PATH_STATE"
+    ],
+    "raw_maker_flag_mapping_must_be_verified_in_d0": true,
+    "bucket_row_count_is_not_unique_orders_or_participants": true,
+    "r0_5_trade_storage_grid_not_scientific_feature_definition": true
+  },
+  "scope": {
+    "new_market_outcome_tests": false,
+    "new_market_features_computed": false,
+    "d0_outcome_files_opened": false,
+    "p1_market_data_read": false,
+    "p1_outcome_read": false,
+    "permanent_hypothesis_registry_mutated": false,
+    "outcome_based_merit_ranking": false,
+    "new_strategy_thresholds_frozen": false,
+    "retains_legacy_trade_concentration_replication_failure": true,
+    "no_parent_25bp_candidate_policy_endorsement": true,
+    "no_future_based_eligibility": true
+  },
+  "expected_post_counts": {
+    "families": 15,
+    "ideas": 67,
+    "generation_sessions": 5,
+    "permanent_hypotheses": 0
+  },
+  "completed_lenses_after": [
+    "THEORY_LITERATURE",
+    "MARKET_MECHANISM",
+    "LEGACY_7M_LINEAGE",
+    "ORDER_BOOK_LIQUIDITY",
+    "PERPS_TRADE_FLOW"
+  ],
+  "remaining_lenses": [
+    "DERIVATIVES_POSITIONING",
+    "CROSS_VENUE",
+    "VOLATILITY_REGIME",
+    "PREDICTIVE_MODEL"
+  ],
+  "added_idea_freeze_hashes": {
+    "IDEA-R1-SIDE-DOMINANCE-PERSISTENCE": "6aac5a544f21e1ac8e4a3eb46f790cf217fd4c33a423a1724b70c9298660c01c",
+    "IDEA-R1-SIDE-PRESSURE-ACCELERATION": "e96f66605cb36538bfb1e14fe2ac915450762d0fadfb6bc87c0ed795e425a1dd",
+    "IDEA-R1-SIDE-DOMINANCE-REVERSAL": "44c205b16ff7c0fcebfa7bd46af11eb2b3406263498a3afebca7b29b38b6c72b",
+    "IDEA-R1-IMBALANCE-ACTIVITY-NORMALIZATION": "e78f87814e86be700db2fd97619f9606bd6b00c57eca6507b51c3560e937e008",
+    "IDEA-R1-COUNT-QUANTITY-DIVERGENCE": "dfc5a63e42f404251874682a3013fc5f453f1b79dc3294746757e75890400e91",
+    "IDEA-R1-NOTIONAL-SIDE-ASYMMETRY": "4adbaa280ed3eac2bc6d2fa2279617bf72f844e77f77abe15e10584bda624aa7",
+    "IDEA-R1-FLOW-BURST-CONTINUATION": "06922516ef1c330ea6d9c3b1e25b661a6fbd887abf37dbcefb9d79af7bb06c9a",
+    "IDEA-R1-FLOW-BURST-DISSIPATION": "311a2554df08f193c3e5d938a6677a1816f2d88690a5fa22f48b115e250d9071",
+    "IDEA-R1-FLOW-SIDE-BURST-COUPLING": "bfec422f0575f66be76ec16caee19cd8cddba4be26aaf1a648544a5c554a2b37",
+    "IDEA-R1-FLOW-QUIET-TO-ACTIVE-TRANSITION": "ff813a6d573a78f3f0774be4ed2563bc9971c93c2a0117a07401d162ba59494f",
+    "IDEA-R1-FLOW-BIDIRECTIONAL-CHURN": "fc7dfc143db2f0d37b46106a52e31bb8a8a3fe22053113a95cda1d4613048c22",
+    "IDEA-R1-FLOW-SHORT-LONG-REGIME-CONTRAST": "86c6f13e9ddb0ec7c7579c7f03dc02893cea83665c0c2d0c5ec9d6de1c586016",
+    "IDEA-R1-INTERARRIVAL-SELF-EXCITATION": "488b07aa2aac025cf8610267fe4251c673dc0643b995fec4058f3004914f7341",
+    "IDEA-R1-INDIVIDUAL-PRINT-TAIL-SKEW": "df3c7e51abab02ac18065394be402173b3fddb898447ca185d0f94fe397f5040",
+    "IDEA-R1-PRICE-RESPONSE-FLOW-DECOUPLING": "baabf0a903ce3eab4590c6fd1105eeeb5d6487c4d0c4da5b792af2fd8b8e5bf9",
+    "IDEA-R1-LEGACY-TRADE-SIZE-HHI-FAILED-REPLICATION": "4ac50e48f6cffc4166173821a63e9739e802fa83f328da2c0fa8660265986ac2"
+  },
+  "added_family_freeze_hash": "53e8f3c1e86b1cf203f3355547a70a4cd12c866a1c50a9cedc0010a2b5061652",
+  "generation_session_v5_freeze_hash": "5b59a59162089fe2be9277fdb0f705fd7ea31cc3257dd51e46e9c2c5c962148f",
+  "new_public_sources_sha256": "e59c80b5e311a5218909782969b4a395ca48e6db8fe29caab5d9000a052f745c"
+}

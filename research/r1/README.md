@@ -131,3 +131,11 @@ R1.3 appends one distinct depth-geometry family, 16 governed ideas (9 outcome-bl
 Scientific content: multi-level depth fragility, persistent/failing queue pressure, event-OFI/depth interaction, resilience/recovery, and the competing consequences of opposing/supporting replenishment and cancellation/transaction-driven depth loss. In particular, older refill-penetration failure is retained, not rescued. The extra ideas are not ranked by apparent performance. Infrastructure remains limited: R0.5 lacks reusable causal book features; R0.6's executable book replay is **not** an order-book predictor layer. Full rationale, qualitative source/legacy provenance and acceptance commands are in `research/r1/order_book/README.md`. No later acceptance-metadata patch is planned.
 
 **Next:** R1.4 — perpetual trade-flow hypotheses (the next frozen lens).
+
+## R1.4 checkpoint — PERPS_TRADE_FLOW
+
+R1.4 adds the fifth predeclared generation lens, sixteen mechanisms/idea records (fifteen `OUTCOME_BLIND`; one historical 7M trade-size HHI failure with `LEGACY_RESULT_INFORMED` genealogy), and one truly distinct arrival-tempo family. R1.1 informed flow/metaorder and impact families are reused to avoid family splitting. Total: **15 families, 67 ideas, five generation-session records**, no permanent hypotheses. Twelve ideas need only the existing R0.5 trade-bucket causal state; four need new governed individual event or price-path state. Unknown `buyer_is_maker` semantics, bucket trade-row multiplicity and missing price/individual-print histories are stated explicitly. No D0/P1 outcome testing and no old 25-bp/15m hypothesis endorsement.
+
+Validation, provenance, the capability table, and local acceptance commands are in `trade_flow/README.md`. This step's full research record is shipped with code/tests in the single initial patch and committed only after local acceptance.
+
+**Next:** R1.5 derivatives and positioning generation; remaining lenses are derivatives, cross venue, volatility/regime, and predictive models.

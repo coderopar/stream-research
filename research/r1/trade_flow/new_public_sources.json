@@ -1,0 +1,52 @@
+[
+  {
+    "source_id": "LIT-LILLO-FARMER-2004",
+    "title": "The Long Memory of the Efficient Market",
+    "authors": [
+      "Fabrizio Lillo",
+      "J. Doyne Farmer"
+    ],
+    "year": 2004,
+    "source_kind": "PEER_REVIEWED_EMPIRICAL",
+    "stable_reference": "https://doi.org/10.2202/1558-3708.1226",
+    "supported_mechanism_claims": [
+      "Persistent trade/order signs need not imply predictable returns because liquidity can adapt.",
+      "Observations in other equity markets motivate, but do not validate, BTCUSDT signed-flow hypotheses."
+    ],
+    "scope_note": "Historic public research only; no fitted coefficients or crypto profitability are transferred."
+  },
+  {
+    "source_id": "LIT-BACRY-MASTROMATTEO-MUZY-2015",
+    "title": "Hawkes Processes in Finance",
+    "authors": [
+      "Emmanuel Bacry",
+      "Iacopo Mastromatteo",
+      "Jean-François Muzy"
+    ],
+    "year": 2015,
+    "source_kind": "PUBLIC_RESEARCH_REVIEW",
+    "stable_reference": "https://arxiv.org/abs/1502.04592",
+    "supported_mechanism_claims": [
+      "Self-exciting point-process models are a coherent mechanism lens for event-time clustering.",
+      "Estimating actual event-time excitation requires individual timestamped events, not bucket counts alone."
+    ],
+    "scope_note": "Cites the point-process framework only; no fitted Hawkes model, parameter or project event outcome."
+  },
+  {
+    "source_id": "LIT-EASLEY-LOPEZDEPRADO-OHARA-2012",
+    "title": "Flow Toxicity and Liquidity in a High-frequency World",
+    "authors": [
+      "David Easley",
+      "Marcos M. Lopez de Prado",
+      "Maureen O’Hara"
+    ],
+    "year": 2012,
+    "source_kind": "PEER_REVIEWED_EMPIRICAL",
+    "stable_reference": "https://doi.org/10.1093/rfs/hhs053",
+    "supported_mechanism_claims": [
+      "Trade-flow imbalance and activity can motivate an adverse-selection interpretation subject to adequate trade-side classification.",
+      "A toxicity score is not a tradable profit claim and must not be treated as a validated BTCUSDT strategy."
+    ],
+    "scope_note": "No VPIN implementation or score is adopted; BTCUSDT outcomes are entirely unexamined."
+  }
+]
