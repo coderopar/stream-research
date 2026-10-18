@@ -162,3 +162,11 @@ validator in `derivatives/README.md`. The complete implementation and
 README edits ship together; only locally accepted work is committed.
 
 **Next:** R1.6 — Cross-venue mechanism generation.
+
+## R1.6 checkpoint — CROSS_VENUE
+
+R1.6 adds **16 ideas** (12 `OUTCOME_BLIND`, four `LEGACY_RESULT_INFORMED`) and one mechanism family for distinct venue liquidity segmentation while reusing the pre-existing cross-venue information diffusion family. The universe reaches **101 ideas / 16 families**, with generation session v7 and two required lenses remaining. Literature/API sources motivate hypotheses but do not support BTCUSDT return claims. Historical `LEG7M-09` and `LEG7M-10` null and failed-matching evidence remains traceable. All new ideas require unavailable governed Binance-spot/OKX quote/price state and therefore cannot enter R2 yet; two-leg execution also requires separate execution/settlement capability. No outcome testing, P1 reading, or permanent hypothesis registry mutation.
+
+See `research/r1/cross_venue/README.md` for the full catalogue, clock/source boundaries, evidence ancestry and acceptance commands. The living `research/README.md` records the scientific reason for this step.
+
+**Next:** R1.7 volatility and regime mechanisms, then R1.8 predictive-model track and R1.9 adversarial universe freeze.

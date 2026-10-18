@@ -1,0 +1,73 @@
+{
+  "stage": "R1.6",
+  "title": "Cross-venue information diffusion and liquidity-segmentation hypothesis generation",
+  "protocol_version": "1.2",
+  "status": "COMPLETE_COMMIT_CANDIDATE_AWAITING_LOCAL_TESTS",
+  "accepted_parent": {
+    "tag": "r1-derivatives-positioning-v1",
+    "contract_id": "R1_5_DERIVATIVES_POSITIONING_GENERATION_V1"
+  },
+  "counts": {
+    "prior_families": 15,
+    "new_families": 1,
+    "post_families": 16,
+    "prior_ideas": 85,
+    "new_ideas": 16,
+    "post_ideas": 101,
+    "new_outcome_blind_ideas": 12,
+    "new_legacy_result_informed_ideas": 4,
+    "post_generation_session_version": 7,
+    "blocked_pending_governed_state_or_execution": 16,
+    "permanent_hypothesis_rows": 0
+  },
+  "parent_prefix_sha256": {
+    "families.jsonl": "62f15ef41736e100f4b5f59231494a3baeacb0efa6c1d010d651605914d5e54b",
+    "ideas.jsonl": "b6475e1ccbe9ffa255a396941276cb66a4b62033a072cb56f79761bf9bbbbbb5",
+    "generation_sessions.jsonl": "dc46aa1099254952bbf069df2a5a86a10d8a564f6be9f00f48e6bb0a0a9e6f09"
+  },
+  "new_sources_sha256": "fe9436f495caf77a078040826dcebb52b752365bb6ed507b78d0a2c3b64293d5",
+  "new_idea_freeze_hashes": {
+    "IDEA-R1-CROSS-SPOT-FLOW-LEADS-PERP-REPRICING": "6015535a721375b81afb72c2ec9138b4b768826bc307aa279c42f7bcda031d94",
+    "IDEA-R1-CROSS-PERP-FLOW-LEADS-SPOT-REPRICING": "106c77a3050235c2e1d854cf43836f946a4bda0fa78dbe07efa469291382dda7",
+    "IDEA-R1-CROSS-SPOT-PERP-FLOW-DISAGREEMENT": "829628b3574fb79bd9276a2086c090379d1f962d464c890aee137af3bb211a9d",
+    "IDEA-R1-CROSS-OKX-SPOT-QUOTE-LEADS-BINANCE-PERP": "47154e5c52b78b25eaf8bc903f3ed2fddcd4bcb4eafff89fef8cb9402969abc8",
+    "IDEA-R1-CROSS-BINANCE-OKX-SPOT-QUOTE-DISAGREEMENT": "0d638fbd93c312030643250bcfa3f0258ee11341d60f01ee547112812a6cd589",
+    "IDEA-R1-CROSS-COMMON-VS-LOCAL-VENUE-SHOCK": "7021c60e236fb421beabaaf91f5ca59c587b659e3ade5c352b8f56c57df4be1b",
+    "IDEA-R1-CROSS-RECEIVE-TIME-ASYNCHRONOUS-QUOTES": "17a13a908285769230bf0ffb94c9541ea8c6650dd357be131e1d3a3dd10c6f71",
+    "IDEA-R1-CROSS-INFORMATION-DIFFUSION-AFTER-SPOT-PAUSE": "8b03856c7f4e55bc7eed945dc19ed3445942bc9935ff758e4c5752d937a32100",
+    "IDEA-R1-CROSS-VENUE-QUOTE-DEPTH-SEGMENTATION": "75e7be5e31a97b6b8402d2085fa6f34fa2a2551031a4d13674b847d5be145987",
+    "IDEA-R1-CROSS-VENUE-SPREAD-WIDENING-ASYMMETRY": "8aa0a30aecc0a14d6ede4eb0ce2182add4c1488cd2690f8888cb8e226bb4ccee",
+    "IDEA-R1-CROSS-VENUE-LOCAL-LIQUIDITY-RECOVERY": "42acf5a36400ccf15e36e3a691b835471313f5845f88321ab5223b4cbfb4eb9a",
+    "IDEA-R1-CROSS-CROSS-VENUE-EXECUTION-BAND": "6d8c868a00f73a0c8a0dbaed47288c17eb6ce14ee743cdc9289b97f0e75083eb",
+    "IDEA-R1-CROSS-LEGACY-SPOT-FLOW-NONDISCRIMINATION": "25a733dfd3ae76af46088cbefa0b7d19268d65bde33da54808371f09d0c28863",
+    "IDEA-R1-CROSS-LEGACY-SPOT-PRICE-MATCHING-FAIL": "9a5b2480a33f9c5967773446969467d52648fcd8bccc670c92fbdb02b4fa2e9a",
+    "IDEA-R1-CROSS-LEGACY-OKX-BBO-INCONCLUSIVE": "1efdb10a996dabb85e2bea048262b6b116b7424901d581ee8473d79fd522341b",
+    "IDEA-R1-CROSS-LEGACY-OKX-PRICE-MATCHING-FAIL": "8ffb7f9cc7dce5c2e63d08b9accf9e39368d9388bd9190a116387d4d638ed4f8"
+  },
+  "session_v7_freeze_hash": "a6c06b256fc07000c3641b9b0b4235ad3e95d642a9f0ffff5265d49b4dbf2020",
+  "data_boundaries": {
+    "new_d0_outcome_tests": false,
+    "legacy_result_reinterpretation_as_confirmation": false,
+    "p1_market_data_read": false,
+    "p1_outcome_read": false,
+    "permanent_hypothesis_registry_mutated": false,
+    "outcome_based_idea_pruning": false
+  },
+  "scientific_limits": [
+    "cross-venue exchange timestamps are not local receive time",
+    "instrument and quote normalization before joining venues",
+    "OKX books5 snapshot not full executable liquidity",
+    "R0.6 is not multi-venue execution",
+    "displayed spread not two-leg arbitrage",
+    "archived LEG7M-09 and LEG7M-10 null/matching failures retained",
+    "R0.5 governs only historical candidate-specific PERPS_TRADES"
+  ],
+  "acceptance_commands": [
+    "python -m pytest tests/research_governance/test_r1_cross_venue_generation.py -v",
+    "python research/r1/cross_venue/validate_cross_venue_generation.py",
+    "python research/r1/cross_venue/validate_cross_venue_generation.py --self-test",
+    "python research/r1/derivatives/validate_derivatives_generation.py",
+    "python -m pytest tests/research_governance -q -rs"
+  ],
+  "deliverable": "single root-relative changed-files ZIP; README and acceptance metadata included before user testing"
+}

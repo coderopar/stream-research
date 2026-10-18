@@ -1,0 +1,32 @@
+[
+  {
+    "source_id": "LIT-BINANCE-SPOT-STREAMS",
+    "title": "Binance Spot WebSocket Market Streams",
+    "authors": [
+      "Binance Developers"
+    ],
+    "year": 2026,
+    "source_kind": "EXCHANGE_API_DOCUMENTATION",
+    "stable_reference": "https://github.com/binance/binance-spot-api-docs/blob/master/web-socket-streams.md",
+    "supported_mechanism_claims": [
+      "Spot trade and book-ticker streams expose different message semantics and cadence; bookTicker provides top-of-book updates, not full-depth executions.",
+      "Stream event/trade clocks and local receipt times must not be assumed interchangeable when aligning venues."
+    ],
+    "scope_note": "Public endpoint documentation only; no inference of archived feed completeness, executable cross-venue prices, or BTCUSDT returns."
+  },
+  {
+    "source_id": "LIT-OKX-WS-BOOK-CHANNELS",
+    "title": "OKX API Guide: WebSocket Market Data and Order Book Channels",
+    "authors": [
+      "OKX"
+    ],
+    "year": 2026,
+    "source_kind": "EXCHANGE_API_DOCUMENTATION",
+    "stable_reference": "https://www.okx.com/docs-v5/trick_en/",
+    "supported_mechanism_claims": [
+      "The OKX books5 channel publishes top-five book snapshots at its documented cadence, whereas bbo-tbt and incremental depth streams have different semantics.",
+      "Snapshot cadence, empty/unchanged periods and market instrument identity require care before causal cross-venue quote comparison."
+    ],
+    "scope_note": "Public endpoint description, not a statement that archived R0 feeds contain full OKX depth, trades, or reliable arbitrage capacity."
+  }
+]

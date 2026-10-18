@@ -77,7 +77,7 @@ def test_legacy_r14_registry_is_prefix_preserved():
 
 
 def test_no_new_family_prevents_family_splitting():
-    assert len(read('families.jsonl'))==15
+    assert len(read('families.jsonl'))>=15  # R1.6+ may append; first 15 remain frozen by prefix hash
     assert contract()['new_family_ids']==[]
     assert {i['family_id'] for i in added()} == runner().VALID_FAMILIES
 

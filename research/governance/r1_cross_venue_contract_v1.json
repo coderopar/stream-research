@@ -1,0 +1,125 @@
+{
+  "contract_id": "R1_6_CROSS_VENUE_GENERATION_V1",
+  "protocol_version": "1.2",
+  "accepted_parent": {
+    "tag": "r1-derivatives-positioning-v1",
+    "contract_id": "R1_5_DERIVATIVES_POSITIONING_GENERATION_V1"
+  },
+  "scope": "Cross-venue information transmission and venue-liquidity segmentation; hypothesis generation only, no outcome testing",
+  "immutable_r1_5_prefix_sha256": {
+    "families.jsonl": "62f15ef41736e100f4b5f59231494a3baeacb0efa6c1d010d651605914d5e54b",
+    "ideas.jsonl": "b6475e1ccbe9ffa255a396941276cb66a4b62033a072cb56f79761bf9bbbbbb5",
+    "generation_sessions.jsonl": "dc46aa1099254952bbf069df2a5a86a10d8a564f6be9f00f48e6bb0a0a9e6f09"
+  },
+  "prefix_counts": {
+    "families": 15,
+    "ideas": 85,
+    "sessions": 6
+  },
+  "new_family_ids": [
+    "FAM-CROSS-VENUE-LIQUIDITY-SEGMENTATION"
+  ],
+  "new_family_freeze_hashes": {
+    "FAM-CROSS-VENUE-LIQUIDITY-SEGMENTATION": "9b653599b6eecd0ab8d1ec698dc290ee6f6d9fed435d0424c22dfc4caeefc02c"
+  },
+  "new_idea_ids": [
+    "IDEA-R1-CROSS-SPOT-FLOW-LEADS-PERP-REPRICING",
+    "IDEA-R1-CROSS-PERP-FLOW-LEADS-SPOT-REPRICING",
+    "IDEA-R1-CROSS-SPOT-PERP-FLOW-DISAGREEMENT",
+    "IDEA-R1-CROSS-OKX-SPOT-QUOTE-LEADS-BINANCE-PERP",
+    "IDEA-R1-CROSS-BINANCE-OKX-SPOT-QUOTE-DISAGREEMENT",
+    "IDEA-R1-CROSS-COMMON-VS-LOCAL-VENUE-SHOCK",
+    "IDEA-R1-CROSS-RECEIVE-TIME-ASYNCHRONOUS-QUOTES",
+    "IDEA-R1-CROSS-INFORMATION-DIFFUSION-AFTER-SPOT-PAUSE",
+    "IDEA-R1-CROSS-VENUE-QUOTE-DEPTH-SEGMENTATION",
+    "IDEA-R1-CROSS-VENUE-SPREAD-WIDENING-ASYMMETRY",
+    "IDEA-R1-CROSS-VENUE-LOCAL-LIQUIDITY-RECOVERY",
+    "IDEA-R1-CROSS-CROSS-VENUE-EXECUTION-BAND",
+    "IDEA-R1-CROSS-LEGACY-SPOT-FLOW-NONDISCRIMINATION",
+    "IDEA-R1-CROSS-LEGACY-SPOT-PRICE-MATCHING-FAIL",
+    "IDEA-R1-CROSS-LEGACY-OKX-BBO-INCONCLUSIVE",
+    "IDEA-R1-CROSS-LEGACY-OKX-PRICE-MATCHING-FAIL"
+  ],
+  "new_idea_freeze_hashes": {
+    "IDEA-R1-CROSS-SPOT-FLOW-LEADS-PERP-REPRICING": "6015535a721375b81afb72c2ec9138b4b768826bc307aa279c42f7bcda031d94",
+    "IDEA-R1-CROSS-PERP-FLOW-LEADS-SPOT-REPRICING": "106c77a3050235c2e1d854cf43836f946a4bda0fa78dbe07efa469291382dda7",
+    "IDEA-R1-CROSS-SPOT-PERP-FLOW-DISAGREEMENT": "829628b3574fb79bd9276a2086c090379d1f962d464c890aee137af3bb211a9d",
+    "IDEA-R1-CROSS-OKX-SPOT-QUOTE-LEADS-BINANCE-PERP": "47154e5c52b78b25eaf8bc903f3ed2fddcd4bcb4eafff89fef8cb9402969abc8",
+    "IDEA-R1-CROSS-BINANCE-OKX-SPOT-QUOTE-DISAGREEMENT": "0d638fbd93c312030643250bcfa3f0258ee11341d60f01ee547112812a6cd589",
+    "IDEA-R1-CROSS-COMMON-VS-LOCAL-VENUE-SHOCK": "7021c60e236fb421beabaaf91f5ca59c587b659e3ade5c352b8f56c57df4be1b",
+    "IDEA-R1-CROSS-RECEIVE-TIME-ASYNCHRONOUS-QUOTES": "17a13a908285769230bf0ffb94c9541ea8c6650dd357be131e1d3a3dd10c6f71",
+    "IDEA-R1-CROSS-INFORMATION-DIFFUSION-AFTER-SPOT-PAUSE": "8b03856c7f4e55bc7eed945dc19ed3445942bc9935ff758e4c5752d937a32100",
+    "IDEA-R1-CROSS-VENUE-QUOTE-DEPTH-SEGMENTATION": "75e7be5e31a97b6b8402d2085fa6f34fa2a2551031a4d13674b847d5be145987",
+    "IDEA-R1-CROSS-VENUE-SPREAD-WIDENING-ASYMMETRY": "8aa0a30aecc0a14d6ede4eb0ce2182add4c1488cd2690f8888cb8e226bb4ccee",
+    "IDEA-R1-CROSS-VENUE-LOCAL-LIQUIDITY-RECOVERY": "42acf5a36400ccf15e36e3a691b835471313f5845f88321ab5223b4cbfb4eb9a",
+    "IDEA-R1-CROSS-CROSS-VENUE-EXECUTION-BAND": "6d8c868a00f73a0c8a0dbaed47288c17eb6ce14ee743cdc9289b97f0e75083eb",
+    "IDEA-R1-CROSS-LEGACY-SPOT-FLOW-NONDISCRIMINATION": "25a733dfd3ae76af46088cbefa0b7d19268d65bde33da54808371f09d0c28863",
+    "IDEA-R1-CROSS-LEGACY-SPOT-PRICE-MATCHING-FAIL": "9a5b2480a33f9c5967773446969467d52648fcd8bccc670c92fbdb02b4fa2e9a",
+    "IDEA-R1-CROSS-LEGACY-OKX-BBO-INCONCLUSIVE": "1efdb10a996dabb85e2bea048262b6b116b7424901d581ee8473d79fd522341b",
+    "IDEA-R1-CROSS-LEGACY-OKX-PRICE-MATCHING-FAIL": "8ffb7f9cc7dce5c2e63d08b9accf9e39368d9388bd9190a116387d4d638ed4f8"
+  },
+  "generation_mode_counts": {
+    "OUTCOME_BLIND": 12,
+    "LEGACY_RESULT_INFORMED": 4
+  },
+  "legacy_parent_links": {
+    "IDEA-R1-CROSS-LEGACY-SPOT-FLOW-NONDISCRIMINATION": {
+      "evidence_id": "LEG7M-09",
+      "parent_idea_ref": "IDEA-R1-LEGACY-BINANCE-SPOT-FLOW@1"
+    },
+    "IDEA-R1-CROSS-LEGACY-SPOT-PRICE-MATCHING-FAIL": {
+      "evidence_id": "LEG7M-09",
+      "parent_idea_ref": "IDEA-R1-LEGACY-BINANCE-SPOT-PRICE@1"
+    },
+    "IDEA-R1-CROSS-LEGACY-OKX-BBO-INCONCLUSIVE": {
+      "evidence_id": "LEG7M-10",
+      "parent_idea_ref": "IDEA-R1-LEGACY-OKX-BBO-IMBALANCE@1"
+    },
+    "IDEA-R1-CROSS-LEGACY-OKX-PRICE-MATCHING-FAIL": {
+      "evidence_id": "LEG7M-10",
+      "parent_idea_ref": "IDEA-R1-LEGACY-OKX-PRICE-CONFIRMATION@1"
+    }
+  },
+  "new_public_source_ids": [
+    "LIT-BINANCE-SPOT-STREAMS",
+    "LIT-OKX-WS-BOOK-CHANNELS"
+  ],
+  "new_public_sources_sha256": "fe9436f495caf77a078040826dcebb52b752365bb6ed507b78d0a2c3b64293d5",
+  "session_v7_freeze_hash": "a6c06b256fc07000c3641b9b0b4235ad3e95d642a9f0ffff5265d49b4dbf2020",
+  "completed_lenses_after": [
+    "THEORY_LITERATURE",
+    "MARKET_MECHANISM",
+    "LEGACY_7M_LINEAGE",
+    "ORDER_BOOK_LIQUIDITY",
+    "PERPS_TRADE_FLOW",
+    "DERIVATIVES_POSITIONING",
+    "CROSS_VENUE"
+  ],
+  "remaining_lenses": [
+    "VOLATILITY_REGIME",
+    "PREDICTIVE_MODEL"
+  ],
+  "mandatory_capability_gates": {
+    "BINANCE_SPOT_TRADES": "GOVERNED_BINANCE_SPOT_TRADES_STATE",
+    "BINANCE_SPOT_BBO": "GOVERNED_BINANCE_SPOT_BBO_STATE",
+    "OKX_SPOT_BBO": "GOVERNED_OKX_SPOT_BBO_STATE",
+    "PERPS_PRICE_PATH": "GOVERNED_PERPS_PRICE_PATH_STATE",
+    "PERPS_ORDER_BOOK": "GOVERNED_ORDER_BOOK_STATE"
+  },
+  "additional_execution_gate": "GOVERNED_MULTI_VENUE_EXECUTION_SETTLEMENT",
+  "scientific_boundaries": {
+    "all_cross_venue_ideas_blocked_pending_governed_state": true,
+    "spot_and_okx_feeds_not_present_as_governed_r05_features": true,
+    "R0_6_not_multi_venue_execution": true,
+    "recorded_quote_gap_not_risk_free_arbitrage": true,
+    "receive_time_and_symbol_normalization_mandatory": true,
+    "OKX_books5_not_full_executable_depth": true,
+    "missing_updates_not_zero_market_activity": true,
+    "legacy_spot_and_okx_null_matching_failures_retained": true,
+    "legacy_25bp_and_P75_15m_policy_not_inherited": true,
+    "new_d0_outcome_tests": false,
+    "p1_market_data_read": false,
+    "p1_outcome_read": false,
+    "permanent_hypothesis_registry_mutated": false
+  }
+}

@@ -353,3 +353,17 @@ No new D0 or P1 outcomes were opened or tested and the permanent `HYP-*`
 registry remains untouched. See `research/r1/derivatives/README.md`.
 
 **Next:** R1.6 cross-venue hypothesis generation.
+
+## R1.6 — Cross-venue information and liquidity hypotheses
+
+**Question:** Could information arriving on Binance spot, Binance perpetuals or OKX spot, and unequal liquidity supplied across those venues, condition an economically executable BTCUSDT position?
+
+**What changed:** Building on frozen R1.5 (85 ideas / 15 families), R1.6 added **16 ideas** and **one new family** for *venue liquidity segmentation*, while reusing cross-venue information diffusion for information transmission. Twelve ideas are outcome-blind, four preserve `LEG7M-09`/`LEG7M-10` result-informed ancestry including null and failed-matching branches. The seven completed generation lenses now total **101 ideas / 16 families**; volatility/regime and predictive-model lenses remain required.
+
+**Why it matters:** It distinguishes a causal venue-information state from spurious lead/lag due to exchange/receive-time mismatch; and separates apparent quoted price gaps from executable, two-sided multi-venue trading. Every R1.6 idea is currently blocked pending governed as-of spot/OKX predictor state, while the multi-venue executable cost-band idea also requires an independently justified two-leg execution/settlement model. No scientific-merit ranking follows from testability.
+
+**Evidence/limits:** Two public venue-stream documentation references and existing Makarov–Schoar source support conceptual mechanisms only; historical Binance spot and OKX results remain archival development evidence, not confirmation. No fresh D0 outcome tests, no P1 market/outcome reads, no R0.7 permanent hypothesis registration. The original 25bp/P75/15m legacy policy is not imposed.
+
+**Status:** Complete R1.6 commit candidate; authoritative local acceptance and Git freeze pending. See `research/r1/cross_venue/README.md`, the R1.6 contract, append-only registries and validator/tests.
+
+**Next:** R1.7 volatility/regime idea generation.
