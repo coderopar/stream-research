@@ -170,3 +170,11 @@ R1.6 adds **16 ideas** (12 `OUTCOME_BLIND`, four `LEGACY_RESULT_INFORMED`) and o
 See `research/r1/cross_venue/README.md` for the full catalogue, clock/source boundaries, evidence ancestry and acceptance commands. The living `research/README.md` records the scientific reason for this step.
 
 **Next:** R1.7 volatility and regime mechanisms, then R1.8 predictive-model track and R1.9 adversarial universe freeze.
+
+## R1.7 — Volatility and regime research lens
+
+R1.7 appends one ex-ante volatility-memory/state-transition family and **16 outcome-blind** volatility/regime ideas on the immutable R1.6 prefix. The existing volatility–liquidity-feedback family is reused for joint price-volatility / flow / book / derivative interactions rather than splitting correlated variants. Universe: **17 families, 117 ideas, 8 generation sessions**; only the predictive-model lens remains before R1.9.
+
+No price-variation predictor capability is yet accepted in R0.5, which has only historical-candidate-indexed trade buckets and one latest price, not a governed price history. **All 16 R1.7 ideas are blocked**; the volatility-conditioned execution variant also requires a realistic execution-tail-cost state. Regime labels cannot use future volatility, hindsight breakouts, retrospective whole-bar fields, or D1/P1 distribution mining. Regime conditioning does not automatically imply directional alpha or causality, and post-hoc regime slices cannot rescue failure. Sources: Engle 1982; Andersen et al. 2003; Moreira–Muir 2017, each theoretical only.
+
+No market outcomes or protected P1 were opened; no permanent hypothesis was registered. The contract/validator hashes frozen raw prefix bytes and the new rows and sources. Full code/tests/manifest/README updates are included together; local acceptance pending. See `research/r1/volatility_regime/README.md`.

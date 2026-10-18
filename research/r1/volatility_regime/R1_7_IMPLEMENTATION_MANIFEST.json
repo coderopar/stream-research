@@ -1,0 +1,47 @@
+{
+  "step": "R1.7",
+  "scope": "Volatility and regime hypothesis generation; no new outcome testing",
+  "status": "REQUIRES_LOCAL_VERIFICATION_BEFORE_COMMIT",
+  "accepted_parent": {
+    "tag": "r1-cross-venue-v1",
+    "commit_prefix": "d5ea875",
+    "contract_id": "R1_6_CROSS_VENUE_GENERATION_V1"
+  },
+  "protocol": "1.2",
+  "changed_files_zip_contract": "Only changed/new files; paths relative to repository root; include READMEs, manifest, tests and code in one patch",
+  "universe": {
+    "prior_families": 16,
+    "prior_ideas": 101,
+    "new_families": 1,
+    "new_outcome_blind_ideas": 16,
+    "new_result_informed_ideas": 0,
+    "total_families": 17,
+    "total_ideas": 117,
+    "new_session_version": 8,
+    "remaining_lenses": ["PREDICTIVE_MODEL"]
+  },
+  "capability": {
+    "blocked_volatility_ideas": 16,
+    "state_and_execution_blocked": 1,
+    "r0_5_buckets_are_price_variance": false,
+    "latest_trade_price_is_price_path": false,
+    "r0_6_book_is_governed_predictor": false
+  },
+  "scientific_controls": {
+    "future_regime_labels_allowed": false,
+    "ex_post_volatility_slice_confirms_failed_parent": false,
+    "volatility_is_directional_alpha": false,
+    "p1_market_data_read": false,
+    "p1_outcome_read": false,
+    "new_d0_outcome_tests": false,
+    "permanent_hypothesis_registry_mutated": false
+  },
+  "acceptance_commands": [
+    "python -m pytest tests/research_governance/test_r1_volatility_regime_generation.py -v",
+    "python research/r1/volatility_regime/validate_volatility_regime_generation.py",
+    "python research/r1/volatility_regime/validate_volatility_regime_generation.py --self-test",
+    "python research/r1/cross_venue/validate_cross_venue_generation.py",
+    "python -m pytest tests/research_governance -q -rs"
+  ],
+  "next": "R1.8 PREDICTIVE_MODEL"
+}

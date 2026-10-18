@@ -1,0 +1,51 @@
+[
+  {
+    "source_id": "LIT-ENGLE-ARCH-1982",
+    "title": "Autoregressive Conditional Heteroscedasticity with Estimates of the Variance of United Kingdom Inflation",
+    "authors": [
+      "Robert F. Engle"
+    ],
+    "year": 1982,
+    "source_kind": "PEER_REVIEWED_ARTICLE",
+    "stable_reference": "https://doi.org/10.2307/1912773",
+    "supported_mechanism_claims": [
+      "Past shocks can inform conditional variance even when mean returns are not autocorrelated.",
+      "Volatility clustering is distinct from reliable directional price prediction."
+    ],
+    "scope_note": "Econometric motivation, not estimated BTCUSDT parameters or backtested position returns."
+  },
+  {
+    "source_id": "LIT-ANDERSEN-REALIZED-VOL-2003",
+    "title": "Modeling and Forecasting Realized Volatility",
+    "authors": [
+      "Torben G. Andersen",
+      "Tim Bollerslev",
+      "Francis X. Diebold",
+      "Paul Labys"
+    ],
+    "year": 2003,
+    "source_kind": "PEER_REVIEWED_ARTICLE",
+    "stable_reference": "https://doi.org/10.1111/1468-0262.00418",
+    "supported_mechanism_claims": [
+      "High-frequency historical prices can support realized-variation measurements and forecasting frameworks.",
+      "Sampling, information availability and market microstructure noise matter for fine-scale realized variation."
+    ],
+    "scope_note": "FX research motivates research measurements; this is not proof of BTCUSDT execution returns."
+  },
+  {
+    "source_id": "LIT-MOREIRA-MUIR-VOL-2017",
+    "title": "Volatility-Managed Portfolios",
+    "authors": [
+      "Alan Moreira",
+      "Tyler Muir"
+    ],
+    "year": 2017,
+    "source_kind": "PEER_REVIEWED_ARTICLE",
+    "stable_reference": "https://doi.org/10.1111/jofi.12513",
+    "supported_mechanism_claims": [
+      "Scaling risk exposure according to past volatility is a distinct strategy design dimension.",
+      "Historical risk-managed portfolio findings must not be transferred to BTCUSDT without registered execution, funding and cost tests."
+    ],
+    "scope_note": "Asset-pricing/portfolio literature, not confirmation of a BTCUSDT volatility-timing trading strategy."
+  }
+]

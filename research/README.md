@@ -367,3 +367,15 @@ registry remains untouched. See `research/r1/derivatives/README.md`.
 **Status:** Complete R1.6 commit candidate; authoritative local acceptance and Git freeze pending. See `research/r1/cross_venue/README.md`, the R1.6 contract, append-only registries and validator/tests.
 
 **Next:** R1.7 volatility/regime idea generation.
+
+## R1.7 — Volatility and regime generation
+
+**Research question:** Can pre-entry, receive-time-available price variation and regime transitions modify BTCUSDT uncertainty, the quality of flow/liquidity signals, or realistic executable position risk without claiming that volatility predicts direction?
+
+**What changed:** Appended 16 `OUTCOME_BLIND` ideas and one distinct volatility-memory/state-transition family, while reusing R1.1's volatility–liquidity-feedback family for the seven related interactions. Generation session version **8** completes the volatility/regime lens: **17 families / 117 ideas**, with `PREDICTIVE_MODEL` still required. Three public volatility-econometrics references are source-catalogued and hashed.
+
+**Availability:** All 16 ideas are capability-blocked: R0.5 trade-activity buckets and a latest price are **not** a causal historical volatility price path. The volatility-conditioned execution idea needs an additional governed realistic cost/tail-risk capability. No return/threshold search, D0 outcomes or P1 market/outcome reads occurred; permanent `HYP-*` registry remains empty.
+
+**Interpretation:** A regime must be labeled using **information available before executable entry**, accounting for detection delay, quality gaps and the exact clock. A post-hoc successful regime slice cannot salvage a failed confirmation. Volatility sizing is a separately frozen strategy dimension. Theoretical evidence is not BTCUSDT profitability. See `research/r1/volatility_regime/README.md` and the R1.7 contract, validator, tests and integrated manifest.
+
+**Status:** R1.7 complete implementation candidate; authoritative local tests and Git freeze still required. **Next:** R1.8 predictive-model hypothesis-generation lens.

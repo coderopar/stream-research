@@ -1,0 +1,111 @@
+{
+  "contract_id": "R1_7_VOLATILITY_REGIME_GENERATION_V1",
+  "protocol_version": "1.2",
+  "accepted_parent": {
+    "tag": "r1-cross-venue-v1",
+    "contract_id": "R1_6_CROSS_VENUE_GENERATION_V1",
+    "commit_prefix": "d5ea875"
+  },
+  "scope": "Volatility/regime hypothesis generation only: ex-ante price variation, regime transition, and feedback interactions; no tests or outcome-based pruning",
+  "immutable_r1_6_prefix_sha256": {
+    "families.jsonl": "0f9c85c21c0324fac50b8e462288ac9ac3d700297cd6323f97673331d5bac4af",
+    "ideas.jsonl": "4719003f52e839b71eac0e6a505f10fb59620ade8783be123b0825cdd96e325d",
+    "generation_sessions.jsonl": "3995e47f39312bd463e31a55cdf2d8cb0e1fe52336c4916e7a50e6650b07c246"
+  },
+  "prefix_counts": {
+    "families": 16,
+    "ideas": 101,
+    "sessions": 7
+  },
+  "new_family_ids": [
+    "FAM-VOLATILITY-PERSISTENCE-TRANSITION"
+  ],
+  "new_family_freeze_hashes": {
+    "FAM-VOLATILITY-PERSISTENCE-TRANSITION": "45691e0ceb3096348ba1fc12a7142fec11ca1e5e0f6f8ddcb1931b36e7660928"
+  },
+  "new_idea_ids": [
+    "IDEA-R1-VOL-PERSISTENCE",
+    "IDEA-R1-VOL-ACCELERATION",
+    "IDEA-R1-VOL-COMPRESSION",
+    "IDEA-R1-VOL-SHOCK-DECAY",
+    "IDEA-R1-VOL-SIGNED-ASYMMETRY",
+    "IDEA-R1-VOL-JUMP-CONTINUOUS",
+    "IDEA-R1-VOL-SAMPLING-SENSITIVITY",
+    "IDEA-R1-VOL-TRANSITION-DETECTION",
+    "IDEA-R1-VOL-UNCERTAINTY-PROXY",
+    "IDEA-R1-VOL-FLOW-IMBALANCE",
+    "IDEA-R1-VOL-FLOW-BURST",
+    "IDEA-R1-VOL-LIQUIDITY-FRAGILITY",
+    "IDEA-R1-VOL-REFILL-RESILIENCE",
+    "IDEA-R1-VOL-DERIVATIVES-CROWDING",
+    "IDEA-R1-VOL-CONDITIONED-EXECUTION",
+    "IDEA-R1-VOL-ROBUSTNESS-DIAGNOSTIC"
+  ],
+  "new_idea_freeze_hashes": {
+    "IDEA-R1-VOL-PERSISTENCE": "27fbb12dc5c50177b2e68def847e0a0141490f5e55282d9ec0b77fd8c1748cad",
+    "IDEA-R1-VOL-ACCELERATION": "7a79e65fa1564d1c45bb615ce12efa2fb0134ebaa8ca280aa223c0fdfe9796db",
+    "IDEA-R1-VOL-COMPRESSION": "3cb3691c4718cf3015815ac2b1b2aad658127ef813572d0b759c4fb189418a12",
+    "IDEA-R1-VOL-SHOCK-DECAY": "7ea2a7fd8505cf971bfbaf0dc4ec05a36544ce9c4d7d9d20b48b810b59a099dc",
+    "IDEA-R1-VOL-SIGNED-ASYMMETRY": "506b1f800b32be0242a7faf8b8b59d7e3ff7c0100a68f39876f22325ccc52606",
+    "IDEA-R1-VOL-JUMP-CONTINUOUS": "4f6fa41dca6ce7837ad3b522c382bb0a7b5a6afeeb993114ff9cd9ec0ae4647e",
+    "IDEA-R1-VOL-SAMPLING-SENSITIVITY": "ef34fa55eb8f8f490225553fe227e31814ca8ec3ac6063037f7db3ebdb167598",
+    "IDEA-R1-VOL-TRANSITION-DETECTION": "51fe3acd4800a6e5b67e3ecaf0b60322ba46873b656e382a4f3714e9743f4d89",
+    "IDEA-R1-VOL-UNCERTAINTY-PROXY": "e5a0d3f10bbbbed5d92611a609e009f29a9d137fa947dfea7abe7174429c873f",
+    "IDEA-R1-VOL-FLOW-IMBALANCE": "645faf177c8437b5a49b6d0166e2f2e4fca273086cc898766c05641dc5db0169",
+    "IDEA-R1-VOL-FLOW-BURST": "3ee43b8bb8993dc5a4ac92f621f6086f67520441764cc3aefc5a9d721824cb80",
+    "IDEA-R1-VOL-LIQUIDITY-FRAGILITY": "f5ab686acee4e8e4bd747712b2e7761efcba265449b4a486a921834536c52183",
+    "IDEA-R1-VOL-REFILL-RESILIENCE": "d6e8132119a3c1f2563d32176aa7d19a952a9bd48f4be6f81a77d408bc50d967",
+    "IDEA-R1-VOL-DERIVATIVES-CROWDING": "1881e7d6da4935ca34ba98bbe8c3d0005da1734ddb7018626e6cf6a3ffe98acf",
+    "IDEA-R1-VOL-CONDITIONED-EXECUTION": "7c8c4cec54a5d6287dc90a8b0743a85732aef7722dc5bd3c13975a4816f2fd6f",
+    "IDEA-R1-VOL-ROBUSTNESS-DIAGNOSTIC": "2abc145b1637cb5e6d9c43e32bbaa4059245eff2d34793be06722fd4474a7633"
+  },
+  "generation_mode_counts": {
+    "OUTCOME_BLIND": 16,
+    "LEGACY_RESULT_INFORMED": 0
+  },
+  "legacy_result_informed_new_ideas": 0,
+  "new_public_source_ids": [
+    "LIT-ENGLE-ARCH-1982",
+    "LIT-ANDERSEN-REALIZED-VOL-2003",
+    "LIT-MOREIRA-MUIR-VOL-2017"
+  ],
+  "new_public_sources_sha256": "408fc608931deb1f2f7679480b8d6e17ecdc9bbb8473065e690bf1c5d9c3d639",
+  "session_v8_freeze_hash": "c02969a980d69e1e4023e447f985c2f12a9c47d82bc7b7a221c9a4a86774cf79",
+  "completed_lenses_after": [
+    "THEORY_LITERATURE",
+    "MARKET_MECHANISM",
+    "LEGACY_7M_LINEAGE",
+    "ORDER_BOOK_LIQUIDITY",
+    "PERPS_TRADE_FLOW",
+    "DERIVATIVES_POSITIONING",
+    "CROSS_VENUE",
+    "VOLATILITY_REGIME"
+  ],
+  "remaining_lenses": [
+    "PREDICTIVE_MODEL"
+  ],
+  "mandatory_capability_gates": {
+    "PERPS_PRICE_PATH": "GOVERNED_PERPS_PRICE_PATH_STATE",
+    "PERPS_ORDER_BOOK": "GOVERNED_ORDER_BOOK_STATE",
+    "DERIVATIVES_POSITIONING": "GOVERNED_DERIVATIVES_POSITIONING_STATE"
+  },
+  "additional_execution_gate": "GOVERNED_VOLATILITY_CONDITIONED_EXECUTION_RISK",
+  "scientific_boundaries": {
+    "all_true_volatility_ideas_blocked_pending_governed_price_path": true,
+    "r0_5_trade_activity_not_price_volatility": true,
+    "r0_5_latest_trade_price_not_historical_price_path": true,
+    "r0_6_execution_replay_not_predictor_book_state": true,
+    "volatility_not_intrinsically_directional_alpha": true,
+    "future_high_low_bar_and_future_realized_vol_forbidden": true,
+    "online_regimes_only_after_detection_clock": true,
+    "post_hoc_regime_slice_not_confirmatory_rescue": true,
+    "regime_definition_and_sizing_require_separate_freeze": true,
+    "interaction_is_joint_prediction_not_identified_causal_effect": true,
+    "retain_prior_legacy_volatility_family_without_hidden_result_ancestry": true,
+    "legacy_25bp_and_P75_15m_policy_not_inherited": true,
+    "new_d0_outcome_tests": false,
+    "p1_market_data_read": false,
+    "p1_outcome_read": false,
+    "permanent_hypothesis_registry_mutated": false
+  }
+}
